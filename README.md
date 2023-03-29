@@ -10,7 +10,7 @@ DotaWiki is a comprehensive encyclopedia for Dota  2, providing detailed informa
 
 
 ## Authors
-Roman Volsky - email@gmail.com, [Github](), [LinkedIn]()
+Roman Volskiy - email@gmail.com, [Github](https://github.com/VolskiyRoman/)
 
 Volodymyr Tkach - vovantkac5.work@gmail.com, [Github](https://github.com/tkach-v/), [LinkedIn](https://www.linkedin.com/in/volodymyr-tkach5/)
 
