@@ -3,13 +3,13 @@ from django.db import models
 
 class Hero(models.Model):
     name = models.CharField(max_length=50)
-    primary_stat = models.CharField(max_length=50)
+    primary_stat = models.CharField(max_length=50) # change to ForeignKey
     description_short = models.TextField()
     description_long = models.TextField()
-    attack_type = models.CharField(max_length=50)
+    attack_type = models.CharField(max_length=50) # change to ForeignKey
     complexity = models.IntegerField()
-    image_url_small = models.ImageField(upload_to="photos/%Y/%m/%d/")
-    image_url_large = models.ImageField(upload_to="photos/%Y/%m/%d/")
+    image_url_small = models.ImageField(upload_to="photos/%Y/%m/%d/") # change directory
+    image_url_large = models.ImageField(upload_to="photos/%Y/%m/%d/") # change directory
     health = models.CharField(max_length=50)
     mana = models.CharField(max_length=50)
     strength = models.CharField(max_length=50)
@@ -38,3 +38,7 @@ class Hero(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PrimaryStat(models.Model):
+    name = models.CharField(max_length=50)
