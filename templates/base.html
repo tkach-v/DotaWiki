@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        {% block title %}DotaWiki{% endblock %}
-    </title>
+    <title>{% block title %}DotaWiki{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -26,8 +24,8 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ру fixed-top py-2">
         <div class="container">
-{#            <a class="navbar-brand m-0 me-5 p-0" href=""><img class="logo" src="images/base/logo.svg"#}
-{#                                                              alt="logo"></a>#}
+            <a class="navbar-brand m-0 me-5 p-0" href=""><img class="logo" src="{% static 'images/base/logo.svg' %}"
+                                                              alt="logo image"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -71,18 +69,18 @@
     </nav>
 </header>
 <main>
-{#    <a href="" class="direction-button up-button">#}
-{#        <img src="images/base/up_btn.svg" alt="up-button">#}
-{#    </a>#}
+    <a href="" class="direction-button up-button">
+        <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
+    </a>
     {% block content %}{% endblock %}
 </main>
 <footer>
     <div class="container">
         <div class="row p-0 pt-5 pb-3">
             <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start p-0 pe-5">
-{#                <a class="logo-footer" href="">#}
-{#                    <img src="images/base/logo.svg" alt="Logo" style="height: 40px; width: auto">#}
-{#                </a>#}
+                <a class="logo-footer" href="">
+                    <img src="{% static 'images/base/logo.svg' %}" alt="Logo" style="height: 40px; width: auto">
+                </a>
                 <p class="copyright my-3 my-md-5">© 2023 DotaWiki</p>
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-0 pe-5 my-3 my-md-0 about-us">
@@ -100,25 +98,25 @@
                 <h5>
                     Contacts
                 </h5>
-{#                <p>#}
-{#                    <a href="https://www.linkedin.com/in/volodymyr-tkach5/" class="d-flex flex-row align-items-center">#}
-{#                        <img src="images/base/linkedin-logo.png" alt="">#}
-{#                        <span class="ps-2">Volodymyr</span>#}
-{#                    </a>#}
-{#                </p>#}
-{#                <p>#}
-{#                    <a href="" class="d-flex flex-row align-items-center">#}
-{#                        <img src="images/base/linkedin-logo.png" alt="">#}
-{#                        <span class="ps-2">Roman</span>#}
-{#                    </a>#}
-{#                </p>#}
-{#                <p>#}
-{#                    <a href="https://www.linkedin.com/in/cargellenn-undefined-568bb7266/"#}
-{#                       class="d-flex flex-row align-items-center">#}
-{#                        <img src="images/base/linkedin-logo.png" alt="">#}
-{#                        <span class="ps-2">Vladyslav</span>#}
-{#                    </a>#}
-{#                </p>#}
+                <p>
+                    <a href="https://www.linkedin.com/in/volodymyr-tkach5/" class="d-flex flex-row align-items-center">
+                        <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                        <span class="ps-2">Volodymyr</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="d-flex flex-row align-items-center">
+                        <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                        <span class="ps-2">Roman</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/cargellenn-undefined-568bb7266/"
+                       class="d-flex flex-row align-items-center">
+                        <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                        <span class="ps-2">Vladyslav</span>
+                    </a>
+                </p>
             </div>
             <div class="col-6 col-lg-2 p-0 useful-links">
                 <h5>
@@ -152,8 +150,8 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
-{# styles below #}
-{#<script src="scripts/base.js"></script>#}
+{# scripts below #}
+<script src="{% static 'scripts/base.js' %}"></script>
 {% block myscripts %}{% endblock %}
 </body>
 </html>
