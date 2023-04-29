@@ -3,10 +3,10 @@ from django.db import models
 
 class Hero(models.Model):
     name = models.CharField(max_length=50)
-    primary_stat = models.ForeignKey('PrimaryStat', on_delete=models.PROTECT)
+    primary_stat = models.ForeignKey('HeroPrimaryStat', on_delete=models.PROTECT)
     description_short = models.TextField()
     description_long = models.TextField()
-    attack_type = models.ForeignKey("AttackType", on_delete=models.PROTECT)
+    attack_type = models.ForeignKey("HeroAttackType", on_delete=models.PROTECT)
     complexity = models.IntegerField()
     image_url_small = models.ImageField(upload_to="photos/heroes")
     image_url_large = models.ImageField(upload_to="photos/heroes")

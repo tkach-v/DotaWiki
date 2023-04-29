@@ -1,0 +1,255 @@
+.prev_next_btn {
+  position: relative;
+  bottom: 50%;
+}
+.prev_next_btn #prev-hero {
+  position: relative;
+  left: 2%;
+}
+.prev_next_btn #prev-hero img {
+  transform: rotate(270deg);
+  position: relative;
+  top: 0;
+  left: 8px;
+}
+.prev_next_btn #next-hero {
+  position: relative;
+  bottom: 46px;
+  left: calc(98% - 36px);
+}
+.prev_next_btn #next-hero img {
+  transform: rotate(90deg);
+  position: relative;
+  top: 0;
+  right: 8px;
+}
+
+.hero-summary .hero-info .hero-name {
+  font-family: "Bebas Neue", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .hero-summary .hero-info .hero-name {
+    font-size: 36px;
+  }
+}
+.hero-summary .hero-info .description-short {
+  font-size: 24px;
+  text-align: center;
+  margin: 18px 0;
+}
+@media (max-width: 768px) {
+  .hero-summary .hero-info .description-short {
+    font-size: 18px;
+  }
+}
+.hero-summary .hero-info .description-long {
+  font-family: "Open Sans", serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #F8F8F8;
+}
+@media (max-width: 768px) {
+  .hero-summary .hero-info .description-long {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 40px;
+  }
+}
+.hero-summary .hero-info .abilities-container {
+  background: #1A1A1F;
+  box-shadow: 6px 12px 40px rgba(11, 11, 26, 0.55);
+}
+.hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+  height: 80px;
+  width: auto;
+}
+@media (max-width: 1400px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 70px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 60px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 65px;
+  }
+}
+@media (max-width: 576px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 55px;
+  }
+}
+@media (max-width: 450px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 45px;
+  }
+}
+@media (max-width: 350px) {
+  .hero-summary .hero-info .abilities-container img, .hero-summary .hero-info .abilities-container svg {
+    height: 38px;
+  }
+}
+.hero-summary .hero-info .abilities-container .ability-item img {
+  border: 2px solid #000000;
+}
+.hero-summary .hero-info .abilities-container .talents img {
+  border: 0;
+}
+
+.ability-description {
+  background: #1A1A1F;
+  box-shadow: 6px 12px 40px rgba(11, 11, 26, 0.55);
+}
+.ability-description .ability-image {
+  border: 2px solid #000000;
+  max-width: 106px;
+  max-height: 106px;
+}
+.ability-description .ability-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.ability-description .ability-text,
+.ability-description .ability-details {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.ability-description .detail-title {
+  font-weight: 700;
+}
+
+.hero-info .collapse,
+.hero-info .collapsing {
+  position: absolute;
+  z-index: 9998;
+}
+
+.talent-tree {
+  background: #1A1A1F;
+  box-shadow: 6px 12px 40px rgba(11, 11, 26, 0.55);
+}
+.talent-tree table th {
+  text-align: center;
+}
+.talent-tree table th,
+.talent-tree table td {
+  border: 1px solid #FFFFFF;
+  padding: 15px;
+}
+.talent-tree table .talent-left {
+  width: 45%;
+  text-align: right;
+}
+.talent-tree table .talent-level {
+  text-align: center;
+  width: 10%;
+}
+.talent-tree table .talent-right {
+  width: 45%;
+  text-align: left;
+}
+
+.hero-characteristics h2 {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.hero-characteristics h5 {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hero-characteristics .portrait {
+  width: 256px;
+  text-align: center;
+  font-size: 24px;
+}
+.hero-characteristics .portrait .health {
+  background: linear-gradient(92.36deg, #5CBF39 0%, #1A5B03 100%);
+}
+.hero-characteristics .portrait .mana {
+  background: linear-gradient(92.36deg, #397FBF 0%, #09196D 100%);
+}
+.hero-characteristics .value {
+  font-size: 20px;
+}
+.hero-characteristics .value img {
+  width: 30px;
+  height: auto;
+}
+.hero-characteristics .value span {
+  margin-left: 15px;
+}
+.hero-characteristics .underlined {
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 4px;
+}
+.hero-characteristics .attack,
+.hero-characteristics .defence,
+.hero-characteristics .mobility {
+  border-left: 1px solid #FFFFFF;
+}
+@media (max-width: 998px) {
+  .hero-characteristics .attack,
+  .hero-characteristics .defence,
+  .hero-characteristics .mobility {
+    border: 0;
+  }
+}
+@media (max-width: 576px) {
+  .hero-characteristics .attack,
+  .hero-characteristics .defence,
+  .hero-characteristics .mobility {
+    margin-top: 12px;
+  }
+}
+
+.hero-cosmetic {
+  margin-top: 100px;
+}
+.hero-cosmetic h2 {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.hero-cosmetic .cosmetic-item img {
+  width: 100%;
+  height: auto;
+}
+.hero-cosmetic .cosmetic-item h5 {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  background-color: #1A1A1F;
+  margin: 0;
+}
+
+/*# sourceMappingURL=hero_detail.css.map */
