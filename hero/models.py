@@ -3,13 +3,13 @@ from django.db import models
 
 class Hero(models.Model):
     name = models.CharField(max_length=50)
-    primary_stat = models.ForeignKey('PrimaryStat', on_delete=models.PROTECT)
+    primary_stat = models.ForeignKey('HeroPrimaryStat', on_delete=models.PROTECT)
     description_short = models.TextField()
     description_long = models.TextField()
-    attack_type = models.ForeignKey("AttackType", on_delete=models.PROTECT)
+    attack_type = models.ForeignKey("HeroAttackType", on_delete=models.PROTECT)
     complexity = models.IntegerField()
-    image_url_small = models.ImageField(upload_to="photos/small")
-    image_url_large = models.ImageField(upload_to="photos/large")
+    image_url_small = models.ImageField(upload_to="photos/heroes")
+    image_url_large = models.ImageField(upload_to="photos/heroes")
     health = models.CharField(max_length=50)
     mana = models.CharField(max_length=50)
     strength = models.CharField(max_length=50)
@@ -27,28 +27,48 @@ class Hero(models.Model):
     move_speed = models.CharField(max_length=50)
     turn_speed = models.CharField(max_length=50)
     vision = models.CharField(max_length=50)
-    left_10 = models.CharField(max_length=50)
-    right_10 = models.CharField(max_length=50)
-    left_15 = models.CharField(max_length=50)
-    right_15 = models.CharField(max_length=50)
-    left_20 = models.CharField(max_length=50)
-    right_20 = models.CharField(max_length=50)
-    left_25 = models.CharField(max_length=50)
-    right_25 = models.CharField(max_length=50)
+    left_10 = models.CharField(max_length=100)
+    right_10 = models.CharField(max_length=100)
+    left_15 = models.CharField(max_length=100)
+    right_15 = models.CharField(max_length=100)
+    left_20 = models.CharField(max_length=100)
+    right_20 = models.CharField(max_length=100)
+    left_25 = models.CharField(max_length=100)
+    right_25 = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
 
-class PrimaryStat(models.Model):
+class HeroPrimaryStat(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
 
-class AttackType(models.Model):
+class HeroAttackType(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+
+
+class Ability(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    image_url = models.ImageField('photos/abilities')
+    type = models.ForeignKey("AbilityType", on_delete=models.PROTECT)
+    generic_details = models.TextField()
+    specific_details = models.TextField()
+    cooldown = models.CharField(max_length=50)
+    mana_cost = models.CharField(max_length=50)
+
+
+class AbilityType(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+

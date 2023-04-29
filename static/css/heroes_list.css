@@ -1,0 +1,168 @@
+.navbar-brand {
+  margin-left: 3px !important;
+}
+
+.search {
+  margin-right: 3px;
+}
+
+h1 {
+  font-family: "Bebas Neue", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 30px 0;
+}
+
+.filter {
+  background-color: #1A1A1F;
+  box-shadow: 6px 12px 40px rgba(11, 11, 26, 0.55);
+  margin: 0 3px 40px 3px;
+}
+.filter a {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.filter .attribute a {
+  padding: 20px;
+}
+@media (max-width: 576px) {
+  .filter .attribute a {
+    border: 1px solid #353535;
+  }
+}
+.filter .attribute a:hover {
+  background-color: #242429;
+  color: #FED14C;
+}
+.filter .attribute img {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+.filter .clicked {
+  background-color: #242429;
+  color: #FED14C;
+}
+.filter .complexity a:hover {
+  opacity: 0.9;
+}
+.filter .complexity p {
+  padding: 20px;
+}
+.filter .search-heroes {
+  padding: 14px;
+  border-radius: 5px;
+  float: right;
+}
+@media (max-width: 992px) {
+  .filter .search-heroes {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 576px) {
+  .filter .search-heroes {
+    padding: 7px;
+  }
+}
+.filter .search-heroes .search {
+  max-width: 100%;
+  margin-right: 0;
+}
+.filter .search-heroes .search > div {
+  height: 36px;
+}
+@media (max-width: 1200px) {
+  .filter {
+    font-size: 16px;
+  }
+  .filter a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .filter .attribute a, .filter .complexity p {
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .filter {
+    font-size: 14px;
+  }
+  .filter a {
+    font-size: 14px;
+  }
+}
+
+.heroes-list {
+  margin-left: 3px;
+}
+.heroes-list #no-hero-match {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 90px;
+  padding: 15vh 20px;
+  text-align: center;
+  letter-spacing: 4px;
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  .heroes-list #no-hero-match {
+    font-size: 70px;
+  }
+}
+@media (max-width: 992px) {
+  .heroes-list #no-hero-match {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .heroes-list #no-hero-match {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .heroes-list #no-hero-match {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.heroes-list a {
+  transition: 0.3s;
+}
+.heroes-list a > * {
+  border: 2px solid #000000;
+  filter: drop-shadow(6px 12px 40px rgba(11, 11, 26, 0.55));
+  font-family: "Bebas Neue", serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.heroes-list a:hover {
+  transform: scale(1.2);
+  position: relative;
+  z-index: 5;
+}
+.heroes-list a:hover > .hero-name {
+  display: block;
+  position: absolute;
+  padding: 5px;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+}
+.heroes-list .hero-name {
+  text-align: center;
+  background-color: #1A1A1F;
+  display: none;
+}
+
+/*# sourceMappingURL=heroes_list.css.map */
