@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+import jsonfield
 
 
 class Hero(models.Model):
@@ -64,16 +65,16 @@ class Ability(models.Model):
     owner = models.ForeignKey("Hero", on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
     description = models.TextField()
-    image_url = models.ImageField('photos/abilities')
+    image_url = models.ImageField(upload_to='photos/abilities')
     type = models.ForeignKey("AbilityType", on_delete=models.PROTECT)
-    generic_details = models.TextField()
-    specific_details = models.TextField()
-    cooldown = models.CharField(max_length=50)
-    mana_cost = models.CharField(max_length=50)
+    generic_details = jsonfield.JSONField(blank=True, null=True)
+    specific_details = jsonfield.JSONField(blank=True, null=True)
+    cooldown = models.CharField(max_length=50, null=True)
+    mana_cost = models.CharField(max_length=50, null=True)
 
 
 class AbilityType(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.name
