@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Heroes{% endblock %}
+{% block mystyles %}
+<link rel="stylesheet" href="{% static 'css/heroes_list.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+        <div class="row" align="center">
+            <h1>Choose your hero</h1>
+        </div>
+        <div class="row filter p-3 p-lg-0">
+            <div class="col-12 col-lg-6 attribute m-0 p-0">
+                <div class="row m-0 p-0">
+                    <div class="col-6 col-sm-3 m-0 p-2 p-sm-0">
+                        <a class="d-flex align-items-center justify-content-center" href="">
+                            <img src="{% static 'images/heroes_list/strength.svg' %}" alt="strength">
+                            <p class="m-0 ms-2">Strength</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 m-0 p-2 p-sm-0">
+                        <a class="d-flex align-items-center justify-content-center" href="">
+                            <img src="{% static 'images/heroes_list/agility.svg' %}" alt="agility">
+                            <p class="m-0 ms-2">Agility</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 m-0 p-2 p-sm-0">
+                        <a class="d-flex align-items-center justify-content-center" href="">
+                            <img src="{% static 'images/heroes_list/intelligence.svg' %}" alt="intelligence">
+                            <p class="m-0 ms-2">Intelligence</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-3 m-0 p-2 p-sm-0">
+                        <a class="d-flex align-items-center justify-content-center" href="">
+                            <img src="{% static 'images/heroes_list/universal.png' %}" alt="universal">
+                            <p class="m-0 ms-2">Universal</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 complexity px-0 p-0">
+                <div class="d-flex align-items-center justify-content-center m-0 p-0">
+                    <p class="m-0">Complexity:</p>
+                    <a id="complexity_1" href="">
+                        <img src="{% static 'images/heroes_list/complexity_empty.svg' %}" alt="">
+                    </a>
+                    <a id="complexity_2" href="">
+                        <img src="{% static 'images/heroes_list/complexity_empty.svg' %}">
+                    </a>
+                    <a id="complexity_3" href="">
+                        <img src="{% static 'images/heroes_list/complexity_empty.svg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 search-heroes ms-auto">
+                <form role="search" class="search">
+                    <div class="input-group pe-2">
+                        <span class="input-group-text py-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="form-input" placeholder="Search...">
+                        <span class="input-group-text m-0 p-0 px-2 ms-auto search_x">
+                            <a type="button">
+                                <i class="fa-solid fa-xmark" style="display: none"></i>
+                            </a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row heroes-list">
+            <h1 id="no-hero-match">No Heroes match your filter</h1>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="hero_detail.html">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/puck.png"
+                         alt="">
+                    <div class="hero-name">Puck</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/pudge.png"
+                         alt="">
+                    <div class="hero-name">Pudge</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"
+                         alt="">
+                    <div class="hero-name">Abaddon</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"
+                         alt="">
+                    <div class="hero-name">crystal maiden</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png"
+                         alt="">
+                    <div class="hero-name">Shadow Field</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"
+                         alt="">
+                    <div class="hero-name">Abaddon</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"
+                         alt="">
+                    <div class="hero-name">crystal maiden</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png"
+                         alt="">
+                    <div class="hero-name">Shadow Field</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"
+                         alt="">
+                    <div class="hero-name">Abaddon</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"
+                         alt="">
+                    <div class="hero-name">crystal maiden</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png"
+                         alt="">
+                    <div class="hero-name">Shadow Field</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"
+                         alt="">
+                    <div class="hero-name">Abaddon</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"
+                         alt="">
+                    <div class="hero-name">crystal maiden</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png"
+                         alt="">
+                    <div class="hero-name">Shadow Field</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"
+                         alt="">
+                    <div class="hero-name">Abaddon</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"
+                         alt="">
+                    <div class="hero-name">crystal maiden</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
+                <a class="d-flex flex-column" href="">
+                    <img class="img-fluid"
+                         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/brewmaster.png"
+                         alt="">
+                    <div class="hero-name">Brewmaster</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block myscripts %}
+<script src="{% static 'scripts/heroes_list.js' %}"></script>
+{% endblock %}

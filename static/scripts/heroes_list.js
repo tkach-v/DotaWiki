@@ -64,31 +64,31 @@ for (let i = 0; i < lstComplexity.length; i++) {
     lstComplexity[i].addEventListener('click', evt => {
         if (lstComplexity[i].classList.contains('chosen')) {
             lstComplexity[i].classList.remove('chosen');
-            lstComplexity[0].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
-            lstComplexity[1].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
-            lstComplexity[2].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
+            lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
+            lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
+            lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
         } else {
             if (lstComplexity[i].id === 'complexity_1') {
                 lstComplexity[0].classList.add('chosen');
                 lstComplexity[1].classList.remove('chosen');
                 lstComplexity[2].classList.remove('chosen');
-                lstComplexity[0].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
-                lstComplexity[1].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
-                lstComplexity[2].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
+                lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
+                lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
+                lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
             } else if (lstComplexity[i].id === 'complexity_2') {
                 lstComplexity[0].classList.remove('chosen');
                 lstComplexity[1].classList.add('chosen');
                 lstComplexity[2].classList.remove('chosen');
-                lstComplexity[0].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
-                lstComplexity[1].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
-                lstComplexity[2].innerHTML = "<img src=\"images/heroes_list/complexity_empty.svg\">";
+                lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
+                lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
+                lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\">";
             } else {
                 lstComplexity[0].classList.remove('chosen');
                 lstComplexity[1].classList.remove('chosen');
                 lstComplexity[2].classList.add('chosen');
-                lstComplexity[0].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
-                lstComplexity[1].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
-                lstComplexity[2].innerHTML = "<img src=\"images/heroes_list/complexity_full.svg\">";
+                lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
+                lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
+                lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\">";
             }
         }
 
