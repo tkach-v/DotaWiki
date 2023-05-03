@@ -21,7 +21,8 @@ from DotaWiki import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('hero.urls'))
+    path('', include('hero.urls')),
+    path('', include('home.urls'))
 ]
 
 # add media

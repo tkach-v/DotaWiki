@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django_extensions',
 
     # local apps
-    'hero.apps.HeroConfig'
+    'hero.apps.HeroConfig',
+    'home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [

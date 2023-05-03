@@ -61,6 +61,7 @@ class AttackType(models.Model):
 
 
 class Ability(models.Model):
+    owner = models.ForeignKey("Hero", on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
     description = models.TextField()
     image_url = models.ImageField('photos/abilities')
