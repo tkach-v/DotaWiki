@@ -1,12 +1,14 @@
 from django.db import models
+from django.utils.text import slugify
 
 
 class Hero(models.Model):
     name = models.CharField(max_length=50)
-    primary_stat = models.ForeignKey('PrimaryStat', on_delete=models.PROTECT)
+    slug = models.SlugField(max_length=50, blank=True, null=True)
+    primary_stat = models.ForeignKey('PrimaryStat', on_delete=models.CASCADE)
     description_short = models.TextField()
     description_long = models.TextField()
-    attack_type = models.ForeignKey("AttackType", on_delete=models.PROTECT)
+    attack_type = models.ForeignKey("AttackType", on_delete=models.CASCADE)
     complexity = models.IntegerField()
     image_url_small = models.ImageField(upload_to="photos/heroes")
     image_url_large = models.ImageField(upload_to="photos/heroes")
@@ -27,14 +29,18 @@ class Hero(models.Model):
     move_speed = models.CharField(max_length=50)
     turn_speed = models.CharField(max_length=50)
     vision = models.CharField(max_length=50)
-    left_10 = models.CharField(max_length=100)
-    right_10 = models.CharField(max_length=100)
-    left_15 = models.CharField(max_length=100)
-    right_15 = models.CharField(max_length=100)
-    left_20 = models.CharField(max_length=100)
-    right_20 = models.CharField(max_length=100)
-    left_25 = models.CharField(max_length=100)
-    right_25 = models.CharField(max_length=100)
+    talent_left_10 = models.CharField(max_length=100)
+    talent_right_10 = models.CharField(max_length=100)
+    talent_left_15 = models.CharField(max_length=100)
+    talent_right_15 = models.CharField(max_length=100)
+    talent_left_20 = models.CharField(max_length=100)
+    talent_right_20 = models.CharField(max_length=100)
+    talent_left_25 = models.CharField(max_length=100)
+    talent_right_25 = models.CharField(max_length=100)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
