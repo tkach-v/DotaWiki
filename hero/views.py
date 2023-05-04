@@ -11,4 +11,5 @@ def index(request):
 class MyModelListView(ListView):
     model = Hero
     template_name = 'hero/heroes_list.html'
-    context_object_name = 'my_model_list'
+    context_object_name = 'heroes'
+    queryset = Hero.objects.order_by('name')

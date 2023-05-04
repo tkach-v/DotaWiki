@@ -72,11 +72,14 @@ class Ability(models.Model):
     cooldown = models.CharField(max_length=50, null=True)
     mana_cost = models.CharField(max_length=50, null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class AbilityType(models.Model):
     name = models.CharField(max_length=50, null=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
