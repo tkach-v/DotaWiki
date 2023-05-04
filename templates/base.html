@@ -24,7 +24,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ру fixed-top py-2">
         <div class="container">
-            <a class="navbar-brand m-0 me-5 p-0" href=""><img class="logo" src="{% static 'images/base/logo.svg' %}"
+            <a class="navbar-brand m-0 me-5 p-0" href="{% url 'home:home' %}"><img class="logo" src="{% static 'images/base/logo.svg' %}"
                                                               alt="logo image"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse py-3 py-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mx-auto mb-lg-0">
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link" href="heroes/">Heroes</a>
+                        <a class="nav-link" href="{% url 'hero:hero_list' %}">Heroes</a>
                     </li>
                     <li class="nav-item px-lg-4">
                         <a class="nav-link" href="">Items</a>
@@ -78,7 +78,7 @@
     <div class="container">
         <div class="row p-0 pt-5 pb-3">
             <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start p-0 pe-5">
-                <a class="logo-footer" href="">
+                <a class="logo-footer" href="{% url 'home:home' %}">
                     <img src="{% static 'images/base/logo.svg' %}" alt="Logo" style="height: 40px; width: auto">
                 </a>
                 <p class="copyright my-3 my-md-5">© 2023 DotaWiki</p>
@@ -105,7 +105,7 @@
                     </a>
                 </p>
                 <p>
-                    <a href="" class="d-flex flex-row align-items-center">
+                    <a href="{% url 'hero:hero_list' %}" class="d-flex flex-row align-items-center">
                         <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
                         <span class="ps-2">Roman</span>
                     </a>
@@ -123,7 +123,7 @@
                     Useful Links
                 </h5>
                 <p>
-                    <a href="">
+                    <a href="{% url 'hero:hero_list' %}">
                         Heroes
                     </a>
                 </p>

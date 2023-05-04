@@ -2,10 +2,10 @@
 {% load static %}
 {% block title %}Heroes{% endblock %}
 {% block mystyles %}
-<link rel="stylesheet" href="{% static 'css/heroes_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/heroes_list.css' %}">
 {% endblock %}
 {% block content %}
-<div class="container">
+    <div class="container">
         <div class="row" align="center">
             <h1>Choose your hero</h1>
         </div>
@@ -41,13 +41,13 @@
             <div class="col-12 col-lg-3 complexity px-0 p-0">
                 <div class="d-flex align-items-center justify-content-center m-0 p-0">
                     <p class="m-0">Complexity:</p>
-                    <a id="complexity_1" href="">
+                    <a id="complexity_1" href="?complexity=1">
                         <img src="{% static 'images/heroes_list/complexity_empty.svg' %}" alt="">
                     </a>
-                    <a id="complexity_2" href="">
+                    <a id="complexity_2" href="?complexity=2">
                         <img src="{% static 'images/heroes_list/complexity_empty.svg' %}">
                     </a>
-                    <a id="complexity_3" href="">
+                    <a id="complexity_3" href="?complexity=3">
                         <img src="{% static 'images/heroes_list/complexity_empty.svg' %}">
                     </a>
                 </div>
@@ -68,21 +68,19 @@
                 </form>
             </div>
         </div>
-            <div class="row heroes-list">
+        <div class="row heroes-list">
             <h1 id="no-hero-match">No Heroes match your filter</h1>
-            <div class="row">
-                {% for hero in heroes %}
+            {% for hero in heroes %}
                 <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
-                    <a class="d-flex flex-column" href="">
-                        <img class="img-fluid"
-                            src="{{ hero.image_url_small.url }}"
-                            alt="{{ hero.name }}">
+                    <a class="d-flex flex-column" href="{% url 'hero:hero_list' %}">
+                        <img class="img-fluid" src="{{ hero.image_url_small.url }}" alt="{{ hero.name }}">
                         <div class="hero-name">{{ hero.name }}</div>
                     </a>
                 </div>
-                {% endfor %}
-            </div>
-                {% endblock %}
-        {% block myscripts %}
-        <script src="{% static 'scripts/heroes_list.js' %}"></script>
-        {% endblock %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block myscripts %}
+    <script src="{% static 'scripts/heroes_list.js' %}"></script>
+{% endblock %}
