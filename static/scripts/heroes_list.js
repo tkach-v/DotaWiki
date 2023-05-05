@@ -39,7 +39,6 @@ document.querySelector(".search-heroes a").addEventListener('click', evt => {
 
 
 function getHeroes(complexity, primaryAbility) {
-
     const url = new URL(window.location.href);
     if (complexity) {
         url.searchParams.set("complexity", complexity);
@@ -73,20 +72,18 @@ function getHeroes(complexity, primaryAbility) {
 }
 
 // add filter to heroes page
-const heroURL = "{% url 'hero:hero_list' %}";
+let chosenPrimaryStat = null;
+let chosenComplexity = null;
 
 // filter attributes
 document.querySelectorAll(".attribute a").forEach(a => {
     a.addEventListener('click', evt => {
-
-
-
         // style clicked
         if (a.classList.contains("clicked")) {
             a.classList.remove('clicked');
-            getHeroes(null, null);
+            chosenPrimaryStat = null;
         } else {
-            getHeroes(null, a.querySelector("p").innerText);
+            chosenPrimaryStat = a.querySelector("p").innerText;
             a.classList.add('clicked');
 
             // delete styles for others
@@ -96,8 +93,7 @@ document.querySelectorAll(".attribute a").forEach(a => {
                 }
             });
         }
-
-
+        getHeroes(chosenComplexity, chosenPrimaryStat);
         evt.preventDefault();
     });
 });
@@ -112,7 +108,7 @@ for (let i = 0; i < lstComplexity.length; i++) {
             lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_1'>";
             lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_2'>";
             lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_3'>";
-            getHeroes(null, null);
+            chosenComplexity = null;
         } else {
             if (lstComplexity[i].id === 'complexity_1') {
                 lstComplexity[0].classList.add('chosen');
@@ -121,7 +117,7 @@ for (let i = 0; i < lstComplexity.length; i++) {
                 lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_1'>";
                 lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_2'>";
                 lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_3'>";
-                getHeroes(1, null);
+                chosenComplexity = 1;
             } else if (lstComplexity[i].id === 'complexity_2') {
                 lstComplexity[0].classList.remove('chosen');
                 lstComplexity[1].classList.add('chosen');
@@ -129,7 +125,7 @@ for (let i = 0; i < lstComplexity.length; i++) {
                 lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_1'>";
                 lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_2'>";
                 lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_empty.svg\" alt='comlexity_3'>";
-                getHeroes(2, null);
+                chosenComplexity = 2;
             } else {
                 lstComplexity[0].classList.remove('chosen');
                 lstComplexity[1].classList.remove('chosen');
@@ -137,10 +133,10 @@ for (let i = 0; i < lstComplexity.length; i++) {
                 lstComplexity[0].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_1'>";
                 lstComplexity[1].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_2'>";
                 lstComplexity[2].innerHTML = "<img src=\"/static/images/heroes_list/complexity_full.svg\" alt='comlexity_3'>";
-                getHeroes(3, null);
+                chosenComplexity = 3;
             }
         }
-
+        getHeroes(chosenComplexity, chosenPrimaryStat);
         evt.preventDefault();
     });
 }
