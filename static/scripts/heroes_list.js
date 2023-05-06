@@ -60,7 +60,7 @@ function getHeroes(complexity, primaryAbility) {
             (data.context).forEach(hero => {
                 const heroHTMLElement = `
                 <div class="col-6 col-md-3 col-lg-2 p-0 pe-3 pb-3">
-                    <a class="d-flex flex-column" href="{% url 'hero:hero_list' %}">
+                    <a class="d-flex flex-column" href="${hero.slug}">
                         <img class="img-fluid" src="/media/${hero.image_url_small}" alt="${hero.name}">
                         <div class="hero-name">${hero.name}</div>
                     </a>

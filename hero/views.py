@@ -1,12 +1,19 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.http import JsonResponse
 
 from .models import *
 
 
 def index(request):
-    return render(request, "hero/index.html")
+    return render(request, "hero/heroes_detail.html")
+
+
+class HeroDetail(DetailView):
+    model = Hero
+    template_name = 'hero/heroes_detail.html'
+    context_object_name = 'hero'
+    slug_url_kwarg = 'slug'
 
 
 class HeroesList(ListView):

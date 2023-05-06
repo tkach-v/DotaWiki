@@ -1,0 +1,101 @@
+.search {
+  margin-right: 3.5px;
+}
+
+.navbar .container {
+  padding-left: 14px;
+}
+
+h2 {
+  font-family: "Bebas Neue", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 35px;
+}
+
+.items-filter {
+  background: #1A1A1F;
+  margin: 0 14px;
+}
+.items-filter .filter-item {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 7px;
+  border: 1px solid #353535;
+  font-size: 20px;
+  line-height: 28px;
+}
+@media (max-width: 992px) {
+  .items-filter .filter-item {
+    font-size: 18px;
+  }
+}
+.items-filter .filter-item:hover {
+  background-color: #242429;
+  color: #FED14C;
+}
+.items-filter .basic-items,
+.items-filter .neutral-items {
+  font-size: 24px;
+}
+@media (max-width: 992px) {
+  .items-filter .basic-items,
+  .items-filter .neutral-items {
+    font-size: 20px;
+  }
+}
+.items-filter .clicked {
+  background-color: #242429;
+  color: #FED14C;
+}
+.items-filter .clicked a {
+  color: #FED14C;
+}
+.items-filter .filter-items-neutral {
+  display: none;
+}
+
+.items-list {
+  margin-left: 14px;
+}
+.items-list .item {
+  background: #1A1A1F;
+  font-size: 20px;
+  line-height: 23px;
+}
+.items-list .item a {
+  color: #ffffff;
+}
+.items-list .item a:hover {
+  opacity: 0.85;
+}
+.items-list .item .price {
+  color: #FED14C;
+}
+.items-list .item .coin {
+  width: 16px;
+  height: 16px;
+}
+.items-list .item .item-name {
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .items-list * {
+    font-size: 18px;
+  }
+}
+@media (max-width: 340px) {
+  .items-list .col-6 {
+    padding: 0 5px;
+  }
+}
+
+footer .container {
+  padding: 0 14px;
+}
+
+/*# sourceMappingURL=items_list.css.map */
