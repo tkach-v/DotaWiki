@@ -1,0 +1,106 @@
+.item-description,
+.item-ability,
+.item-infobox,
+.item-notes {
+  background: #1A1A1F;
+  box-shadow: 6px 12px 40px rgba(11, 11, 26, 0.55);
+}
+
+.item-description h2 {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+}
+.item-description p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.item-ability h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.item-ability .ability-description,
+.item-ability .ability-details,
+.item-ability .ability-characteristic {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.item-ability .ability-characteristics {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #353535;
+  text-align: center;
+}
+.item-ability .ability-characteristics .characteristic-value {
+  margin: 0;
+  color: #3C62C2;
+}
+.item-ability .ability-description {
+  border-bottom: 1px solid #353535;
+}
+.item-ability .detail-title {
+  font-weight: 700;
+}
+
+.item-infobox h5 {
+  font-size: 22px;
+  line-height: 25px;
+  text-align: center;
+}
+.item-infobox p {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.item-infobox .item-characteristics {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #353535;
+  font-size: 16px;
+  line-height: 18px;
+}
+.item-infobox .item-characteristics .price {
+  color: #FED14C;
+}
+.item-infobox .item-recipe p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+}
+.item-infobox .item-recipe img {
+  width: 50px;
+  height: auto;
+}
+
+.item-notes h5 {
+  font-size: 22px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.characteristic-name {
+  font-weight: 700;
+}
+
+.connection .connect-horizontal {
+  border-bottom: 3px solid #FFFFFF;
+}
+.connection .connect-main {
+  height: 12px;
+  border-right: 3px solid #FFFFFF;
+}
+.connection .connect-others {
+  height: 12px;
+  border-left: 3px solid #FFFFFF;
+  border-right: 3px solid #FFFFFF;
+}
+
+/*# sourceMappingURL=item_detail.css.map */

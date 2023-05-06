@@ -36,6 +36,9 @@
     font-size: 36px;
   }
 }
+.hero-summary .hero-info .hero-name img {
+  border-radius: 100%;
+}
 .hero-summary .hero-info .description-short {
   font-size: 24px;
   text-align: center;
@@ -107,6 +110,28 @@
 }
 .hero-summary .hero-info .abilities-container .ability-item img {
   border: 2px solid #000000;
+  position: relative;
+}
+.hero-summary .hero-info .abilities-container .ability-shard,
+.hero-summary .hero-info .abilities-container .ability-scepter {
+  position: relative;
+}
+.hero-summary .hero-info .abilities-container .ability-shard::after,
+.hero-summary .hero-info .abilities-container .ability-scepter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hero-summary .hero-info .abilities-container .ability-shard::after {
+  background-image: url("/images/hero_detail/ability_shard.png");
+}
+.hero-summary .hero-info .abilities-container .ability-scepter::after {
+  background-image: url("/images/hero_detail/ability_scepter.png");
 }
 .hero-summary .hero-info .abilities-container .talents img {
   border: 0;
@@ -118,14 +143,22 @@
 }
 .ability-description .ability-image {
   border: 2px solid #000000;
-  max-width: 106px;
-  max-height: 106px;
+  max-width: 118px;
+  max-height: 118px;
 }
 .ability-description .ability-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
+}
+.ability-description .ability-type {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #1c2e50;
+  color: #ddd;
+  letter-spacing: 1px;
+  border-radius: 5px;
 }
 .ability-description .ability-text,
 .ability-description .ability-details {
