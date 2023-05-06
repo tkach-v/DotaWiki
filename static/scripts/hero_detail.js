@@ -35,6 +35,12 @@ items.forEach(item => {
         });
         document.querySelector("#collapseTalentTree").classList.remove("show");
 
+        document.querySelector("body").style.pointerEvents = "none";
+
+        setTimeout(() => {
+            document.querySelector("body").style.pointerEvents = "auto";
+        }, 350);
+
         evt.preventDefault();
     });
 });
