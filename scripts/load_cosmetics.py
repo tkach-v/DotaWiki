@@ -19,17 +19,21 @@ def run():
         ow = Hero.objects.get(name=row['hero_name'])
 
         for cosm in row['cosmetics']:
+            try:
+                response = requests.get(cosm['image_url'])
+                image = Image.open(BytesIO(response.content))
+                image_io = BytesIO()
+                image.save(image_io, format='PNG')
+                image_io.seek(0)
+            except:
+                print(f"Error! In hero {row['hero_name']}, in item {cosm['name']}")
+                continue
 
             cosmetic = Cosmetic(
                 owner=ow,
                 name=cosm['name'],
             )
 
-            response = requests.get(cosm['image_url'])
-            image = Image.open(BytesIO(response.content))
-            image_io = BytesIO()
-            image.save(image_io, format='PNG')
-            image_io.seek(0)
             cosmetic.image_url.save(cosm['name'].lower().replace(" ", "_") + '.png', image_io)
 
             cosmetic.save()
