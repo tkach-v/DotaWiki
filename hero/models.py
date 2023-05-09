@@ -83,3 +83,10 @@ class AbilityType(models.Model):
         return str(self.name)
 
 
+class Cosmetic(models.Model):
+    owner = models.ForeignKey("Hero", on_delete=models.PROTECT)
+    name = models.CharField(max_length=100)
+    image_url = models.ImageField(upload_to='photos/cosmetics')
+
+    def __str__(self):
+        return self.name

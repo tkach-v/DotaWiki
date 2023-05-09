@@ -128,10 +128,10 @@
   background-size: contain;
 }
 .hero-summary .hero-info .abilities-container .ability-shard::after {
-  background-image: url("/images/hero_detail/ability_shard.png");
+  background-image: url("../images/hero_detail/ability_shard.png");
 }
 .hero-summary .hero-info .abilities-container .ability-scepter::after {
-  background-image: url("/images/hero_detail/ability_scepter.png");
+  background-image: url("../images/hero_detail/ability_scepter.png");
 }
 .hero-summary .hero-info .abilities-container .talents img {
   border: 0;
@@ -220,6 +220,9 @@
   text-align: center;
   font-size: 24px;
 }
+.hero-characteristics .portrait img {
+  width: 256px;
+}
 .hero-characteristics .portrait .health {
   background: linear-gradient(92.36deg, #5CBF39 0%, #1A5B03 100%);
 }
@@ -245,7 +248,7 @@
 .hero-characteristics .mobility {
   border-left: 1px solid #FFFFFF;
 }
-@media (max-width: 998px) {
+@media (max-width: 1200px) {
   .hero-characteristics .attack,
   .hero-characteristics .defence,
   .hero-characteristics .mobility {
