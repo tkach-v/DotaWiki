@@ -88,38 +88,26 @@
                             </div>
                             <div class="row ability-details">
                                 <div class="col-12">
+                                    {% for key, value in ability.generic_details.items %}
                                     <p class="detail">
                                         <span class="detail-title">
-                                            Cast Animation:
+                                            {{ key }}
                                         </span>
                                         <span class="detail-value">
-                                            0.55+0
+                                            {{ value }}
                                         </span>
                                     </p>
+                                    {% endfor %}
+                                    {% for key, value in ability.specific_details.items %}
                                     <p class="detail">
                                         <span class="detail-title">
-                                            Cast Animation:
+                                            {{ key }}
                                         </span>
                                         <span class="detail-value">
-                                            0.55+0
+                                            {{ value }}
                                         </span>
                                     </p>
-                                    <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                                        <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                                    </p>
-                                    <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                                        <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                                    </p>
+                                    {% endfor %}
                                 </div>
                             </div>
                             {% if ability.cooldown %}
@@ -208,10 +196,10 @@
                          src={{ hero.image_url_large.url }}
                          alt="{{ hero.name }}">
                     <div class="prev_next_btn">
-                        <a href="" class="direction-button d-flex" id="prev-hero">
+                        <a href="{% url 'hero:hero_detail' slug=prev_hero.slug %}" class="direction-button d-flex" id="prev-hero">
                             <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
                         </a>
-                        <a href="" class="direction-button d-flex" id="next-hero">
+                        <a href="{% url 'hero:hero_detail' slug=next_hero.slug %}" class="direction-button d-flex" id="next-hero">
                             <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
                         </a>
                     </div>
