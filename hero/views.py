@@ -18,8 +18,19 @@ class HeroDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         hero = self.object
+        heroes = Hero.objects.order_by('name')
+
+        next_hero = heroes.filter(
+            name__gt=hero.name).first() or heroes.last()  # Отримати наступного героя або останнього
+        prev_hero = heroes.filter(name__lt=hero.name).last() or heroes.first()
+
+        context['next_hero'] = next_hero
+        context['prev_hero'] = prev_hero
+
         abilities = hero.ability_set.all()  # Отримати список вмінь героя
+        cosmetics = hero.cosmetic_set.all()
         context['abilities'] = abilities
+        context['cosmetics'] = cosmetics
         return context
 
 
