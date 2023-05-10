@@ -1,0 +1,388 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Item list{% endblock %}
+{% block mystyles %}
+<link rel="stylesheet" href="{% static 'css/items_list.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container p-0">
+    <h2>
+        <Items></Items>
+    </h2>
+    <div class="items-filter p-3 mb-4">
+        <div class="row main-filter m-0">
+            <div class="col-6 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item basic-items clicked" href="">
+                        Basic items
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item neutral-items" href="">
+                        Neutral items
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row addition-filter filter-items-basic m-0">
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item clicked" href="">
+                        All
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Consumables
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Equipment
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Miscellaneous
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Secret
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Attributes
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Magical
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Artifacts
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Armor
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Weapons
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Accessories
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Support
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row addition-filter filter-items-neutral m-0">
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item clicked" href="">
+                        All
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Tier 1
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Tier 2
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Tier 3
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Tier 4
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2 p-2">
+                <div class="row m-0">
+                    <a class="col-12 filter-item" href="">
+                        Tier 5
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="items-list">
+        <div class="row m-0">
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
+                <div class="item py-3 px-auto">
+                    <a href="">
+                        <div class="row m-0">
+                            <div class="col-6 d-flex justify-content-end">
+                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                            </div>
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                        <span class="price pe-2">
+                            6800
+                        </span>
+                                <img src="images/items_list/coin.png" alt="Coin">
+                            </div>
+                        </div>
+                        <div class="item-name pt-3 px-2">
+                            <span>Tango</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block myscripts %}
+<script src="{% static 'scripts/items_list.js' %}"></script>
+{% endblock %}
