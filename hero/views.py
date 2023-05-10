@@ -19,7 +19,9 @@ class HeroDetail(DetailView):
         context = super().get_context_data(**kwargs)
         hero = self.object
         abilities = hero.ability_set.all()  # Отримати список вмінь героя
+        cosmetics = hero.cosmetic_set.all()
         context['abilities'] = abilities
+        context['cosmetics'] = cosmetics
         return context
 
 
