@@ -6,19 +6,18 @@
 {% endblock %}
 {% block content %}
 <a href="" class="direction-button up-button">
-    <img src="images/base/up_btn.svg" alt="up-button">
+    <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
 </a>
 <div class="container p-3 p-xl-5">
     <div class="item-description p-4 mx-0 mx-xl-5">
         <div class="item-name d-flex align-items-center justify-content-center mb-3">
             <h2 class="pe-4">
-                Overwhelming Blink
+               {{ item.name }}
             </h2>
-            <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink" class="img-fluid">
+            <img src="{{ item.image_url.url }}" alt="{{ item.name }}" class="img-fluid">
         </div>
         <p>
-            Overwhelming Blink is an item purchasable at the Base Shop, under Arcane. However, it can only be completed
-            with items from the Secret Shop.
+            {{ item.description }}
         </p>
     </div>
     <div class="row m-0 mt-4">

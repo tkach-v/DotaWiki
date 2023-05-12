@@ -11,5 +11,12 @@ class ItemList(ListView):
     queryset = Item.objects.order_by('name')
 
 
+class ItemDetail(DetailView):
+    model = Item
+    template_name = 'item/items_detail.html'
+    context_object_name = 'item'
+    slug_url_kwarg = 'slug'
+
+
 def index2(request):
     return render(request, 'item/items_detail.html')

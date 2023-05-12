@@ -5,5 +5,5 @@ app_name = 'item'
 
 urlpatterns = [
     path('', ItemList.as_view(), name='item_list'),
-    path('test2/', index2)
+    path('<slug:slug>/', ItemDetail.as_view(), name='item_detail')
 ]

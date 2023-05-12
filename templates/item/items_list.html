@@ -162,7 +162,7 @@
             {% for item in items %}
             <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
                 <div class="item py-3 px-auto">
-                    <a href="">
+                    <a href="{% url 'item:item_detail' slug=item.slug %}">
                         <div class="row m-0">
                             <div class="col-6 d-flex justify-content-end">
                                 <img class="img-fluid" src="{{ item.image_url.url }}" alt="Item image">
