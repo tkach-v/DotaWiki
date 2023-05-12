@@ -67,7 +67,6 @@ def run():
             print("No image small in", row['name'])
             pass
 
-
         try:
             response_large = requests.get(row['image_url_large'])
             image = Image.open(BytesIO(response_large.content))

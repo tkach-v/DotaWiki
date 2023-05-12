@@ -69,8 +69,8 @@ class Ability(models.Model):
     type = models.ForeignKey("AbilityType", on_delete=models.PROTECT)
     generic_details = jsonfield.JSONField(blank=True, null=True)
     specific_details = jsonfield.JSONField(blank=True, null=True)
-    cooldown = models.CharField(max_length=50, null=True)
-    mana_cost = models.CharField(max_length=50, null=True)
+    cooldown = models.CharField(max_length=50, null=True, blank=True)
+    mana_cost = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -90,3 +90,5 @@ class Cosmetic(models.Model):
 
     def __str__(self):
         return self.name
+
+
