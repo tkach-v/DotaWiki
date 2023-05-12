@@ -159,226 +159,26 @@
     </div>
     <div class="items-list">
         <div class="row m-0">
+            {% for item in items %}
             <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
                 <div class="item py-3 px-auto">
                     <a href="">
                         <div class="row m-0">
                             <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
+                                <img class="img-fluid" src="{{ item.image_url.url }}" alt="Item image">
                             </div>
                             <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
+                                <span class="price pe-2">{{ item.cost }}</span>
+                                <img src="{% static 'images/items_list/coin.png' %}" alt="Coin">
                             </div>
                         </div>
                         <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
+                            <span>{{ item.name }}</span>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-xl-2 m-0 p-0 pe-3 pb-3">
-                <div class="item py-3 px-auto">
-                    <a href="">
-                        <div class="row m-0">
-                            <div class="col-6 d-flex justify-content-end">
-                                <img class="img-fluid" src="images/items_list/test-item.jpg" alt="Item image">
-                            </div>
-                            <div class="col-6 d-flex align-items-center justify-content-start">
-                        <span class="price pe-2">
-                            6800
-                        </span>
-                                <img src="images/items_list/coin.png" alt="Coin">
-                            </div>
-                        </div>
-                        <div class="item-name pt-3 px-2">
-                            <span>Tango</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
