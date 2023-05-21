@@ -13,6 +13,7 @@ def run():
         items = json.load(f1)
 
     Item.objects.all().delete()
+    TypeSpecific.objects.all().delete()
 
     for row in items:
         print(row['name'])
@@ -21,10 +22,12 @@ def run():
         disassemble_val, created = Disassemble.objects.get_or_create(name=row['disassemble'])
         availability_val, created = Availability.objects.get_or_create(name=row['availability'])
         type_global_val, created = TypeGlobal.objects.get_or_create(name=row['type_global'])
-        type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'])
-
         if type_global_val.name == 'Neutral':
-            type_specific_val.name = type_global_val.name[:6]
+            type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'][:6])
+        else:
+            type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'])
+
+
 
         item = Item(
             name=row['name'],
