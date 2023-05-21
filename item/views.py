@@ -11,6 +11,13 @@ class ItemList(ListView):
     queryset = Item.objects.order_by('name')
 
 
+class ItemList(ListView):
+    model = Item
+    template_name = 'item/items_list.html'
+    context_object_name = 'items'
+    queryset = Item.objects.order_by('name')
+
+
 class ItemDetail(DetailView):
     model = Item
     template_name = 'item/items_detail.html'

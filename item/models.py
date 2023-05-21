@@ -1,3 +1,4 @@
+import jsonfield
 from django.db import models
 from django.utils.text import slugify
 
@@ -58,3 +59,30 @@ class TypeSpecific(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+class ItemAbility(models.Model):
+    owner = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=300, null=True)
+    cooldown = models.CharField(max_length=100, null=True)
+    manacost = models.CharField(max_length=100, null=True)
+    details = jsonfield.JSONField(blank=True, null=True)
+    ability_type = models.ForeignKey('AbilityType', on_delete=models.CASCADE)
+    affects = models.ForeignKey('Affects', on_delete=models.CASCADE)
+    damage = models.ForeignKey('Damage', on_delete=models.CASCADE)
+
+
+class AbilityType(models.Model):
+    name = models.CharField(max_length=100, null=True)
+
+
+class Affects(models.Model):
+    name = models.CharField(max_length=100, null=True)
+
+
+class Damage(models.Model):
+    name = models.CharField(max_length=100, null=True)
+
+
+

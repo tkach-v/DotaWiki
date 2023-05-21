@@ -71,8 +71,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../font/bebas-neue-regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../font/bebas-neue-bold.ttf");
+  font-weight: 700;
+}
 body {
-  margin-top: 58px;
+  margin-top: 51px;
   background: linear-gradient(to bottom, #3B3B42 0%, #191820 100%) fixed;
   color: #ffffff;
   font-family: Helvetica, serif;
@@ -80,6 +90,15 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+body::-webkit-scrollbar-track {
+  background-color: #1A1A1F;
 }
 
 .navbar {
@@ -101,17 +120,6 @@ body {
   color: #ffffff;
 }
 .navbar .nav-link:hover {
-  color: #FED14C;
-}
-.navbar .dropdown-menu {
-  background-color: #242429;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-}
-.navbar .dropdown-menu a {
-  color: #FFFFFF;
-}
-.navbar .dropdown-menu a:hover {
-  background-color: rgba(100, 100, 100, 0.36);
   color: #FED14C;
 }
 
@@ -182,7 +190,7 @@ body {
   z-index: 10;
 }
 
-footer {
+footer, .footer {
   background-color: #1A1A1F;
   border-top: 1px solid #303030;
   font-weight: 400;
@@ -191,22 +199,22 @@ footer {
   margin-top: 90px;
 }
 @media (max-width: 768px) {
-  footer {
+  footer, .footer {
     font-size: 14px;
   }
 }
-footer .row {
+footer .row, .footer .row {
   margin-left: 3px;
   margin-right: 3px;
 }
-footer .logo-footer:hover {
+footer .logo-footer:hover, .footer .logo-footer:hover {
   opacity: 1;
 }
-footer .copyright {
+footer .copyright, .footer .copyright {
   font-size: 14px;
   color: #696969;
 }
-footer h5 {
+footer h5, .footer h5 {
   font-weight: 700;
   font-size: 20px;
   border-bottom: 1px solid #FFFFFF;
@@ -215,18 +223,18 @@ footer h5 {
   margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-  footer h5 {
+  footer h5, .footer h5 {
     font-size: 16px;
   }
 }
-footer a {
+footer a, .footer a {
   color: #FFFFFF;
 }
-footer a:hover {
+footer a:hover, .footer a:hover {
   color: #FFFFFF;
   opacity: 0.8;
 }
-footer .contacts a {
+footer .contacts a, .footer .contacts a {
   height: 24px !important;
 }
 
