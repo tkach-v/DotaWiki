@@ -1,4 +1,276 @@
-{% extends 'base.html' %}
-{% block content %}
-    HELLO, HOME PAGE
-{% endblock %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DotaWiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2247aab1c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/base/icon.svg' %}">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark ру fixed-top py-2">
+        <div class="container">
+            <a class="navbar-brand m-0 me-5 p-0" href="{% url 'home:home' %}"><img class="logo" src="{% static 'images/base/logo.svg' %}"
+                                                                        alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+            <div class="collapse navbar-collapse py-3 py-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mx-auto mb-lg-0">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="{% url 'hero:hero_list' %}">Heroes</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="{% url 'item:item_list' %}">Items</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="{% url 'home:home' %}">Creeps</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="{% url 'home:home' %}">Mechanics</a>
+                    </li>
+                </ul>
+                <form role="search" class="search">
+                    <div class="input-group pe-2">
+                        <span class="input-group-text py-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="form-input" placeholder="Search...">
+                        <span class="input-group-text m-0 p-0 px-2 ms-auto search_x">
+                            <a role="button" href="">
+                                <i class="fa-solid fa-xmark" style="display: none"></i>
+                            </a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <a href="" class="direction-button up-button">
+        <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
+    </a>
+    <div class="container p-0" id="disclaimer">
+        <video autoplay loop muted class="disclaimer__video" poster="{% static 'images/index/video-image.jpg' %}">
+            <source src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm"
+                    type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container disclaimer__content m-0">
+            <h1>Discover the <span>Dota 2</span></h1>
+            <p>The ultimate resource for players who want to stay ahead of the competition. Whether you're looking to
+                improve your gameplay or learn more about your favorite heroes and items, we've got you covered.</p>
+            <a class="learn-more-btn" href="#creeps">
+                <span>Learn more</span>
+                <img src="{% static 'images/index/arrow.svg' %}" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="slide active" id="creeps">
+            <div class="slide__wrapper">
+                <img class="slide__title" src="{% static 'images/index/creeps-title.svg' %}" alt="">
+                <img class="slide__image" src="{% static 'images/index/creeps_fhd.png' %}" alt="Creeps image">
+                <div class="slide__poster-card">
+                    <div class="row-1">
+                        <div class="poster-card__text">
+                            Mechanics are the inner workings of Dota 2. The following is a list of mechanics topics.
+                            Click on
+                            each topic to view how they are calculated, where they originate, as well as their complex
+                            interactions with other mechanics elements.
+                        </div>
+                        <div class="poster-card__btn">
+                            <a class="learn-more-btn" href="#">
+                                <span>Learn more</span>
+                                <img src="{% static 'images/index/arrow.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <a class="poster__link poster__link_active" href="#creeps">Creeps</a>
+                        <a class="poster__link" href="#items">Items</a>
+                        <a class="poster__link" href="#heroes">Heroes</a>
+                        <a class="poster__link" href="#mechanics">Mechanics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="items">
+            <div class="slide__wrapper">
+                <img class="slide__title" src="{% static 'images/index/items-title.svg' %}" alt="">
+                <img class="slide__image" src="{% static 'images/index/items.png' %}" alt="Items image">
+                <div class="slide__poster-card">
+                    <div class="row-1">
+                        <div class="poster-card__text">
+                            Objects that can be purchased on the game map. Items increase a hero's properties, and grant
+                            them
+                            special abilities and effects. Neutral items can be found by killing neutral creeps.
+                        </div>
+                        <div class="poster-card__btn">
+                            <a class="learn-more-btn" href="#">
+                                <span>Learn more</span>
+                                <img src="{% static 'images/index/arrow.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <a class="poster__link" href="#creeps">Creeps</a>
+                        <a class="poster__link poster__link_active" href="#items">Items</a>
+                        <a class="poster__link" href="#heroes">Heroes</a>
+                        <a class="poster__link" href="#mechanics">Mechanics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="heroes">
+            <div class="slide__wrapper">
+                <img class="slide__title" src="{% static 'images/index/heroes-title.svg' %}" alt="">
+                <img class="slide__image" src="{% static 'images/index/heroes.png' %}" alt="Heroes image">
+                <div class="slide__poster-card">
+                    <div class="row-1">
+                        <div class="poster-card__text">
+                            Objects that can be purchased on the game map. Items increase a hero's properties, and grant
+                            them
+                            special abilities and effects. Neutral items can be found by killing neutral creeps.
+                        </div>
+                        <div class="poster-card__btn">
+                            <a class="learn-more-btn" href="#">
+                                <span>Learn more</span>
+                                <img src="{% static 'images/index/arrow.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <a class="poster__link" href="#creeps">Creeps</a>
+                        <a class="poster__link" href="#items">Items</a>
+                        <a class="poster__link poster__link_active" href="#heroes">Heroes</a>
+                        <a class="poster__link" href="#mechanics">Mechanics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="mechanics">
+            <div class="slide__wrapper">
+                <img class="slide__title" src="{% static 'images/index/mechanics-title.svg' %}" alt="">
+                <img class="slide__image" src="{% static 'images/index/mechanics.png' %}" alt="Mechanics image">
+                <div class="slide__poster-card">
+                    <div class="row-1">
+                        <div class="poster-card__text">
+                            Mechanics are the inner workings of Dota 2. The following is a list of mechanics topics.
+                            Click
+                            on
+                            each topic to view how they are calculated, where they originate, as well as their complex
+                            interactions with other mechanics elements.
+                        </div>
+                        <div class="poster-card__btn">
+                            <a class="learn-more-btn" href="#">
+                                <span>Learn more</span>
+                                <img src="{% static 'images/index/arrow.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <a class="poster__link" href="#creeps">Creeps</a>
+                        <a class="poster__link" href="#items">Items</a>
+                        <a class="poster__link" href="#heroes">Heroes</a>
+                        <a class="poster__link poster__link_active" href="#mechanics">Mechanics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row p-0 pt-5 pb-3">
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start p-0 pe-5">
+                    <a class="logo-footer" href="index.html">
+                        <img src="{% static 'images/base/logo.svg' %}" alt="Logo" style="height: 40px; width: auto">
+                    </a>
+                    <p class="copyright my-3 my-md-5">© 2023 DotaWiki</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-0 pe-5 my-3 my-md-0 about-us">
+                    <h5>
+                        About Us
+                    </h5>
+                    <p>
+                        Welcome to our Dota2 encyclopedia! We're gamers and Dota2 enthusiasts providing accurate and
+                        up-to-date information about heroes, items, skins, and more. Our detailed guides and tips are
+                        designed to help you improve your gameplay and enjoy the game to the fullest. Thank you for
+                        visiting!
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2 p-0 contacts">
+                    <h5>
+                        Contacts
+                    </h5>
+                    <p>
+                        <a href="https://www.linkedin.com/in/volodymyr-tkach5/"
+                           class="d-flex flex-row align-items-center">
+                            <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                            <span class="ps-2">Volodymyr</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="" class="d-flex flex-row align-items-center">
+                            <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                            <span class="ps-2">Roman</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/cargellenn-undefined-568bb7266/"
+                           class="d-flex flex-row align-items-center">
+                            <img src="{% static 'images/base/linkedin-logo.png' %}" alt="">
+                            <span class="ps-2">Vladyslav</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2 p-0 useful-links">
+                    <h5>
+                        Useful Links
+                    </h5>
+                    <p>
+                        <a href="">
+                            Heroes
+                        </a>
+                    </p>
+                    <p>
+                        <a href="">
+                            Items
+                        </a>
+                    </p>
+                    <p>
+                        <a href="">
+                            Creeps
+                        </a>
+                    </p>
+                    <p>
+                        <a href="">
+                            Mechanics
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<script src="{% static 'scripts/index.js' %}"></script>
+<script src="{% static 'scripts/base.js' %}"></script>
+</body>
+</html>

@@ -27,7 +27,7 @@
 .hero-summary .hero-info .hero-name {
   font-family: "Bebas Neue", serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 48px;
   margin: 0;
 }
@@ -128,10 +128,10 @@
   background-size: contain;
 }
 .hero-summary .hero-info .abilities-container .ability-shard::after {
-  background-image: url("../images/hero_detail/ability_shard.png");
+  background-image: url("/images/hero_detail/ability_shard.png");
 }
 .hero-summary .hero-info .abilities-container .ability-scepter::after {
-  background-image: url("../images/hero_detail/ability_scepter.png");
+  background-image: url("/images/hero_detail/ability_scepter.png");
 }
 .hero-summary .hero-info .abilities-container .talents img {
   border: 0;
@@ -203,7 +203,7 @@
 
 .hero-characteristics h2 {
   font-family: "Bebas Neue", serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 42px;
   line-height: 42px;
   text-align: center;
@@ -268,7 +268,7 @@
 }
 .hero-cosmetic h2 {
   font-family: "Bebas Neue", serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 42px;
   line-height: 42px;
   text-align: center;

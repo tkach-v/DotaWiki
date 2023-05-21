@@ -167,10 +167,16 @@
                             <div class="col-6 d-flex justify-content-end">
                                 <img class="img-fluid" src="{{ item.image_url.url }}" alt="Item image">
                             </div>
+                            {% if item.cost %}
                             <div class="col-6 d-flex align-items-center justify-content-start">
                                 <span class="price pe-2">{{ item.cost }}</span>
                                 <img src="{% static 'images/items_list/coin.png' %}" alt="Coin">
                             </div>
+                            {% elif item.type_global.name == "Neutral" %}
+                            <div class="col-6 d-flex align-items-center justify-content-start">
+                                <span class="price pe-2">{{ item.type_specific }}</span>
+                            </div>
+                            {% endif %}
                         </div>
                         <div class="item-name pt-3 px-2">
                             <span>{{ item.name }}</span>

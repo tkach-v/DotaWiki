@@ -12,7 +12,7 @@
     <div class="item-description p-4 mx-0 mx-xl-5">
         <div class="item-name d-flex align-items-center justify-content-center mb-3">
             <h2 class="pe-4">
-               {{ item.name }}
+                {{ item.name }}
             </h2>
             <img src="{{ item.image_url.url }}" alt="{{ item.name }}" class="img-fluid">
         </div>
@@ -210,34 +210,38 @@
         <div class="col-12 col-md-5 p-0 pe-xl-5">
             <div class="item-infobox p-4">
                 <h5 class="m-0 pb-4">
-                    Overwhelming Blink
+                    {{ item.name }}
                 </h5>
                 <p>
-                    A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.
+                    {{ item.lore_description }}
                 </p>
                 <div class="item-characteristics py-2">
+                    {% if item.cost %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
                             Cost:
                         </div>
                         <div class="characteristic-value d-flex align-items-center justify-content-start">
                         <span class="price pe-2">
-                            6800
+                            {{ item.cost }}
                         </span>
-                            <img src="images/items_list/coin.png" alt="Coin">
+                            <img src="{% static 'images/items_list/coin.png' %}" alt="Coin">
                         </div>
                     </div>
+                    {% endif %}
+                    {% if item.sell_value %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
                             Sell value:
                         </div>
                         <div class="characteristic-value d-flex align-items-center justify-content-start">
                         <span class="price pe-2">
-                            3400
+                            {{ item.sell_value }}
                         </span>
-                            <img src="images/items_list/coin.png" alt="Coin">
+                            <img src="{% static 'images/items_list/coin.png' %}" alt="Coin">
                         </div>
                     </div>
+                    {% endif %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
                             Active:
@@ -246,12 +250,30 @@
                             Overwhelming Blink
                         </div>
                     </div>
+                    {% if item.shareable.name %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
-                            Disassemble
+                            Shareable: {{ item.shareable }}
                         </div>
                         <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
                     </div>
+                    {% endif %}
+                    {% if item.disassemble.name %}
+                    <div class="characteristic py-2 d-flex">
+                        <div class="characteristic-name pe-2">
+                            Disassemble: {{ item.disassemble }}
+                        </div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                    </div>
+                    {% endif %}
+                    {% if item.availability.name %}
+                    <div class="characteristic py-2 d-flex">
+                        <div class="characteristic-name pe-2">
+                            Availability: {{ item.availability }}
+                        </div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                    </div>
+                    {% endif %}
                 </div>
                 <div class="item-recipe pt-3">
                     <p>Recipe</p>
