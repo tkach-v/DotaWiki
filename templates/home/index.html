@@ -61,7 +61,7 @@
 <main>
     <div class="container p-0" id="disclaimer">
         <video autoplay loop muted class="disclaimer__video" poster="{% static 'images/index/video-image.jpg' %}">
-            <source src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm"
+            <source src="{% static 'videos/' %}{{random_video}}"
                     type="video/webm">
             Your browser does not support the video tag.
         </video>
@@ -83,10 +83,8 @@
                 <div class="slide__poster-card">
                     <div class="row-1">
                         <div class="poster-card__text">
-                            Mechanics are the inner workings of Dota 2. The following is a list of mechanics topics.
-                            Click on
-                            each topic to view how they are calculated, where they originate, as well as their complex
-                            interactions with other mechanics elements.
+                            In the Creeps tab, you can delve into the world of creeps and neutrals in Dota 2.
+                            Creeps are non-player units that spawn regularly and populate the lanes and jungles.
                         </div>
                         <div class="poster-card__btn">
                             <a class="learn-more-btn" href="{% url 'hero:hero_list' %}">
@@ -138,9 +136,8 @@
                 <div class="slide__poster-card">
                     <div class="row-1">
                         <div class="poster-card__text">
-                            Objects that can be purchased on the game map. Items increase a hero's properties, and grant
-                            them
-                            special abilities and effects. Neutral items can be found by killing neutral creeps.
+                            This tab provides information about the heroes in Dota 2.
+                            You can explore various heroes, their abilities, attributes, and lore.
                         </div>
                         <div class="poster-card__btn">
                             <a class="learn-more-btn" href="{% url 'hero:hero_list' %}">
@@ -165,11 +162,9 @@
                 <div class="slide__poster-card">
                     <div class="row-1">
                         <div class="poster-card__text">
-                            Mechanics are the inner workings of Dota 2. The following is a list of mechanics topics.
-                            Click
-                            on
-                            each topic to view how they are calculated, where they originate, as well as their complex
-                            interactions with other mechanics elements.
+                           The Mechanics tab focuses on the intricate gameplay mechanics and systems in Dota 2.
+                            Gain insights into the underlying mechanics that shape the game and influence
+                            decision-making, strategy, and tactics.
                         </div>
                         <div class="poster-card__btn">
                             <a class="learn-more-btn" href="{% url 'hero:hero_list' %}">
