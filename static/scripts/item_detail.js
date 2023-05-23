@@ -37,23 +37,26 @@ if (otherImages.length === 0) {
 }
 
 // fix infobox when scrolled (not for phones)
-if (window.screen.width >= 768) {
-    const abilities = document.querySelectorAll('.item-ability');
-    const minScrol = document.querySelector(".col-md-5").offsetTop;
-    const maxScroll = document.querySelector(".item-abilities").offsetHeight;
+const abilities = document.querySelectorAll('.item-ability');
+if (window.screen.width >= 768 && abilities.length) {
+    const minScroll = document.querySelector(".col-md-5").offsetTop;
+    const maxScroll = document.querySelector(".item-abilities").offsetHeight + minScroll - 21 * 3 - document.querySelector(".item-infobox").offsetHeight;
+    let elem = document.querySelector(".item-infobox");
 
     (function () {
         window.onscroll = () => {
-            let elem = document.querySelector(".col-md-5")
-            if (abilities.length && window.scrollY > (minScrol - 51) && window.scrollY < (maxScroll - document.querySelector('.col-md-5 .item-infobox').offsetHeight / 2)) {
-                elem.style.position = "related"
-                elem.style.top = (window.scrollY - minScrol + 51) + "px"
+            if (window.scrollY > (minScroll - 51)) {
+                elem.style.position = "related";
+                if (window.scrollY <= maxScroll) {
+                    elem.style.top = (window.scrollY - minScroll + 51) + "px";
+                } else {
+                    elem.style.top = (maxScroll - minScroll + 42) + "px"
+                }
+
             } else {
                 elem.style.position = 'relative';
                 elem.style.top = "0";
-                elem.style.right = "0";
             }
         };
     }());
 }
-
