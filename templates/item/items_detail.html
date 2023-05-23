@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Item list{% endblock %}
+{% block title %}{{ item.name }}{% endblock %}
 {% block mystyles %}
 <link rel="stylesheet" href="{% static 'css/item_detail.css' %}">
 {% endblock %}
