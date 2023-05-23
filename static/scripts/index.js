@@ -1,6 +1,10 @@
-// do slider for full screen images
+// do slider for full screen images and do adaptive for it
 const sliderLinks = document.querySelectorAll(".slide .poster__link");
 let currentSlide = "creeps";
+
+if (window.innerWidth < 950) {
+    document.querySelector(".section").style.height = document.querySelector(`#${currentSlide}`).offsetHeight + "px";
+}
 
 sliderLinks.forEach(a => {
     a.addEventListener('click', evt => {
@@ -22,7 +26,10 @@ sliderLinks.forEach(a => {
             currentSlide = "mechanics";
         }
 
-        console.log(currentSlide)
+        if (window.innerWidth < 950) {
+            document.querySelector(".section").style.height = document.querySelector(`#${currentSlide}`).offsetHeight + "px";
+        }
+
         evt.preventDefault()
     });
 });
