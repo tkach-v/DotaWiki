@@ -1,22 +1,17 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from django.http import JsonResponse, HttpResponse
+from django.shortcuts import get_object_or_404
+
 from .models import *
 
 
 class ItemList(ListView):
-    model = Item
     template_name = 'item/items_list.html'
     context_object_name = 'items'
-    queryset = Item.objects.order_by('name')
 
-
-class ItemList(ListView):
-    model = Item
-    template_name = 'item/items_list.html'
-    context_object_name = 'items'
-    queryset = Item.objects.order_by('name')
-
+    def get_queryset(self):
+        type_global = get_object_or_404(TypeGlobal, name='Basics')
+        return Item.objects.filter(type_global=type_global).order_by('name')
 
 class ItemDetail(DetailView):
     model = Item
