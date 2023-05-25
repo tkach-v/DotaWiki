@@ -13,6 +13,7 @@ class ItemList(ListView):
         type_global = get_object_or_404(TypeGlobal, name='Basics')
         return Item.objects.filter(type_global=type_global).order_by('name')
 
+
 class ItemDetail(DetailView):
     model = Item
     template_name = 'item/items_detail.html'

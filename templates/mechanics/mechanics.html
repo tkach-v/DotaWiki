@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}Creeps{% endblock %}
 {% block mystyles %}
-<link rel="stylesheet" href="{% static 'css/hero_detail.css' %}">
+<link rel="stylesheet" href="{% static 'css/creeps_mechanics.css' %}">
 {% endblock %}
 {% block content %}
     <div class="container">
@@ -19,7 +19,7 @@
                     <div>
                         Unit Mechanics Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -41,10 +41,10 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="images/hero_detail/cooldown_icon.svg" alt="">
+                                                <img src="{% static 'images/hero_detail/cooldown_icon.svg' %}" alt="">
                                                 <div class="ps-2">Cooldown</div>
                                             </div>
                                         </div>
@@ -65,28 +65,28 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="images/heroes_list/strength.svg" alt="">
+                                                <img src="{% static 'images/heroes_list/strength.svg' %}" alt="">
                                                 <div class="ps-2">Strength</div>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="images/heroes_list/agility.svg" alt="">
+                                                <img src="{% static 'images/heroes_list/agility.svg' %}" alt="">
                                                 <div class="ps-2">Agility</div>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             <div class="d-flex align-items-center">
-                                                <img src="images/heroes_list/intelligence.svg" alt="">
+                                                <img src="{% static 'images/heroes_list/intelligence.svg' %}" alt="">
                                                 <div class="ps-2">Intelligence</div>
                                             </div>
                                         </div>
@@ -104,7 +104,7 @@
                         <tr>
                             <td class="mechanic">
                                 <div class="d-flex align-items-center mechanic-title  px-5">
-                                    <img src="images/hero_detail/talents.svg" alt="" style="height: 24px">
+                                    <img src="{% static 'images/hero_detail/talents.svg' %}" alt="" style="height: 24px">
                                     <div class="ps-2">
                                         Talents
                                     </div>
@@ -146,7 +146,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Health Regeneration
                                         </div>
@@ -165,7 +165,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Mana Regeneration
                                         </div>
@@ -184,13 +184,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Armor Manipulation
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Effective HP
                                         </div>
@@ -221,7 +221,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Effective HP
                                         </div>
@@ -240,13 +240,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             True Strike
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Accuracy
                                         </div>
@@ -299,7 +299,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Phased
                                         </div>
@@ -347,7 +347,7 @@
                     <div>
                         Attack Mechanics Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -369,25 +369,25 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Physical Damage
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Magical Damage
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Pure Damage
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             HP Removal
                                         </div>
@@ -408,13 +408,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Total Attack Damage
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Instant Attack
                                         </div>
@@ -433,7 +433,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Spell amplification
                                         </div>
@@ -452,25 +452,25 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Damage amplification
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Damage reduction
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Damage negation
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Damage Barrier
                                         </div>
@@ -510,13 +510,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Attack point
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Attack backswing
                                         </div>
@@ -536,13 +536,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Cast point
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Cast backswing
                                         </div>
@@ -602,7 +602,7 @@
                     <div>
                         Attack Modifiers Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -683,7 +683,7 @@
                     <div>
                         World Mechanics Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -705,13 +705,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Lanes
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Jungle
                                         </div>
@@ -729,25 +729,25 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Ancient
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Towers
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Barracks
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Outposts
                                         </div>
@@ -775,7 +775,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Buyback
                                         </div>
@@ -793,19 +793,19 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Recipes
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Item sharing
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Disassembling
                                         </div>
@@ -833,13 +833,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Lane creeps
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Neutral creeps
                                         </div>
@@ -887,25 +887,25 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Ground vision
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Flying vision
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Shared vision
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             True sight
                                         </div>
@@ -970,7 +970,7 @@
                     <div>
                         Status Effects Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -992,7 +992,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Shackle
                                         </div>
@@ -1255,7 +1255,7 @@
                     <div>
                         Dispelling Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1333,7 +1333,7 @@
                     <div>
                         Gameplay Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1365,7 +1365,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Modding
                                         </div>
@@ -1393,7 +1393,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Scan
                                         </div>
@@ -1530,7 +1530,7 @@
                     <div>
                         System Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1552,7 +1552,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Replay
                                         </div>
@@ -1617,7 +1617,7 @@
                     <div>
                         Settings Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1639,13 +1639,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Hotkeys
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Chat wheel
                                         </div>
@@ -1701,7 +1701,7 @@
                     <div>
                         Matchmaking Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1763,13 +1763,13 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Report
                                         </div>
                                     </li>
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Commend
                                         </div>
@@ -1795,7 +1795,7 @@
                     <div>
                         Cosmetic Items Table
                     </div>
-                    <img src="images/creeps/up-btn.svg" alt="">
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
                 </div>
                 <div class="table-content">
                     <table>
@@ -1817,7 +1817,7 @@
                                 </div>
                                 <ul class="mt-3 p-0">
                                     <li class="d-flex align-items-center py-1">
-                                        <img src="images/items_detail/note_marker.svg" alt="note-marker">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
                                         <div class="ps-2">
                                             Drop list
                                         </div>
