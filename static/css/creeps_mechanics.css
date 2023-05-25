@@ -1,0 +1,224 @@
+.block__title {
+  margin-bottom: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 44px;
+  text-align: center;
+  position: relative;
+}
+.block__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  max-width: 890px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 992px) {
+  .block__title {
+    font-size: 34px;
+    line-height: 34px;
+  }
+}
+
+.block__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
+}
+@media (max-width: 992px) {
+  .block__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.block__subtitle {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  transition: display 1s;
+}
+@media (max-width: 992px) {
+  .block__subtitle {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.block__table {
+  width: 100%;
+  text-align: center;
+}
+.block__table .table-title,
+.block__table thead {
+  background-color: #1A1A1F;
+  font-weight: 400;
+}
+.block__table .table-title {
+  font-size: 24px;
+  line-height: 28px;
+  border: 1px solid #353535;
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.block__table .table-title:hover {
+  color: #FED14C;
+}
+.block__table .table-title img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+@media (max-width: 350px) {
+  .block__table .table-title {
+    text-align: start;
+  }
+}
+.block__table .table-title-active img {
+  transform: translate(-50%, -50%) rotate(0);
+}
+.block__table .table-content {
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+.block__table .table-content table {
+  width: 100%;
+  overflow-x: scroll;
+}
+.block__table .table-content td {
+  border: 1px solid #353535;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  width: auto;
+}
+.block__table .table-content th {
+  font-weight: 400;
+  padding: 15px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #353535;
+}
+.block__table .table-content thead {
+  font-size: 20px;
+  line-height: 22px;
+}
+.block__table .table-content tbody {
+  background-color: #212125;
+}
+.block__table .table-content .unit {
+  padding: 10px 0 0;
+}
+.block__table .table-content .unit div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.block__table .table-content .unit .unit__images div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.block__table .table-content .unit .unit__images img {
+  max-width: 75px;
+  max-height: 75px;
+}
+.block__table .table-content .unit .unit__name {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: rgba(23, 23, 26, 0.7);
+  width: 100%;
+}
+.block__table .table-content .gold-value {
+  color: #FED14C;
+  padding-right: 3px;
+}
+.block__table .table-content .xp-title {
+  text-transform: uppercase;
+}
+.block__table .table-content .xp-value {
+  color: #439242;
+}
+@media (max-width: 992px) {
+  .block__table .table-title,
+  .block__table thead {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .block__table .table-content td {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.lane-creeps,
+.neutral-creeps,
+.attack-mechanics,
+.world-mechanics,
+.status-effects-mechanics,
+.gameplay-mechanics,
+.system-mechanics,
+.unit-mechanics {
+  padding-top: 60px;
+}
+
+.lane-creeps .block__table {
+  margin-top: 30px;
+}
+
+.neutral-creeps .block__table {
+  margin-top: 30px;
+}
+.neutral-creeps .block__table .unit .unit__images img {
+  max-height: 60px;
+  max-width: 60px;
+}
+.neutral-creeps .block__table #roshan .unit .unit__images img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.mechanic,
+.mechanic-description {
+  text-align: start;
+}
+
+.block__table .table-content .mechanic {
+  padding: 20px;
+  text-align: center;
+}
+
+.block__table .table-content .mechanic-title {
+  font-weight: 600;
+}
+
+.block__table .table-content .mechanic-description {
+  padding: 20px;
+}
+
+.unit-mechanics .block__table {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=creeps_mechanics.css.map */
