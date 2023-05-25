@@ -128,10 +128,10 @@
   background-size: contain;
 }
 .hero-summary .hero-info .abilities-container .ability-shard::after {
-  background-image: url("/images/hero_detail/ability_shard.png");
+  background-image: url("../images/hero_detail/ability_shard.png");
 }
 .hero-summary .hero-info .abilities-container .ability-scepter::after {
-  background-image: url("/images/hero_detail/ability_scepter.png");
+  background-image: url("../images/hero_detail/ability_scepter.png");
 }
 .hero-summary .hero-info .abilities-container .talents img {
   border: 0;

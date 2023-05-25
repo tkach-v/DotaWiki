@@ -1,0 +1,2205 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Creeps{% endblock %}
+{% block mystyles %}
+    <link rel="stylesheet" href="{% static 'css/creeps_mechanics.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="block lane-creeps">
+            <h2 class="block__title">
+                Lane Creeps
+            </h2>
+            <div class="block__text">
+                Lane creeps are a type of creep that automatically moves down the three lanes towards the enemy
+                faction's Ancient. Each and every 30 seconds a new group (the creep wave) spawns for each faction at
+                each of their barracks, but the number in the group and their stats eventually change, as the game
+                progresses. Lane creeps engage any hostile unit nearby, but when left unattended, the opposing creeps
+                end up clashing each other in the lanes on their way towards the enemy base.
+                <br><br>
+                Like other creeps, lane creeps are vitally important to a hero's progress because they grant resources,
+                allowing for an advantage over the enemy team. They give experience to nearby enemies when killed – as
+                well as gold to heroes who deal the last hit they take. Allied creeps can also be denied by their team,
+                preventing the enemy from getting their gold bounty, and halving the experience gain from them. To get
+                as many last hits as possible, players often manipulate creep position in the lane by abusing their
+                simple AI, gaining an advantage and disrupting the pace of the battle into their favor. Creep control
+                techniques include disruptively pushing forward into towers, pulling neutral creeps for allied lane
+                creeps to fight, or aggroing enemy melee creeps to change their target.
+                <br><br>
+                Lane creeps (while controlled by the AI) are the only units capable of disabling Backdoor Protection
+                icon Backdoor Protection. However, once taken over by a player, a lane creep no longer disables the
+                protection.
+            </div>
+            <h3 class="block__subtitle">
+                Types
+            </h3>
+            <div class="block__text">
+                There are four types of lane creeps: Melee, Ranged, Flagbearer, and Siege. Melee creeps spawn in larger
+                numbers and have more health and less attack damage than ranged creeps. Ranged creeps have lower health,
+                but deal more damage per attack to creeps, and are able to attack from a distance. However, their attack
+                type causes them to deal less damage against heroes and buildings. Flagbearer creeps are identical to
+                melee creeps, but have higher magic resistance, carry an aura that grants nearby allies health
+                regeneration, and grant their gold bounty to every enemy within an area around them when killed. They
+                start spawning at the fifth creep wave and spawn on every second wave from that point on, replacing one
+                melee creep in those waves. Siege creeps spawn in every tenth wave. They have high health and high magic
+                resistance. They have a long ranged attack which deals significantly more damage to buildings, but less
+                to other units. They also prioritize buildings over other units when in range.
+                <br><br>
+                Destroying either of the enemy team's melee or ranged barracks causes the destroying team's respective
+                lane to begin spawning super creeps instead of regular creeps. Super creeps are stronger versions of
+                regular lane creeps that give less gold and experience to the enemy when killed. When all enemy barracks
+                are destroyed, mega creeps begin to spawn from all lanes and siege creeps gain additional damage.
+                Flagbearer creeps do not get upgraded.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Lane Creeps Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Unit
+                            </th>
+                            <th>
+                                Health
+                            </th>
+                            <th>
+                                Armor
+                            </th>
+                            <th>
+                                Attack Damage
+                            </th>
+                            <th>
+                                Attack Time
+                            </th>
+                            <th>
+                                Attack Range
+                            </th>
+                            <th>
+                                Vision
+                            </th>
+                            <th>
+                                Gold
+                            </th>
+                            <th>
+                                XP
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Flagbearer Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                550
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                19‒23
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">34‒39</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">57</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Mega Flagbearer Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                1270
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                96‒104
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">20‒26</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">25</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Mega Melee Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                1270
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                96‒104
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">20‒26</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">25</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_ranged_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_ranged_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Mega Ranged Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                1015
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                131‒136
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                500
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">19‒25</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">22</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_siege_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_siege_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Mega Siege Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                935
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                51‒62
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                690
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">59‒72</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">88</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Melee Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                550
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                19‒23
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">34‒39</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">57</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/ranged_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/ranged_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Ranged Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                300
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                21‒26
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                500
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">43‒52</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">69</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_siege_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_siege_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Siege Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                935
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                35‒46
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                690
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">59‒72</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">88</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Super Flagbearer Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                700
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                36‒44
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">20‒26</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">25</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/flagbearer_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/flagbearer_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Super Melee Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                700
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                36‒44
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                100
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">20‒26</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">25</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/ranged_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/ranged_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Super Ranged Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                475
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                41‒46
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                500
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">19‒25</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">22</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/mega_siege_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/mega_siege_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Super Siege Creep
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                935
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                51‒62
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                690
+                            </td>
+                            <td>
+                                750/750
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">59‒72</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <span class="xp-value">88</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block neutral-creeps">
+            <h2 class="block__title">
+                Neutral Creeps
+            </h2>
+            <div class="block__text">
+                Neutral creeps are a type of creep that are not controlled by any player. They are aligned to neither of
+                the teams, and offer an alternative source of gold and experience. Neutral creeps appear in small camps
+                scattered in the jungle on both sides of the map. They come with different power levels and most of them
+                have unique abilities. Roshan icon Roshan, who sits in his den at the river, and the Unknown Unit icon
+                Tormentors on the map edges are also considered neutral creeps.
+            </div>
+            <h3 class="block__subtitle">
+                Types
+            </h3>
+            <div class="block__text">
+                There are many different types of neutral creeps which spawn in small groups inside of camps within the
+                jungle. These camps are categorised into small, medium, large and ancient creep camps.
+            </div>
+            <h3 class="block__subtitle">
+                Small Camps
+            </h3>
+            <div class="block__text">
+                Small creeps are the weakest of the neutral creeps. They give little gold and experience, deal low
+                damage and have low health, making them easy to kill for any hero at any time of the game.
+                <br><br>
+                There are 6 different types of small camps, consisting of Kobolds, Hill Trolls, Vhouls, Ghosts and
+                Harpies. The sixth camp type is a combination of kobolds and trolls. Besides the kobold camp which
+                consists of five units, all small camps consist of three units.
+                <br><br>
+                The Kobolds are the smallest creeps, but come in bigger groups. They are all melee and have various
+                abilities; a movement speed buffing aura, attacks that occasionally disarm their targets, and a GPM
+                boosting aura. Hill Trolls are ranged creeps, with one priest and two Tomahawk throwing berserkers. The
+                priest can heal allies and passively boosts the healing capacity of nearby allies, wile the berserkers
+                are capable of disabling their enemies' passive abilities by attacking them. Vhouls are ranged creeps
+                that have envenomed spears which greatly cripple their target's health regeneration. The ghost camp
+                consist of two melee spirits that can silence enemies, which they never do, and a ranged ghost with a
+                chilling attack that slows enemies. The Harpies are ranged creeps, with one of them capable of throwing
+                a bolt of lightning that jumps between targets, while the other two can take flight, ignoring terrain,
+                although none of the harpies use their abilities.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Small Camps Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th colspan="3">
+                                Total Gold
+                            </th>
+                            <th colspan="2">
+                                Total XP
+                            </th>
+                            <th rowspan="2">
+                                Total health
+                            </th>
+                            <th rowspan="2">
+                                Abilities
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                            <th>For stacker</th>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/kobold_2.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/kobold_3.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/kobold_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/kobold_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/kobold_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Kobold Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">50‒60</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">43‒51</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">15‒18</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">89</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">76</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1445
+                            </td>
+                            <td>
+                                <div class="py-1">Prospecting Aura</div>
+                                <div class="py-1">Steal Weapon</div>
+                                <div class="py-1">Speed Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/hill_troll_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+
+                                            <img src="{% static 'images/creeps/hill_troll_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/hill_troll_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Hill Troll Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">58‒64</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">49‒54</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">17‒19</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">84</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">71</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1450
+                            </td>
+                            <td>
+                                <div class="py-1">Break</div>
+                                <div class="py-1">Heal</div>
+                                <div class="py-1">Heal Amplification Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/kobold_3.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/hill_troll_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/hill_troll_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Hill Troll and Kobold Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">59‒65</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">50‒55</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">18‒20</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">86</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">73</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1400
+                            </td>
+                            <td>
+                                <div class="py-1">Break</div>
+                                <div class="py-1">Speed Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/vhoul.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/vhoul.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/vhoul.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Vhoul Assassin Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">54‒60</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">46‒51</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">16‒18</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">90</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">77</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1200
+                            </td>
+                            <td>
+                                <div class="py-1">Envenomed Weapon</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/ghost_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/ghost_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/ghost_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Ghost Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">53‒57</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">45‒48</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">16‒17</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">94</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">80</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1300
+                            </td>
+                            <td>
+                                <div class="py-1">Vex</div>
+                                <div class="py-1">Frost Attack</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/harpy_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/harpy_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/harpy_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Harpy Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">59‒65</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">50‒55</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">18‒20</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">94</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">80</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1445
+                            </td>
+                            <td>
+                                <div class="py-1">Take Off</div>
+                                <div class="py-1">Chain Lightning</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Medium Camps
+            </h3>
+            <div class="block__text">
+                Medium creeps are also relatively weak camps, but stronger than the small creeps. They give a bit more
+                gold and experience, deal low to moderate damage and have more health. Some of them can be dealt with
+                early on, but some may be too strong.
+                <br><br>
+                There are 5 different types of medium camps, consisting of Centaurs, Wolves, Satyrs, Ogres and Golems.
+                The number of units varies between two and four based on the camp.
+                <br><br>
+                The Centaurs are melee creeps, one of them being small and the other being big. The big centaur can
+                stomp the ground to stun nearby enemies, which it only uses when enough enemies are within its range.
+                The small centaur has an aura which makes its allies more resistant against magical damage. The Wolves
+                come in a pack of three, with two of them being small with an intimidating howl that weakens their
+                enemies attacks, however, they only howl when on low health. The big wolf is capable of striking an
+                enemy critically, having a chance to deal more damage on an attack. It also has an attack damage
+                boosting aura, which makes this camp deal the most damage. The Satyr camp consists of two small satyrs,
+                which are comparable to the creeps in the small creep camp power-wise, are ranged, and may purge an
+                enemy if they attack for a while, and two medium Satyrs, which are melee with a mana burning ability
+                which they also never use. They also passively boost the mana regeneration of nearby allies. Ogres are
+                melee creeps which come in a group of three, from which one can envelop an ally with a protective frost
+                shield, slowing attacking units and granting armor to the ally. The other two ogres have a powerful
+                ground smash attack that has a long wind-up time. Golems come in pairs, but split each into two smaller
+                golems on their death. They have melee attacks and may occasionally throw rocks at enemies.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Medium Camps Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th colspan="3">
+                                Total Gold
+                            </th>
+                            <th colspan="2">
+                                Total XP
+                            </th>
+                            <th rowspan="2">
+                                Total health
+                            </th>
+                            <th rowspan="2">
+                                Abilities
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                            <th>For stacker</th>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/centaur_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/centaur_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Centaur Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">74‒82</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">63‒70</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">22‒25</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">122</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">104</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1450
+                            </td>
+                            <td>
+                                <div class="py-1">Cloak Aura</div>
+                                <div class="py-1">War Stomp</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/wolf_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/wolf_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/wolf_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Wolf Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">74‒84</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">63‒71</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">22‒25</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">140</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">119</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1600
+                            </td>
+                            <td>
+                                <div class="py-1">Intimidate</div>
+                                <div class="py-1">Critical Strike</div>
+                                <div class="py-1">Packleader's Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/satyr_2.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/satyr_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/satyr_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/satyr_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Satyr Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">72‒84</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">61‒71</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">22‒25</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">140</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">119</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1800
+                            </td>
+                            <td>
+                                <div class="py-1">Purge</div>
+                                <div class="py-1">Mana Burn</div>
+                                <div class="py-1">Mana Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/ogre_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/ogre_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/ogre_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Ogre Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">78‒90</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">66‒77</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">23‒27</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">112</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">95</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                2200
+                            </td>
+                            <td>
+                                <div class="py-1">Ogre Smash</div>
+                                <div class="py-1">Ice Armor</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/golem_2.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/golem_2.webp' %}" alt="Creep image">
+                                            <img src="images/creeps/golem_1.webp" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/golem_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/golem_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/golem_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Golem Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">80‒100</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">73‒92</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">14‒16</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">136</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">126</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                2500
+                            </td>
+                            <td>
+                                <div class="py-1">Hurl Boulder</div>
+                                <div class="py-1">Shard Split</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Large Camps
+            </h3>
+            <div class="block__text">
+                Large creeps are the strongest of the regular camps. They consist of strong creeps with strong abilities
+                and are very difficult to deal with early on.
+                <br><br>
+                There are 6 different types of large camps, consisting of Centaurs, Satyrs, Hellbears, Wildwings and
+                Trolls. Besides the Hellbear and Warpine camps which consist of two units, all large camps consist of
+                three units.
+                <br><br>
+                The Centaurs of the large camp are the same as the ones from the medium camp, except that the large camp
+                contains two small centaurs and one big one, instead of one of each. The large Satyr camp is similar to
+                the medium one. It contains the same small and medium Satyr, but one of each instead of two, and has a
+                big Satyr, which is a strong melee creep with a strong long-ranged area nuke which it uses only if
+                enough enemies are within range, and a strong health regenerating aura. The Hellbears are strong creeps
+                which come in pairs, both being melee. The bigger one can clap so powerful that nearby enemies take
+                damage and get slowed, which it only does when enough enemies are within range. The smaller hellbear
+                passively boosts nearby allies' attack speed. Both hellbears have a death rattle, boosting nearby
+                allies' attack damage and attack speed respectively when killed. Wildwings are three melee creeps, two
+                of them being small and capable of channeling a strong tornado, which they may only do when a nearby
+                Wildwing dies. The third wildwing is much bigger and is capable of pushing heroes around with a strong
+                gust of wind, while also passively increasing nearby allies' armor. The trolls are ranged creeps, two of
+                them being small, with the ability to briefly ensnare enemies, and one being big, capable of raising
+                three skeletons, which it immediately does once provoked. The skeletons rally their allies, each
+                passively boosting their attack damage. Warpines are melee units that occasionally throw pinecones at
+                their enemies, which can bounce between targets, damaging and slowing them.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Large Camps Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th colspan="3">
+                                Total Gold
+                            </th>
+                            <th colspan="2">
+                                Total XP
+                            </th>
+                            <th rowspan="2">
+                                Total health
+                            </th>
+                            <th rowspan="2">
+                                Abilities
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                            <th>For stacker</th>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/centaur_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/centaur_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/centaur_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Large Centaur Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">92‒102</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">78‒87</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">28‒31</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">154</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">131</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1800
+                            </td>
+                            <td>
+                                <div class="py-1">Cloak Aura</div>
+                                <div class="py-1">War Stomp</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/satyr_3.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/satyr_2.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/satyr_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Large Satyr Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">98‒110</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">83‒94</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">29‒33</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">160</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">136</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                2000
+                            </td>
+                            <td>
+                                <div class="py-1">Purge</div>
+                                <div class="py-1">Mana Burn</div>
+                                <div class="py-1">Mana Aura</div>
+                                <div class="py-1">Shockwave</div>
+                                <div class="py-1">Unholy Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/hellbear_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/hellbear_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Hellbear Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">96‒108</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">82‒92</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">29‒32</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">156</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">133</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1650
+                            </td>
+                            <td>
+                                <div class="py-1">Swiftness Aura</div>
+                                <div class="py-1">Death Throe: Rush</div>
+                                <div class="py-1">Thunder Clap</div>
+                                <div class="py-1">Death Throe: Power</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/wildwing_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/wildwing_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/wildwing_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Wildwing Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">96‒106</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">82‒90</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">29‒32</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">142</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">121</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1650
+                            </td>
+                            <td>
+                                <div class="py-1">Tornado</div>
+                                <div class="py-1">Tempest</div>
+                                <div class="py-1">Hurricane</div>
+                                <div class="py-1">Toughness Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/warpine.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/warpine.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Warpine Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">100‒104</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">85‒88</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">30‒31</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">152</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">129</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                1700
+                            </td>
+                            <td>
+                                <div class="py-1">Seed Shot</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit" rowspan="2">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/warpine.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/warpine.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Troll Camp, <br> Troll Camp + 3 Skeleton
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">82‒96</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">70‒82</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">25‒29</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">174</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">148</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                2100
+                            </td>
+                            <td rowspan="2">
+                                <div class="py-1">Ensnare</div>
+                                <div class="py-1">Raise Dead</div>
+                                <div class="py-1">Rally</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">94‒114</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">82‒100</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">25‒29</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">186</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">160</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                2100
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Ancient Camps
+            </h3>
+            <div class="block__text">
+                Ancient creeps are very powerful neutral creeps. Unlike the regular creeps, these creeps have a special
+                unit type, the Ancient type, which makes them immune to numerous spells, such as converting spells. They
+                are nearly impossible to deal with early on, and for some heroes even later into the game. They have
+                very high health, deal high damage and have strong auras. They also have some magic resistance, making
+                it harder to clear them with spells which deal magical damage.
+                <br><br>
+                There are 4 different types of ancient camps, consisting of Dragons, Hides, Golems, and the Frostbitten.
+                All 4 camps consist of 3 units.
+                <br><br>
+                The Dragons are ranged creeps but have a short attack range. There are 3 dragons, 2 of them being small
+                and relatively weak and one big dragon. The small dragons have an aura that makes their enemies more
+                susceptible to spell damage. The big dragon has 3 abilities: It is able to spit a fireball which engulfs
+                a target area in flames, dealing damage over time, a passive splash attack which causes each of its
+                attack to deal area damage, and a stacking armor boosting aura. The Dragon never uses its Fireball
+                ability. The Hides are, similar to the dragons, ranged creeps with a short attack range. Also similar to
+                the dragons, it consists of 2 smaller Rumblehides, and one bigger Thunderhide. But unlike the dragons,
+                all 3 of them have high magic resistance. The Thunderhide has 2 abilities: It can slam the ground,
+                dealing area damage and slowing hit enemies, and it can temporarily frenzy an ally, boosting its attack
+                speed significantly. The Thunderhide never uses the Slam ability, but does cast Frenzy on itself. The
+                Rumblehides have an aura which boosts the accuracy and attack speed of nearby allies. The Golems are
+                strong melee creeps. One of the three golems is stronger than the other 2, having much more health and a
+                bit more damage. The small golems have an aura that reduces their enemies' armor, while the big golem
+                has an aura which increases the health capacity of nearby allies, making them the tankiest creeps of
+                all, not only due to their high and boosted health, but also due to their high armor and magic
+                resistance. The Frostbitten consist of a ranged Ice Shaman, with an ability to hurl an Icefire Bomb at a
+                target unit or building, dealing damage over time, and two Frostbitten Golems, with an aura that reduces
+                nearby allies' cooldowns.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Ancient Camps Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th colspan="3">
+                                Total Gold
+                            </th>
+                            <th colspan="2">
+                                Total XP
+                            </th>
+                            <th rowspan="2">
+                                Total health
+                            </th>
+                            <th rowspan="2">
+                                Abilities
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                            <th>For stacker</th>
+                            <th>Default</th>
+                            <th>Stacked</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/dragon_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/dragon_1.webp' %}" alt="Creep image">
+                                            <img src="images/creeps/dragon_1.webp" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Dragon Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">156‒172</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">133‒146</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">47‒52</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">314</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">267</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                3900
+                            </td>
+                            <td>
+                                <div class="py-1">Magic Amplification Aura</div>
+                                <div class="py-1">Fireball</div>
+                                <div class="py-1">Splash Attack</div>
+                                <div class="py-1">Dragonhide Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/golem_ancient_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/golem_ancient_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/golem_ancient_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Large Golem Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">156‒172</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">133‒146</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">47‒52</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">314</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">267</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                3565
+                            </td>
+                            <td>
+                                <div class="py-1">Weakening Aura</div>
+                                <div class="py-1">Granite Aura</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/thunderhide_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/thunderhide_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/thunderhide_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Thunderhide Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">156‒172</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">133‒146</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">47‒52</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">314</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">267</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                3400
+                            </td>
+                            <td>
+                                <div class="py-1">War Drums Aura</div>
+                                <div class="py-1">Frenzy</div>
+                                <div class="py-1">Slam</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/frostbiten_2.webp' %}" alt="Creep image">
+                                        </div>
+                                        <div>
+                                            <img src="{% static 'images/creeps/frostbiten_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/frostbiten_1.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Frostbitten Camp
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">156‒172</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">133‒146</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">47‒52</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">314</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                <span class="xp-value">267</span>
+                                <span class="xp-title">xp</span>
+                            </td>
+                            <td>
+                                3300
+                            </td>
+                            <td>
+                                <div class="py-1">Time Warp Aura</div>
+                                <div class="py-1">Icefire Bomb</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Roshan
+            </h3>
+            <div class="block__text">
+                Roshan is a unique creep that spawns northwest corner of the map and wanders to the southeast corner,
+                where he has a second pit. He also counts as an ancient creep and also has its own unique category. In
+                addition to providing a large experience and gold bounty when killed, Roshan also drops the Aegis of the
+                Immortal icon Aegis of the Immortal. The second time he is killed in a single game, he starts dropping
+                Cheese icon Cheese as well. The third time he is killed in a single game, he starts dropping a Refresher
+                Shard icon Refresher Shard or a Aghanim's Blessing icon Aghanim's Blessing, based on which pit he was
+                when killed. Roshan's power increases as time passes.
+                <br><br>
+                Roshan has a high and unpredictable respawn timer when killed. He possesses five abilities from which
+                one is active. His first ability is an area slam which damages and slows nearby enemies. The damage gets
+                stronger as time passes. His second ability grants his attacks a chance to bash an enemy, stunning and
+                dealing bonus damage. His third ability passively protects Roshan from a single-target spell every few
+                seconds and grants high status resistance. His fourth ability grants Roshan permanent bonuses as time
+                passes, increasing his health, armor and attack damage, while also grants him phased movement and
+                reduces damage from illusions. His last ability causes him to charge towards the other Roshan pit
+                whenever the time of day changes, with increased movement speed and damaging and knocking back any unit
+                that crosses his path while charging. Roshan uses the Unknown Unit icon Twin Gates to travel across the
+                map towards the other pit.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Roshan Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table id="roshan">
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th>
+                                Total Gold
+                            </th>
+                            <th>
+                                Total XP
+                            </th>
+                            <th>
+                                Total health
+                            </th>
+                            <th>
+                                Abilities
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/roshan.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Roshan
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">200‒290 + 135</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                    <span style="padding-left: 3px">to each allied hero</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">267 + 20</span>
+                                <span class="xp-title">xp</span>
+                                <span style="padding-left: 3px">per minute</span>
+                            </td>
+                            <td>
+                                6000 Health + 130 additional health per minute
+                            </td>
+                            <td>
+                                <div class="py-1">Spell Block</div>
+                                <div class="py-1">Bash</div>
+                                <div class="py-1">Slam</div>
+                                <div class="py-1">Strength of the Immortal</div>
+                                <div class="py-1">On The Move</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Tormentors
+            </h3>
+            <div class="block__text">
+                Tormentors are immobile special ancient creeps that spawn on the paths next to the offlanes, close to
+                the Defender's Gates of both bases. They do not spawn until the midgame, and then have a long respawn
+                time once killed. When defeated, they grant one of the two lowest net worth heroes a free Aghanim's
+                Shard - Roshan icon Aghanim's Shard. If all heroes of the killing team have their shards already, the
+                team is rewarded with extra gold and experience instead. Each time a Tormentor respawns their power
+                increases.
+                <br><br>
+                Tormentors cannot move or attack, but have 2 abilities with which they defend themselves instead, both
+                being passive. Their first ability grants them a strong universal damage barrier that continues
+                regenerates itself at a high rate. Their second ability causes them to reflect a great portion of damage
+                they take to all enemy heroes within their vicinity. Each time the Tormentor respawns, the barrier's
+                capacity and regeneration rate increases, and the reflected damage percentage increases as well.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Tormentors Attribute Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">
+                                Creeps
+                            </th>
+                            <th>
+                                Total Gold
+                            </th>
+                            <th>
+                                Total XP
+                            </th>
+                            <th>
+                                Total health
+                            </th>
+                            <th>
+                                Abilities
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="unit">
+                                <div>
+                                    <div class="unit__images">
+                                        <div>
+                                            <img src="{% static 'images/creeps/tormentor_1.webp' %}" alt="Creep image">
+                                            <img src="{% static 'images/creeps/tormentor_2.webp' %}" alt="Creep image">
+                                        </div>
+                                    </div>
+                                    <div class="unit__name">
+                                        Tormentors
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="gold-value">250 + 280</span>
+                                    <img src="{% static 'images/items_list/coin.png' %}" alt="">
+                                    <span style="padding-left: 3px">to each allied hero</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="xp-value">280</span>
+                                <span class="xp-title">xp</span>
+                                <span style="padding-left: 3px">to each allied hero</span>
+                            </td>
+                            <td>
+                                1 Health + (2500+ 100 per death) damage barrier
+                            </td>
+                            <td>
+                                <div class="py-1">Unyielding Shield</div>
+                                <div class="py-1">Reflect</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block myscripts %}
+    <script src="{% static 'scripts/creeps_mechanics.js' %}"></script>
+{% endblock %}

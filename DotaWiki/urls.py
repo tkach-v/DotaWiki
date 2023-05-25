@@ -23,7 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('heroes/', include('hero.urls')),
     path('', include('home.urls')),
-    path('items/', include('item.urls'))
+    path('items/', include('item.urls')),
+    path('creeps/', include('creeps.urls')),
+    path('mechanics/', include('mechanics.urls'))
 ]
 
 # add media

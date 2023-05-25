@@ -6,8 +6,6 @@ document.querySelector(".basic-items").addEventListener('click', evt => {
     document.querySelector('.neutral-items').classList.remove("clicked");
     document.querySelector('.filter-items-basic a').click();
 
-
-    console.log("FUCK ME")
     evt.preventDefault();
 });
 
@@ -17,7 +15,6 @@ document.querySelector(".neutral-items").addEventListener('click', evt => {
     document.querySelector('.neutral-items').classList.add("clicked");
     document.querySelector('.basic-items').classList.remove("clicked");
     document.querySelector('.filter-items-neutral a').click();
-
 
     evt.preventDefault();
 });

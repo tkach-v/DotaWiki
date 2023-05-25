@@ -37,24 +37,42 @@ if (otherImages.length === 0) {
 }
 
 // fix infobox when scrolled (not for phones)
+
+
 const abilities = document.querySelectorAll('.item-ability');
 if (window.screen.width >= 768 && abilities.length) {
-    const minScroll = document.querySelector(".col-md-5").offsetTop;
-    const maxScroll = document.querySelector(".item-abilities").offsetHeight + minScroll - 21 * 3 - document.querySelector(".item-infobox").offsetHeight;
+(".item-infobox").offsetHeight;
     let elem = document.querySelector(".item-infobox");
+    let elemWidth = elem.offsetWidth;
+    let elemHeight = elem.offsetHeight;
+
+    const minScroll = document.querySelector(".col-md-5").offsetTop;
+    const maxScroll = document.querySelector(".item-abilities").offsetHeight + minScroll - 51 - 21 - elemHeight;
+
+
+    elem.style.width = elemWidth + "px";
+    // elem.style.height = elemHeight + "px";
+
+    console.log(minScroll);
+    console.log(maxScroll);
+
 
     (function () {
         window.onscroll = () => {
+            console.log(window.scrollY)
             if (window.scrollY > (minScroll - 51)) {
-                elem.style.position = "related";
+                elem.classList.add('item-infobox-fixed');
+
                 if (window.scrollY <= maxScroll) {
-                    elem.style.top = (window.scrollY - minScroll + 51) + "px";
+                    elem.style.top = window.scrollY - minScroll + 51 + "px"
                 } else {
-                    elem.style.top = (maxScroll - minScroll + 42) + "px"
+                    // elem.classList.remove('item-infobox-fixed');
+                    elem.style.top = maxScroll - minScroll + 51 + "px"
+                    // elem.style.top = null;
                 }
 
             } else {
-                elem.style.position = 'relative';
+                elem.classList.remove('item-infobox-fixed');
                 elem.style.top = "0";
             }
         };

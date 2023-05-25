@@ -2,19 +2,18 @@
 {% load static %}
 {% block title %}{{ hero.name }}{% endblock %}
 {% block mystyles %}
-<link rel="stylesheet" href="{% static 'css/hero_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hero_detail.css' %}">
 {% endblock %}
 {% block content %}
-<main>
     <div class="container py-0">
         <div class="hero-summary">
             <div class="row">
                 <div class="col-12 col-lg-6 hero-info my-auto">
                     <h1 class="d-flex flex-row align-items-center justify-content-center hero-name">
                         {% with primary_stat=hero.primary_stat.name %}
-                        <img src="{% static 'images/heroes_list/'|add:primary_stat|add:'.svg' %}"
-                             alt="primary_stat">
-                        <span class="ps-3">{{ hero.name }}</span>
+                            <img src="{% static 'images/heroes_list/'|add:primary_stat|add:'.svg' %}"
+                                 alt="primary_stat">
+                            <span class="ps-3">{{ hero.name }}</span>
                         {% endwith %}
                     </h1>
                     <h5 class="description-short">
@@ -27,28 +26,28 @@
                         <div class="col-10">
                             <div class="row justify-content-center">
                                 {% for ability in abilities %}
-                                {% if ability.type.name|slice:":7" == "Scepter" %}
-                                <a class="col-2 p-1 ability-item ability-scepter" data-bs-toggle="collapse"
-                                   href="#collapseAbility{{ ability.pk }}"
-                                   role="button" aria-expanded="false"
-                                   aria-controls="collapseAbility{{ ability.pk }}">
-                                    <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
-                                </a>
-                                {% elif ability.type.name|slice:":5" == "Shard" %}
-                                <a class="col-2 p-1 ability-item ability-shard" data-bs-toggle="collapse"
-                                   href="#collapseAbility{{ ability.pk }}"
-                                   role="button" aria-expanded="false"
-                                   aria-controls="collapseAbility{{ ability.pk }}">
-                                    <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
-                                </a>
-                                {% else %}
-                                <a class="col-2 p-1 ability-item" data-bs-toggle="collapse"
-                                   href="#collapseAbility{{ ability.pk }}"
-                                   role="button" aria-expanded="false"
-                                   aria-controls="collapseAbility{{ ability.pk }}">
-                                    <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
-                                </a>
-                                {% endif %}
+                                    {% if ability.type.name|slice:":7" == "Scepter" %}
+                                        <a class="col-2 p-1 ability-item ability-scepter" data-bs-toggle="collapse"
+                                           href="#collapseAbility{{ ability.pk }}"
+                                           role="button" aria-expanded="false"
+                                           aria-controls="collapseAbility{{ ability.pk }}">
+                                            <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
+                                        </a>
+                                    {% elif ability.type.name|slice:":5" == "Shard" %}
+                                        <a class="col-2 p-1 ability-item ability-shard" data-bs-toggle="collapse"
+                                           href="#collapseAbility{{ ability.pk }}"
+                                           role="button" aria-expanded="false"
+                                           aria-controls="collapseAbility{{ ability.pk }}">
+                                            <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a class="col-2 p-1 ability-item" data-bs-toggle="collapse"
+                                           href="#collapseAbility{{ ability.pk }}"
+                                           role="button" aria-expanded="false"
+                                           aria-controls="collapseAbility{{ ability.pk }}">
+                                            <img src="{{ ability.image_url.url }}" alt="{{ ability.name }}">
+                                        </a>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -64,74 +63,74 @@
                     </div>
 
                     {% for ability in abilities %}
-                    <div class="collapse col-11 col-lg-5" id="collapseAbility{{ ability.pk }}">
-                        <div class="p-4 m-2 mt-4 ability-description mx-auto">
-                            <div class="row mb-4 ability-short">
-                                <div class="col-12 col-xl-3 pb-3 d-flex justify-content-center justify-content-xl-start">
-                                    <img class="ability-image img-fluid"
-                                         src="{{ ability.image_url.url }}"
-                                         alt="{{ ability.name }}">
+                        <div class="collapse col-11 col-lg-5" id="collapseAbility{{ ability.pk }}">
+                            <div class="p-4 m-2 mt-4 ability-description mx-auto">
+                                <div class="row mb-4 ability-short">
+                                    <div class="col-12 col-xl-3 pb-3 d-flex justify-content-center justify-content-xl-start">
+                                        <img class="ability-image img-fluid"
+                                             src="{{ ability.image_url.url }}"
+                                             alt="{{ ability.name }}">
+                                    </div>
+                                    <div class="col-12 col-xl-9 ps-3">
+                                        <h5 class="ability-title mb-3">
+                                            {{ ability.name }}
+                                        </h5>
+                                        {% if ability.type.name %}
+                                            <p class="ability-type me-auto">
+                                                {{ ability.type }}
+                                            </p>
+                                        {% endif %}
+                                        <p class="ability-text">
+                                            {{ ability.description|safe }}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-xl-9 ps-3">
-                                    <h5 class="ability-title mb-3">
-                                        {{ ability.name }}
-                                    </h5>
-                                    {% if ability.type.name %}
-                                    <p class="ability-type me-auto">
-                                        {{ ability.type }}
-                                    </p>
-                                    {% endif %}
-                                    <p class="ability-text">
-                                        {{ ability.description|safe }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row ability-details">
-                                <div class="col-12">
-                                    {% for key, value in ability.generic_details.items %}
-                                    <p class="detail">
+                                <div class="row ability-details">
+                                    <div class="col-12">
+                                        {% for key, value in ability.generic_details.items %}
+                                            <p class="detail">
                                         <span class="detail-title">
                                             {{ key }}
                                         </span>
-                                        <span class="detail-value">
+                                                <span class="detail-value">
                                             {{ value }}
                                         </span>
-                                    </p>
-                                    {% endfor %}
-                                    {% for key, value in ability.specific_details.items %}
-                                    <p class="detail">
+                                            </p>
+                                        {% endfor %}
+                                        {% for key, value in ability.specific_details.items %}
+                                            <p class="detail">
                                         <span class="detail-title">
                                             {{ key }}
                                         </span>
-                                        <span class="detail-value">
+                                                <span class="detail-value">
                                             {{ value }}
                                         </span>
-                                    </p>
-                                    {% endfor %}
+                                            </p>
+                                        {% endfor %}
+                                    </div>
                                 </div>
-                            </div>
-                            {% if ability.cooldown %}
-                            <div class="row cooldown-mana mt-3">
+                                {% if ability.cooldown %}
+                                    <div class="row cooldown-mana mt-3">
 
-                                <div class="col cooldown" align="start">
-                                    <img src="{% static 'images/hero_detail/cooldown_icon.svg' %}"
-                                         alt="cooldown-icon">
-                                    <span class="cooldown-value ps-1">
+                                        <div class="col cooldown" align="start">
+                                            <img src="{% static 'images/hero_detail/cooldown_icon.svg' %}"
+                                                 alt="cooldown-icon">
+                                            <span class="cooldown-value ps-1">
                                         {{ ability.cooldown }}
                                             </span>
-                                </div>
+                                        </div>
 
-                                <div class="col mana" align="end">
-                                    <img src="{% static 'images/hero_detail/manaicon.svg' %}"
-                                         alt="mana-icon">
-                                    <span class="mana-value ps-1">
+                                        <div class="col mana" align="end">
+                                            <img src="{% static 'images/hero_detail/manaicon.svg' %}"
+                                                 alt="mana-icon">
+                                            <span class="mana-value ps-1">
                                         {{ ability.mana_cost }}
                                     </span>
-                                </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% endif %}
                         </div>
-                    </div>
                     {% endfor %}
 
                     <div class="collapse col-11 col-lg-5" id="collapseTalentTree">
@@ -194,12 +193,14 @@
                 <div class="col-12 col-lg-6 hero-image">
                     <img class="img-fluid"
                          src={{ hero.image_url_large.url }}
-                         alt="{{ hero.name }}">
+                                 alt="{{ hero.name }}">
                     <div class="prev_next_btn">
-                        <a href="{% url 'hero:hero_detail' slug=prev_hero.slug %}" class="direction-button d-flex" id="prev-hero">
+                        <a href="{% url 'hero:hero_detail' slug=prev_hero.slug %}" class="direction-button d-flex"
+                           id="prev-hero">
                             <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
                         </a>
-                        <a href="{% url 'hero:hero_detail' slug=next_hero.slug %}" class="direction-button d-flex" id="next-hero">
+                        <a href="{% url 'hero:hero_detail' slug=next_hero.slug %}" class="direction-button d-flex"
+                           id="next-hero">
                             <img src="{% static 'images/base/up_btn.svg' %}" alt="up-button">
                         </a>
                     </div>
@@ -246,12 +247,12 @@
                             </div>
                             <div class="mt-3 d-flex flex-row align-items-center justify-content-start value">
                                 {% with attack_type=hero.attack_type.name %}
-                                <img src="{% static 'images/heroes_list/'|add:attack_type|add:'.svg' %}"
-                                     alt="attack_type">
-                                <span class="attack-type-value">
-                                        {{ hero.attack_type }}
-                                    {% endwith %}
-                                    </span>
+                                    <img src="{% static 'images/heroes_list/'|add:attack_type|add:'.svg' %}"
+                                         alt="attack_type">
+                                    <span class="attack-type-value">
+                                    {{ hero.attack_type }}
+                                {% endwith %}
+                                </span>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-xl-3 px-4 pb-3 pt-1 attack">
@@ -329,24 +330,22 @@
             </div>
         </div>
         {% if cosmetics %}
-        <div class="hero-cosmetic ms-3 ms-lg-0">
-            <h2>
-                Cosmetic items for {{ hero.name }}
-            </h2>
-            <div class="row">
-                {% for cosmetic in cosmetics %}
-                <div class="col-6 col-lg-3 ps-0 ps-lg-0 pe-4 pb-4 cosmetic-item">
-                    <img src="{{ cosmetic.image_url.url }}" alt="Item name here">
-                    <h5>{{ cosmetic.name }}</h5>
+            <div class="hero-cosmetic ms-3 ms-lg-0">
+                <h2>
+                    Cosmetic items for {{ hero.name }}
+                </h2>
+                <div class="row">
+                    {% for cosmetic in cosmetics %}
+                        <div class="col-6 col-lg-3 ps-0 ps-lg-0 pe-4 pb-4 cosmetic-item">
+                            <img src="{{ cosmetic.image_url.url }}" alt="Item name here">
+                            <h5>{{ cosmetic.name }}</h5>
+                        </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
-        </div>
         {% endif %}
-
     </div>
-</main>
 {% endblock %}
 {% block myscripts %}
-<script src="{% static 'scripts/hero_detail.js' %}"></script>
+    <script src="{% static 'scripts/hero_detail.js' %}"></script>
 {% endblock %}

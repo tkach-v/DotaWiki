@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     # local apps
     'hero.apps.HeroConfig',
     'home.apps.HomeConfig',
-    'item.apps.ItemConfig'
+    'item.apps.ItemConfig',
+    'creeps.apps.CreepsConfig',
+    'mechanics.apps.MechanicsConfig'
 ]
 
 MIDDLEWARE = [

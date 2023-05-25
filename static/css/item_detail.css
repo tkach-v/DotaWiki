@@ -49,6 +49,11 @@
   font-weight: 700;
 }
 
+.item-infobox {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 .item-infobox h5 {
   font-size: 22px;
   line-height: 25px;
@@ -77,7 +82,16 @@
 }
 .item-infobox .item-recipe img {
   width: 50px;
-  height: auto;
+  height: 36px;
+}
+
+.item-infobox-fixed {
+  position: absolute;
+  left: 0;
+}
+
+.col-md-5 {
+  position: relative;
 }
 
 .item-notes h5 {

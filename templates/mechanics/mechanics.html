@@ -1,0 +1,1930 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Creeps{% endblock %}
+{% block mystyles %}
+<link rel="stylesheet" href="{% static 'css/creeps_mechanics.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="block unit-mechanics">
+            <h2 class="block__title">
+                Unit Mechanics
+            </h2>
+            <div class="block__text">
+                These properties are used by units in general, including heroes, creeps, and summons. Heroes possess a
+                number of unique mechanics that other units don't.
+            </div>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Unit Mechanics Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Abilities
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{% static 'images/hero_detail/cooldown_icon.svg' %}" alt="">
+                                                <div class="ps-2">Cooldown</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Skills possessed by units, to be used on the battlefield. All heroes have at least three
+                                basic abilities and one ultimate ability. Hero abilities are acquired upon leveling up
+                                with experience. Most abilities need to be activated, while others are passive or
+                                augment a hero's basic attacks. Active abilities have a cooldown period between uses.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Abilities
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{% static 'images/heroes_list/strength.svg' %}" alt="">
+                                                <div class="ps-2">Strength</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{% static 'images/heroes_list/agility.svg' %}" alt="">
+                                                <div class="ps-2">Agility</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{% static 'images/heroes_list/intelligence.svg' %}" alt="">
+                                                <div class="ps-2">Intelligence</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Baseline stats that increase with each level. Strength increases health and health
+                                regeneration, Agility increases armor and attack speed, Intelligence increases mana and
+                                mana regeneration. All heroes are associated with one of three attributes, known as
+                                their Primary Attribute. Raising a hero's Primary Attribute also raises their physical
+                                attack damage. Attributes can also be increased by items and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="d-flex align-items-center mechanic-title  px-5">
+                                    <img src="{% static 'images/hero_detail/talents.svg' %}" alt="" style="height: 24px">
+                                    <div class="ps-2">
+                                        Talents
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Bonuses that increase a hero's stats and properties. Players can pick one of two talents
+                                at levels 10, 15, 20, and 25. The talents that were not chosen can be acquired at level
+                                27, 28, 29 and 30 respectively.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Experience (XP)
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Points needed for heroes to level up. Experience is gained from killing creeps, enemy
+                                heroes and controlling outposts. A hero's maximum level is 30, after which experience no
+                                longer serves any purpose.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Spawning
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Heroes spawn at the fountain, in their base. Dead heroes respawn after a set amount of
+                                time. Respawn time is determined by the hero's level.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Health
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Health Regeneration
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The amount of hit points a hero has. Health and health regeneration can be increased by
+                                strength, items, talents and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Mana
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Mana Regeneration
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The resource required to use most abilities. Mana and mana regeneration can be increased
+                                by intelligence, items, talents and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Armor
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Armor Manipulation
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Effective HP
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Property that reduces incoming physical damage by a scaling amount per attack. Armor
+                                comes in three types, and can be increased or decreased by agility, items, talents and
+                                abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Damage Block
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Property that reduces incoming damage by a fixed amount per attack. It is granted by
+                                some items and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Magic Resistance
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Effective HP
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Property that reduces incoming magical damage by a percentage. All heroes start with 25%
+                                Magic Resistance. It can be further increased by items, talents and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Evasion
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            True Strike
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Accuracy
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Property that grants a percentage chance to completely avoid a physical attack. True
+                                strike allows a hero to ignore evasion.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Movement Speed
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The rate at which a unit moves. Movement speed can be increased and decreased by items
+                                and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Status Resistance
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Status resistance is an attribute of a hero that reduces the duration of most status
+                                debuffs and the slow values of slows. By default, every unit has a base status
+                                resistance of zero.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Turn Rate
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The rate at which a unit's model turns measured with time. Most actions require the
+                                model to be facing towards the direction of the action about to be taken.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Collision Size
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Phased
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The internal size of a unit, which is impassable and can block other units. Most heroes
+                                have the same collision size, regardless of their graphical model.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Aura
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Passive buffs and debuffs that surround a hero or unit in a circular radius. Auras come
+                                from abilities and items, and cannot be dispelled.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Illusions
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Copies of heroes that are generated by abilities, items, or runes. Illusions come in
+                                different types, and possess lesser properties of the original hero.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block attack-mechanics">
+            <h2 class="block__title">
+                Attack Mechanics
+            </h2>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Attack Mechanics Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Damage Types
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Physical Damage
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Magical Damage
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Pure Damage
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            HP Removal
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                There are three overall categories of damage. Physical damage is done by basic attacks,
+                                and some abilities. Magical damage is done by abilities and items. Pure damage is the
+                                rarest, and penetrates armor and magic resistance. HP Removal ignores all forms of
+                                damage manipulation, and is not technically considered a type of damage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Attack Damage
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Total Attack Damage
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Instant Attack
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Damage done by basic attacks. This type of damage is usually physical, but is split into
+                                four Attack Classes that interact differently with different Defense Classes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Spell damage
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Spell amplification
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Damage done by any source other than basic attacks. Spell damage can come in magical,
+                                physical, or pure damage types.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Damage manipulation
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Damage amplification
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Damage reduction
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Damage negation
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Damage Barrier
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Calculations that affect the final value of a damage instance. Items and abilities can
+                                amplify, reduce, or negate final damage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Damage over time
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Periodic damage done over intervals, usually in small amounts.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Attack Speed
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The time it takes to perform an attack. Attack speed can be increased or decreased by
+                                items and abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Attack animation
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Attack point
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Attack backswing
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The model animation that plays when a unit attacks. Damage is dealt at the attack point,
+                                followed by the attack backswing of the animation. Attack animations play faster or
+                                slower according to a unit's attack speed.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Cast animation
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Cast point
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Cast backswing
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The model animation that plays when a unit uses an ability. The ability is used at the
+                                cast point, followed by the cast backswing of the animation. Each ability has its own
+                                unique cast animation. The speed of cast animations can be altered only with arcane
+                                blink , Other than that cast speed stays the same throughout the match for each ability.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Channeling
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The model animation for certain abilities that require a unit to stand still in order to
+                                affect the ability over time.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Projectile speed
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The speed at which the projectile from a ranged basic attack travels. Abilities have
+                                unique projectile speeds for their projectiles.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Attack Range
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The distance from which a unit can perform basic attacks.
+                                Most Melee heroes have a range of 150, while Ranged heroes can have a range of up to
+                                700.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h2 class="block__subtitle">
+                Attack Modifiers
+            </h2>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Attack Modifiers Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Critical strike
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifier that increases damage from basic attacks by a percentage multiplier.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Cleave & Splash
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifiers that cause damage from basic attacks to spill past a single target to a larger
+                                area.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Bash
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifier that gives basic attacks a chance to stun.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Lifesteal
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifier that causes attacks to regenerate a portion of their damage as health.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Mana break
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifier that causes attacks to burn mana from the target, dealing damage based on the
+                                burned amount.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block world-mechanics">
+            <h2 class="block__title">
+                World Mechanics
+            </h2>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        World Mechanics Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Game map
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Lanes
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Jungle
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                The battlefield where Dota 2 matches takes place. Three Lanes are present on the map, and lead into each team's base. In between the lanes are wooded areas known as the Jungle.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Buildings
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Ancient
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Towers
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Barracks
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Outposts
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Structures that aid in the defense of each opposing side. The main building is the Ancient, which must be destroyed in order for a side to win. Buildings can be made temporarily invulnerable with Glyph of Fortification.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Shops
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Stores scattered across the map that sell items to heroes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Gold
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Buyback
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Currency used to buy items, which increase a hero's capabilities. Heroes gain a small amount of gold every second, and can earn more gold by killing creeps, enemy heroes, and buildings. Dead heroes can use gold to Buyback, allowing them to respawn instantly.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Items
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Recipes
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Item sharing
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Disassembling
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Objects that can be purchased on the game map. Items increase a hero's properties, and grant them special abilities and effects. Smaller items combine into larger items, with the help of recipes. Some items can be disassembled. Neutral items can be found by killing neutral creeps.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Courier
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A special unit owned by each player that holds and delivers items to players.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Creeps
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Lane creeps
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Neutral creeps
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Units that automatically spawn on the map. They are killed for gold and experience. Lane creeps attack and push towards the opposing base. Neutral creeps reside in the jungle.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Summons
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Units that are created by heroes to aid them in combat.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Wards
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Units that provide vision, or some other utility.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Runes
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Special boosters that spawn on the map. Runes give extra gold and experience to heroes who pick them up, as well as a variety of power-up effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Vision
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Ground vision
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Flying vision
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Shared vision
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            True sight
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                A unit's ability to see the map in real time, versus being covered by the fog of war. Most units have a radius of vision around them. Some units can turn invisible, and can only be detected by True Sight.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Time of day
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The cycle of night and day. Some heroes have abilities that function differently at night. Vision is also limited at night.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Trees
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Vegetation that serve as impassible obstacles on the game map. Trees can be cut down, and will regrow over time. Some items and abilities can interact with trees.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Pseudo-random distribution
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The chance an ability or item's effect will occur, increasing every time the effect does not occur.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    True random distribution
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The chance an ability or item's effect will occur, calculated independently of previous instances.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block status-effects-mechanics">
+            <h2 class="block__title">
+                Status Effects
+            </h2>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Status Effects Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Stun
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Shackle
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is unable to move or perform any actions. Shackle is the same as stun, but requires the attacking hero to channel the effect.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Root
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is unable to move, but can perform some actions.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Leash
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is unable to move outside a limited range, but can perform some actions. Similar to root.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Hex
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is transformed into a critter, and is unable to perform any actions except move at a slow pace.
+                            </td>
+                        </tr><tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Cyclone
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is swept into the air, where it is invulnerable, but cannot move or perform any actions.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Hide/Banish
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is temporarily removed from the game map, and cannot be damaged or affected by any other mechanics.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Blind
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit has a chance to miss basic attacks.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Silence
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is disabled from using unit abilities, but can still use item abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Mute
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is disabled from using item abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Break
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit's passive abilities are disabled.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Disarm
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit cannot attack, but can still use abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Slow
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit's movement speed is reduced. Most slows end after a set time, while other slows gradually decrease over time.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Trap
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit's movement is restricted by pathing blockers, but can still perform actions. Units try to path around them if possible.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Barrier
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit's movement and several sources of forced movement are restricted by barriers, but can still perform actions. Units do not try to path around them, manual guidance is required.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Taunt
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is forced to attack a certain target, ignoring player input.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Fear
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is forced to run towards their team's fountain, ignoring player input.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Hypnosis
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is forced to move towards a hypnotizing source, ignoring player input.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Forced movement
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is forced to move in a certain direction, ignoring player input.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Teleport/Blink
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit moves to a location instantaneously.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Invisibility
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit cannot be seen by normal vision, but can be detected by True Sight.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Phased
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit can move through other units, ignoring collision size.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Invulnerability
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit cannot be damaged by physical attacks.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Spell immunity
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit cannot be targeted or affected by most spells.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Attack immunity
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit cannot be attacked. Already launched attack projectiles cannot harm or affect the unit. Unit is still affected by physical spell damage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Ethereal
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit assumes a ghostly form, becoming immune to physical damage, but takes more magical damage. Ethereal units are disarmed and attack immune.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">Dispelling</h3>
+            <div class="block__text">
+                Dispel refers to methods that remove buffs, debuffs, and status effects. This is an important topic to understanding the internal interactions of Dota 2.
+            </div>
+            <div class="block__table" style="margin-top: 30px">
+                <div class="table-title">
+                    <div>
+                        Dispelling Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Basic dispel
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A simple dispel granted by abilities and items.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Spell immunity
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Some forms of spell immunity provide a basic dispel when activated.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Strong dispel
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A greater dispel that removes more status effects, granted by a handful of abilities.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Removable buffs
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A list of buffs that can be removed by various forms of dispel.
+                            </td>
+                        </tr><tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Removable debuffs
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A list of debuffs that can be removed by various forms of dispel.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block gameplay-mechanics">
+            <h2 class="block__title">
+                Gameplay
+            </h2>
+            <div class="block__table">
+                <div class="table-title">
+                    <div>
+                        Gameplay Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Game modes
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Map conditions with different rulesets regarding hero picking and other variables.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Custom Games
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Modding
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Game modes created by community members, with its own set of rules and assets. Custom games are made through modding.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Heads-up display (HUD)
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The in-game graphical interface, showing a hero's portrait, abilities, items, stats, and more.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Minimap
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Scan
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                A small graphical representation of the game map, where heroes and other information can be seen. Scanning is a way to reveal the presence of enemies on the minimap.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Hex
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Unit is transformed into a critter, and is unable to perform any actions except move at a slow pace.
+                            </td>
+                        </tr><tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Disjoint
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of dodging a projectile using an ability or item. Not all projectiles can be disjointed.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Denying
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of killing a friendly hero, creep or building with low health. Denying prevents enemy heroes from gaining gold and experience from the denied unit or building.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Creep control techniques
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Methods to manipulate creeps for the purpose of positioning, or spawning more creeps to kill later on.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Roles
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Play styles that heroes fulfill to serve a specific function for their team.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Ganking
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The strategy of ambushing and attacking isolated enemy heroes in order to secure an early game advantage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Pushing
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The strategy of focusing on destroying buildings and pressuring the lanes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Harassment
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The strategy of attacking opponents to intimidate them from farming effectively, especially during the early game.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Farming
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of accumulating gold by killing as many creeps as possible.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Jungling
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of farming in the jungle by killing neutral creeps, instead of farming in the lanes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Initiating
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of starting a teamfight, usually by disabling opponents with powerful abilities first.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block system-mechanics">
+            <h2 class="block__title">
+                System
+            </h2>
+            <div class="block__text">
+                This is a list of major functions that are not directly part of the game. It involves various features regarding player input, Steam, and others.
+            </div>
+            <div class="block__table" style="margin-top: 30px">
+                <div class="table-title">
+                    <div>
+                        System Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Spectating
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Replay
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                A function that allows players to watch live games, as well as replays of past games.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Trophies & Profile Levels
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                In-game achievements that are awarded for accomplishing various feats.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Events
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Time-limited promotions that come with exclusive cosmetic items, trophies, and more. Events usually take place around big tournaments and holidays.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Versions
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Updates to game mechanics, including new heroes, items, and balance adjustments. Versions are shipped with patches.
+                            </td>
+                        </tr><tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Patches
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Updates to the game client, including changes to elements outside of mechanics, such as cosmetic items or the graphical interface.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Settings
+            </h3>
+            <div class="block__text">
+                Game settings allow users to change display, graphics, audio, and control settings.
+            </div>
+            <div class="block__table" style="margin-top: 30px">
+                <div class="table-title">
+                    <div>
+                        Settings Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Controls
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Hotkeys
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Chat wheel
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Settings for hotkeys, mouse cursor interactions, and the in-game chat wheel.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Launch Options
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Command lines that can be entered Steam's settings to change the Dota 2 client.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Console commands
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                List of commands that can be used through the in-game console.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Cheats
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                List of official cheats that can be used in private lobbies, for the purpose of testing. Cheats cannot be used in matchmaking.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Matchmaking
+            </h3>
+            <div class="block__text">
+                Matchmaking is the automated system that finds and matches players together, usually based on internal calculations of player skill. Casual and ranked matchmaking are both available.
+            </div>
+            <div class="block__table" style="margin-top: 30px">
+                <div class="table-title">
+                    <div>
+                        Matchmaking Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Matchmaking Rating
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The value that determines a player's skill level. Also known as MMR. Winning increases a player's rating, while losing decreases it.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Leaderboards
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Regional ladder rankings for the top players with the highest matchmaking rating.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Bots
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                AI controlled heroes that players can choose to match with.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Priority
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Internal flag that determines who players are matched with. Players with a history of bad conduct are placed in low priority, and can only match with others in low priority.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Ban
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Report
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Commend
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Punishments given out to players who violate rules or community norms. Communication bans are given out based on feedback from other players. Total game bans are given out to players who use third party programs to cheat.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3 class="block__subtitle">
+                Cosmetic items
+            </h3>
+            <div class="block__text">
+                Cosmetic items can be used to alter the appearance of heroes and various elements of the interface. They are purely cosmetic and do not affect game mechanics.
+            </div>
+            <div class="block__table" style="margin-top: 30px">
+                <div class="table-title">
+                    <div>
+                        Cosmetic Items Table
+                    </div>
+                    <img src="{% static 'images/creeps/up-btn.svg' %}" alt="">
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                Mechanic
+                            </th>
+                            <th>
+                                Introduction
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Item drop system
+                                </div>
+                                <ul class="mt-3 p-0">
+                                    <li class="d-flex align-items-center py-1">
+                                        <img src="{% static 'images/items_detail/note_marker.svg' %}" alt="note-marker">
+                                        <div class="ps-2">
+                                            Drop list
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="mechanic-description">
+                                Cosmetic items drop randomly after matches. Rare items drop less often.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Rarity
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Property of items that scale from Common to Arcana. Rarer items are generally harder to obtain, and contain more customizations.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Quality
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Property of items that are associated with the circumstances of their origin.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Armory
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The in-game interface where all cosmetic items are stored.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Treasures
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Boxes that can be opened to obtain random cosmetic items.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Gems
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Modifiers that can be socketed into some items to grant them a counter or custom effects.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Music
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                Soundtracks that play depending on the events of the game. Numerous custom music packs exist.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Steam Market
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                A community marketplace where cosmetic items can be bought and sold.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Trading
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of trading cosmetic items with a friend on Steam, with certain restrictions.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mechanic">
+                                <div class="mechanic-title px-5">
+                                    Gifting
+                                </div>
+                            </td>
+                            <td class="mechanic-description">
+                                The act of sending cosmetic items to a friend as a gift, with certain restrictions.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block myscripts %}
+    <script src="{% static 'scripts/creeps_mechanics.js' %}"></script>
+{% endblock %}
