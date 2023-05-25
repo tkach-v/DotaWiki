@@ -63,6 +63,7 @@ h2 {
   margin-left: 14px;
 }
 .items-list .item {
+  height: 100%;
   background: #1A1A1F;
   font-size: 20px;
   line-height: 23px;
