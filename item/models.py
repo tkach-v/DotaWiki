@@ -17,6 +17,8 @@ class Item(models.Model):
     shareable = models.ForeignKey('Shareable', on_delete=models.CASCADE)
     disassemble = models.ForeignKey('Disassemble', on_delete=models.CASCADE)
     availability = models.ForeignKey('Availability', on_delete=models.CASCADE)
+    recipe = models.ManyToManyField('self', blank=True)
+    need_recipe = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

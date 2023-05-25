@@ -27,8 +27,6 @@ def run():
         else:
             type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'])
 
-
-
         item = Item(
             name=row['name'],
             image_url='',
