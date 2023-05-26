@@ -250,33 +250,41 @@
                     {% if item.bonus %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
-                            Bonus:<br> {{ item.bonus|safe }}
+                            Bonus:
                         </div>
-                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start">
+                            {{ item.bonus|safe }}
+                        </div>
                     </div>
                     {% endif %}
                     {% if item.shareable.name %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
-                            Shareable: {{ item.shareable }}
+                            Shareable:
                         </div>
-                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start">
+                            {{ item.shareable }}
+                        </div>
                     </div>
                     {% endif %}
                     {% if item.disassemble.name %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
-                            Disassemble: {{ item.disassemble }}
+                            Disassemble:
                         </div>
-                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start">
+                            {{ item.disassemble }}
+                        </div>
                     </div>
                     {% endif %}
                     {% if item.availability.name %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
-                            Availability: {{ item.availability }}
+                            Availability:
                         </div>
-                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start">
+                            {{ item.availability }}
+                        </div>
                     </div>
                     {% endif %}
                 </div>

@@ -10,8 +10,11 @@ from .models import *
 class ItemList(ListView):
     template_name = 'item/items_list.html'
     context_object_name = 'items'
-    type_global = get_object_or_404(TypeGlobal, name='Basics')
-    queryset = Item.objects.filter(type_global=type_global).order_by('name')
+    try:
+        type_global = get_object_or_404(TypeGlobal, name='Basics')
+        queryset = Item.objects.filter(type_global=type_global).order_by('name')
+    except:
+        queryset = Item.objects.all().order_by('name')
 
     def dispatch(self, request, *args, **kwargs):
         if 'X-Requested-With' in request.headers and request.headers['X-Requested-With'] == 'XMLHttpRequest':

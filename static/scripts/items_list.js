@@ -32,10 +32,6 @@ function getItems(typeGlobal, typeSpecific) {
                                         <span class="price pe-2">${item.cost}</span>
                                         <img src="/static/images/items_list/coin.png" alt="Coin">
                                     </div>
-                                ` : item.type_global === "Neutral" ? `
-                                    <div class="col-6 d-flex align-items-center justify-content-start">
-                                        <span class="price pe-2">${item.specific_name}</span>
-                                    </div>
                                 ` : `
                                     <div class="col-6 d-flex align-items-center justify-content-start">
                                         <span class="price pe-2">${item.specific_name}</span>
