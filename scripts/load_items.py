@@ -14,6 +14,7 @@ def run():
 
     Item.objects.all().delete()
     TypeSpecific.objects.all().delete()
+    Availability.objects.all().delete()
 
     for row in items:
         print(row['name'])

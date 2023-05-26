@@ -14,6 +14,6 @@ def run():
                 print(row['name'])
                 item.need_recipe = True
                 item.save()
-            #recipe_objects = Item.objects.filter(name__in=recipe_items)
-            #item.recipe.set(recipe_objects)
-            #item.save()
+            recipe_objects = Item.objects.filter(name__in=recipe_items)
+            item.recipe.set(recipe_objects)
+            item.save()
