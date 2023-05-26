@@ -13,10 +13,12 @@ class Item(models.Model):
     type_specific = models.ForeignKey('TypeSpecific', on_delete=models.CASCADE)
     cost = models.CharField(max_length=100, null=True)
     sell_value = models.CharField(max_length=100, null=True)
-    bonus = models.CharField(max_length=300, null=True)
+    bonus = models.CharField(max_length=300, null=True, blank=True)
     shareable = models.ForeignKey('Shareable', on_delete=models.CASCADE)
     disassemble = models.ForeignKey('Disassemble', on_delete=models.CASCADE)
     availability = models.ForeignKey('Availability', on_delete=models.CASCADE)
+    recipe = models.ManyToManyField('self', blank=True, symmetrical=False)
+    need_recipe = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

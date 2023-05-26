@@ -14,6 +14,7 @@ def run():
 
     Item.objects.all().delete()
     TypeSpecific.objects.all().delete()
+    Availability.objects.all().delete()
 
     for row in items:
         print(row['name'])
@@ -26,8 +27,6 @@ def run():
             type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'][:6])
         else:
             type_specific_val, created = TypeSpecific.objects.get_or_create(name=row['type_specific'])
-
-
 
         item = Item(
             name=row['name'],

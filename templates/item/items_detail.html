@@ -247,6 +247,14 @@
                             Overwhelming Blink
                         </div>
                     </div>
+                    {% if item.bonus %}
+                    <div class="characteristic py-2 d-flex">
+                        <div class="characteristic-name pe-2">
+                            Bonus:<br> {{ item.bonus|safe }}
+                        </div>
+                        <div class="characteristic-value d-flex align-items-center justify-content-start"></div>
+                    </div>
+                    {% endif %}
                     {% if item.shareable.name %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
@@ -277,7 +285,7 @@
                     <div class="recipe-images d-flex flex-column justify-content-center">
                         <div class="row m-0 pb-2">
                             <a href="" class="main-item-image d-flex justify-content-center">
-                                <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink" class="img-fluid">
+                                <img src="{{ item.image_url.url }}" alt="Overwhelming Blink" class="img-fluid">
                             </a>
                         </div>
                         <div class="connection mx-auto">
@@ -289,30 +297,14 @@
                             </div>
                         </div>
                         <div class="row m-0 pt-2">
+                            {% for recipe_item in item.recipe.all %}
                             <div class="col p-0">
                                 <a href="" class="other-item-image d-flex justify-content-center">
-                                    <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink"
+                                    <img src="{{ recipe_item.image_url.url }}" alt="{{ recipe_item.name }}"
                                          class="img-fluid">
                                 </a>
                             </div>
-                            <div class="col p-0">
-                                <a href="" class="other-item-image d-flex justify-content-center">
-                                    <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink"
-                                         class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col p-0">
-                                <a href="" class="other-item-image d-flex justify-content-center">
-                                    <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink"
-                                         class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col p-0">
-                                <a href="" class="other-item-image d-flex justify-content-center">
-                                    <img src="images/items_detail/test_item.jpg" alt="Overwhelming Blink"
-                                         class="img-fluid">
-                                </a>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

@@ -49,17 +49,10 @@ if (window.screen.width >= 768 && abilities.length) {
     const minScroll = document.querySelector(".col-md-5").offsetTop;
     const maxScroll = document.querySelector(".item-abilities").offsetHeight + minScroll - 51 - 21 - elemHeight;
 
-
     elem.style.width = elemWidth + "px";
-    // elem.style.height = elemHeight + "px";
-
-    console.log(minScroll);
-    console.log(maxScroll);
-
 
     (function () {
         window.onscroll = () => {
-            console.log(window.scrollY)
             if (window.scrollY > (minScroll - 51)) {
                 elem.classList.add('item-infobox-fixed');
 
