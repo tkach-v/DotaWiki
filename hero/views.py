@@ -5,10 +5,6 @@ from django.http import JsonResponse
 from .models import *
 
 
-def index(request):
-    return render(request, "hero/heroes_detail.html")
-
-
 class HeroDetail(DetailView):
     model = Hero
     template_name = 'hero/heroes_detail.html'
