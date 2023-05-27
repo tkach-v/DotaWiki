@@ -307,12 +307,22 @@
                         <div class="row m-0 pt-2">
                             {% for recipe_item in item.recipe.all %}
                             <div class="col p-0">
-                                <a href="" class="other-item-image d-flex justify-content-center">
+                                <a href="/items/{{ recipe_item.slug }}"
+                                   class="other-item-image d-flex justify-content-center">
                                     <img src="{{ recipe_item.image_url.url }}" alt="{{ recipe_item.name }}"
                                          class="img-fluid">
                                 </a>
                             </div>
                             {% endfor %}
+                            {% if item.need_recipe %}
+                            <div class="col p-0">
+                                <a href="#" class="other-item-image d-flex justify-content-center">
+                                    <img src="{% static 'images/items_detail/recipe_icon.webp' %}"
+                                         alt="{{ recipe_item.name }}"
+                                         class="img-fluid">
+                                </a>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
