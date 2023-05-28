@@ -11,8 +11,10 @@ document.querySelector(".search-heroes input").addEventListener('keyup', evt => 
             } else {
                 i.style.display = "none";
             }
-            if (countMatch < 10) {
+            if (countMatch === 0) {
                 document.querySelector(".heroes-list").style.marginBottom = "40vh";
+            } else  {
+                document.querySelector(".heroes-list").style.marginBottom = "0";
             }
         });
         if (countMatch === 0) {

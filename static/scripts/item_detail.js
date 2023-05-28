@@ -40,7 +40,7 @@ if (otherImages.length === 0) {
 
 
 const abilities = document.querySelectorAll('.item-ability');
-if (window.screen.width >= 768 && abilities.length) {
+if (window.screen.width >= 768 && abilities.length > 1) {
 (".item-infobox").offsetHeight;
     let elem = document.querySelector(".item-infobox");
     let elemWidth = elem.offsetWidth;

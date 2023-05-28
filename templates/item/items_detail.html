@@ -19,190 +19,82 @@
     </div>
     <div class="row m-0 mt-4">
         <div class="col-12 col-md-7 item-abilities p-0 ps-xl-5 pe-md-4">
+            {% for ability in abilities %}
             <div class="item-ability p-4 mb-4">
                 <h5 class="m-0 pb-4">
-                    Ability : Overwhelming Blink
+                    Ability : {{ ability.name }}
                 </h5>
                 <div class="row m-0 py-3 ability-characteristics">
+                    {% if ability.ability_type.name %}
                     <div class="col-4 ability">
                         <p class="characteristic-name">
                             Ability
                         </p>
                         <p class="characteristic-value">
-                            Target Point
+                            {{ ability.ability_type.name }}
                         </p>
                     </div>
+                    {% endif %}
+                    {% if ability.affects.name %}
                     <div class="col-4 affects">
                         <p class="characteristic-name">
                             Affects
                         </p>
                         <p class="characteristic-value">
-                            Self / Enemies
+                            {{ ability.affects.name }}
                         </p>
                     </div>
+                    {% endif %}
+                    {% if ability.damage.name %}
                     <div class="col-4 damage">
                         <p class="characteristic-name">
                             Damage
                         </p>
                         <p class="characteristic-value">
-                            Magical
+                            {{ ability.damage.name }}
                         </p>
                     </div>
+                    {% endif %}
                 </div>
                 <div class="ability-description mt-4">
                     <p>
-                        Teleport to a target point up to 1200 units away.
-                        <br><br>
-                        After teleportation, all enemies in a 800 AoE have 50% movement speed slow and 50 attack speed
-                        slow for 6 seconds, and take damage equal to 100 + 150% of your strength.
-                        <br><br>
-                        Overwhelming Blink cannot be used for 3 seconds after taking damage from an enemy hero or
-                        Roshan.
+                        {{ ability.description|safe }}
                     </p>
                 </div>
                 <div class="row ability-details mt-3">
                     <div class="col-12">
+                        {% for key, value in ability.details.items %}
                         <p class="detail">
                                         <span class="detail-title">
-                                            Cast Animation:
+                                            {{ key }}
                                         </span>
                             <span class="detail-value">
-                                            0.55+0
+                                            {{ value }}
                                         </span>
                         </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="row cooldown-mana mt-3">
+                    {% if ability.cooldown %}
                     <div class="col cooldown" align="start">
-                        <img src="images/hero_detail/cooldown_icon.svg" alt="cooldown-icon">
+                        <img src="{% static 'images/hero_detail/cooldown_icon.svg' %}" alt="cooldown-icon">
                         <span class="cooldown-value ps-1">
-                                        10 ( 5)
+                                        {{ ability.cooldown }}
                                     </span>
                     </div>
+                    {% endif %}
+                    {% if ability.manacost %}
                     <div class="col mana" align="end">
-                        <img src="images/hero_detail/manaicon.svg" alt="mana-icon">
+                        <img src="{% static 'images/hero_detail/manaicon.svg' %}" alt="mana-icon">
                         <span class="mana-value ps-1">
-                                        75/80/85/90
+                                        {{ ability.manacost }}
                                     </span>
                     </div>
+                    {% endif %}
                 </div>
             </div>
-            <div class="item-ability p-4 mb-4">
-                <h5 class="m-0 pb-4">
-                    Ability : Overwhelming Blink
-                </h5>
-                <div class="row m-0 py-3 ability-characteristics">
-                    <div class="col-4 ability">
-                        <p class="characteristic-name">
-                            Ability
-                        </p>
-                        <p class="characteristic-value">
-                            Target Point
-                        </p>
-                    </div>
-                    <div class="col-4 affects">
-                        <p class="characteristic-name">
-                            Affects
-                        </p>
-                        <p class="characteristic-value">
-                            Self / Enemies
-                        </p>
-                    </div>
-                    <div class="col-4 damage">
-                        <p class="characteristic-name">
-                            Damage
-                        </p>
-                        <p class="characteristic-value">
-                            Magical
-                        </p>
-                    </div>
-                </div>
-                <div class="ability-description mt-4">
-                    <p>
-                        Teleport to a target point up to 1200 units away.
-                        <br><br>
-                        After teleportation, all enemies in a 800 AoE have 50% movement speed slow and 50 attack speed
-                        slow for 6 seconds, and take damage equal to 100 + 150% of your strength.
-                        <br><br>
-                        Overwhelming Blink cannot be used for 3 seconds after taking damage from an enemy hero or
-                        Roshan.
-                    </p>
-                </div>
-                <div class="row ability-details mt-3">
-                    <div class="col-12">
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                        <p class="detail">
-                                        <span class="detail-title">
-                                            Cast Animation:
-                                        </span>
-                            <span class="detail-value">
-                                            0.55+0
-                                        </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="row cooldown-mana mt-3">
-                    <div class="col cooldown" align="start">
-                        <img src="images/hero_detail/cooldown_icon.svg" alt="cooldown-icon">
-                        <span class="cooldown-value ps-1">
-                                        10 ( 5)
-                                    </span>
-                    </div>
-                    <div class="col mana" align="end">
-                        <img src="images/hero_detail/manaicon.svg" alt="mana-icon">
-                        <span class="mana-value ps-1">
-                                        75/80/85/90
-                                    </span>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="col-12 col-md-5 p-0 pe-xl-5">
             <div class="item-infobox p-4">
@@ -239,14 +131,6 @@
                         </div>
                     </div>
                     {% endif %}
-                    <div class="characteristic py-2 d-flex">
-                        <div class="characteristic-name pe-2">
-                            Active:
-                        </div>
-                        <div class="characteristic-value d-flex align-items-center justify-content-start">
-                            Overwhelming Blink
-                        </div>
-                    </div>
                     {% if item.bonus %}
                     <div class="characteristic py-2 d-flex">
                         <div class="characteristic-name pe-2">
@@ -307,48 +191,26 @@
                         <div class="row m-0 pt-2">
                             {% for recipe_item in item.recipe.all %}
                             <div class="col p-0">
-                                <a href="" class="other-item-image d-flex justify-content-center">
+                                <a href="/items/{{ recipe_item.slug }}"
+                                   class="other-item-image d-flex justify-content-center">
                                     <img src="{{ recipe_item.image_url.url }}" alt="{{ recipe_item.name }}"
                                          class="img-fluid">
                                 </a>
                             </div>
                             {% endfor %}
+                            {% if item.need_recipe %}
+                            <div class="col p-0">
+                                <a href="#" class="other-item-image d-flex justify-content-center">
+                                    <img src="{% static 'images/items_detail/recipe_icon.webp' %}"
+                                         alt="{{ recipe_item.name }}"
+                                         class="img-fluid">
+                                </a>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="item-notes p-4 mx-0 mx-xl-5 mt-4">
-        <h5 class="m-0 pb-4">
-            Notes
-        </h5>
-        <div class="note d-flex align-items-start mb-4">
-            <img class="pt-1" src="images/items_detail/note_marker.svg" alt="note-marker">
-            <p class="note-text ps-3 m-0">
-                When point-targeted beyond the maximum blink distance, it blinks using the 960 range penalty distance,
-                towards the targeted direction instead of maximum distance.
-            </p>
-        </div>
-        <div class="note d-flex align-items-start mb-4">
-            <img class="pt-1" src="images/items_detail/note_marker.svg" alt="note-marker">
-            <p class="note-text ps-3 m-0">
-                When point-targeted
-            </p>
-        </div>
-        <div class="note d-flex align-items-start mb-4">
-            <img class="pt-1" src="images/items_detail/note_marker.svg" alt="note-marker">
-            <p class="note-text ps-3 m-0">
-                When point-targeted beyond the maximum blink distance, it blinks using the 960 range penalty distance,
-                towards the targeted direction instead of maximum distance.
-            </p>
-        </div>
-        <div class="note d-flex align-items-start mb-4">
-            <img class="pt-1" src="images/items_detail/note_marker.svg" alt="note-marker">
-            <p class="note-text ps-3 m-0">
-                When point-targeted beyond the maximum blink distance, it blinks using the 960 range penalty distance,
-                towards the targeted direction instead of maximum distance.
-            </p>
         </div>
     </div>
 </div>

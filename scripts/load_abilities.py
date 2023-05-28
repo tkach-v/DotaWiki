@@ -21,6 +21,7 @@ def run():
         for ab in row['abilities']:
             ab_type, created = AbilityType.objects.get_or_create(name=ab["type"])
 
+
             ability = Ability(
                 owner=ow,
                 name=ab['name'],
