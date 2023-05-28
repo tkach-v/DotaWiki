@@ -1,0 +1,4339 @@
+[
+  {
+    "item_name": "Observer Ward",
+    "abilities": [
+      {
+        "name": "Plant",
+        "ability": "Target Area",
+        "affects": "",
+        "damage": "",
+        "description": "Plants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes.<br><br>Hold Control to give one Observer Ward to an allied hero.",
+        "details": {
+          "Cast Range:": "500",
+          "Vision Radius:": "1600",
+          "Hero Attacks to Destroy:": "2",
+          "Non-Hero Attacks to Destroy:": "8",
+          "Gold Bounty Increase per Minute:": "4",
+          "Experience Increase per Minute:": "8",
+          "Duration:": "360"
+        },
+        "cooldown": "1",
+        "manacost": "0"
+      },
+      {
+        "name": "Planted Ward",
+        "ability": "Hidden",
+        "affects": "",
+        "damage": "",
+        "description": "This unit is permanently invisible and phased.",
+        "details": {
+          "Attacking Accuracy:": "100%",
+          "Melee Attack Range Bonus:": "150",
+          "Ally Deny Health Threshold:": "50"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Sentry Ward",
+    "abilities": [
+      {
+        "name": "Plant",
+        "ability": "Target Area",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a  radius.<br>Lasts 7 minutes.<br><br>Does not grant ground vision.<br>Hold Control to give one Sentry Ward to an allied hero.",
+        "details": {
+          "Cast Range:": "500",
+          "Hero Attacks to Destroy:": "2",
+          "Non-Hero Attacks to Destroy:": "8",
+          "Duration:": "420"
+        },
+        "cooldown": "1",
+        "manacost": "0"
+      },
+      {
+        "name": "True Sight",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Adds the ability to see invisible units and wards to any allied vision within the Sentry Ward\\'s range.",
+        "details": {
+          "Radius:": "1000",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Planted Ward",
+        "ability": "Hidden",
+        "affects": "",
+        "damage": "",
+        "description": "This unit is permanently invisible and phased.",
+        "details": {
+          "Attacking Accuracy:": "100%",
+          "Melee Attack Range Bonus:": "150",
+          "Ally Deny Health Threshold:": "50"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Faerie Fire",
+    "abilities": [
+      {
+        "name": "Imbue",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Instantly restores 85 health.",
+        "details": {
+          ":": "0",
+          "Health Restored:": "85"
+        },
+        "cooldown": "5",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Tango",
+    "abilities": [
+      {
+        "name": "Devour",
+        "ability": "Target Unit",
+        "affects": "Trees  / Self",
+        "damage": "",
+        "description": "Consumes a target tree to gain 7 health regeneration for 16 seconds. Consuming an Ironwood Tree doubles the heal amount.<br><br>Comes with 3 charges. Can be used on an allied hero to give them one Tango.",
+        "details": {
+          "Cast Range:": "165",
+          "Health Regen Bonus:": "7",
+          "Duration (Regular Tree):": "16",
+          "Duration (Planted Tree):": "32",
+          "Shared Tango Duration:": "40",
+          "Number of Charges:": "3"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Clarity",
+    "abilities": [
+      {
+        "name": "Replenish",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Grants 6 mana regeneration to the target for 25 seconds.<br><br>If the unit is attacked by an enemy hero or Roshan, the effect is lost.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "250",
+          "Mana Regen Bonus:": "6",
+          "Duration:": "25"
+        },
+        "cooldown": "0",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Enchanted Mango",
+    "abilities": [
+      {
+        "name": "Eat Mango",
+        "ability": "No Target  / Target Unit",
+        "affects": "Self  / Allied Heroes",
+        "damage": "",
+        "description": "Instantly restores 100 mana.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "400",
+          "Pick-up Range Bonus:": "150",
+          "Mana Restored:": "100"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Blood Grenade",
+    "abilities": [
+      {
+        "name": "Throw Grenade",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Throws a grenade at the target area. Enemies in the area will take 15 damage on impact, be slowed by 15% and take 15 damage per second.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "900",
+          "Radius:": "300",
+          "Impact Damage:": "50",
+          "Damage per Second:": "15",
+          "Move Speed Slow:": "15%",
+          "Duration:": "5"
+        },
+        "cooldown": "10",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Smoke of Deceit",
+    "abilities": [
+      {
+        "name": "Disguise",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Turns the caster and all allied player-controlled units in a 1200 radius invisible, and grants 15% bonus movement speed for 35 seconds.<br><br>Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility.<br><br>Disguise grants invisibility that is immune to True Sight.",
+        "details": {
+          "Effect Radius:": "1200",
+          "Dispel Radius:": "1025",
+          "Fade Time:": "0",
+          "Move Speed Bonus:": "15%",
+          "Duration:": "35"
+        },
+        "cooldown": "1",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Healing Salve",
+    "abilities": [
+      {
+        "name": "Salve",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Grants 30 health regeneration to the target for 13 seconds.<br><br>If the unit is attacked by an enemy hero or Roshan, the effect is lost.<br><br>Heals for half the amount when cast on an ally.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "250",
+          "Health Regen Bonus:": "30",
+          "Self Duration:": "13",
+          "Allied Duration:": "6.5"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Aghanim's Shard",
+    "abilities": [
+      {
+        "name": "Ability Upgrade",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Upgrades an existing ability or adds a new ability to your hero.",
+        "details": {},
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Iron Branch",
+    "abilities": [
+      {
+        "name": "Plant Tree",
+        "ability": "Target Point",
+        "affects": "",
+        "damage": "",
+        "description": "Targets the ground to plant a happy little tree that lasts for 20 seconds.",
+        "details": {
+          "Cast Range:": "400",
+          "Duration:": "20"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Town Portal Scroll",
+    "abilities": [
+      {
+        "name": "Teleport",
+        "ability": "Target Point  / Target Unit / Channeled",
+        "affects": "Self",
+        "damage": "",
+        "description": "After channeling for 3 seconds, teleports you to a target friendly building.<br><br>Double-click to teleport to your team\\'s base fountain.",
+        "details": {
+          "Cast Range:": "Global",
+          "Min Targeting Distance to Building:": "70",
+          "Max Targeting Distance to Building:": "800",
+          "Max Targeting Distance to Outposts:": "250",
+          "First Channel Time:": "3",
+          "First Channel Time to Outposts:": "6",
+          "Second Channel Time Increase:": "2",
+          "Following Channel Time Increase:": "0.5",
+          "Recent Teleport Check Radius:": "1150",
+          "Recent Teleport Check Duration:": "25",
+          "Boots of Travel 2 Channel Time Reduction:": "1"
+        },
+        "cooldown": "80",
+        "manacost": "75"
+      }
+    ]
+  },
+  {
+    "item_name": "Bottle",
+    "abilities": [
+      {
+        "name": "Regenerate",
+        "ability": "No Target  / Target Unit",
+        "affects": "Self  / Allied Heroes",
+        "damage": "",
+        "description": "Consumes a charge to restore 110 health and 60 mana over 3 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.<br><br>The Bottle automatically refills at the fountain.<br><br>Hold Control to use on an allied hero.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "350",
+          "Total Health Regenerated:": "110",
+          "Total Mana Regenerated:": "60",
+          "Charge Replenish per Power Rune:": "3",
+          "Charge Replenish per Other Rune:": "2",
+          "Regen Duration:": "2.7"
+        },
+        "cooldown": "0.5",
+        "manacost": "0"
+      },
+      {
+        "name": "Store Rune",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Runes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds.<br><br>Using a stored rune fully refills the Bottle.",
+        "details": {
+          "Cast Range:": "100",
+          "Max Rune Stored:": "1",
+          "Rune Store Duration:": "90"
+        },
+        "cooldown": "0.5",
+        "manacost": null
+      },
+      {
+        "name": "Arcane",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Reduces cooldowns and mana costs by 30%.",
+        "details": {
+          "Cooldown Reduction:": "30%",
+          "Mana Loss Reduction:": "30%",
+          "Duration:": "50"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Bounty",
+        "ability": "No Target",
+        "affects": "Self  / Allies",
+        "damage": "",
+        "description": "Grants bonus Gold.",
+        "details": {
+          "Initial Spawn Team Gold:": "40",
+          "Next Spawn Base Team Gold:": "36",
+          "Next Spawn Team Gold Bonus per Interval:": "9",
+          "Team Gold Bonus Interval:": "300",
+          "Turbo Mode Multiplier:": "2"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Double Damage",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases base damage by 100%.",
+        "details": {
+          "Attack Damage Bonus:": "100%",
+          "Duration:": "45"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Haste",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases movement speed to maximum.",
+        "details": {
+          "Haste Speed:": "550",
+          "Duration:": "22"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Illusion",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Conjures 2 illusions of your hero which deal 35% damage. Melee illusions take 200% damage. Ranged illusions take 300% damage. Illusions last 75 seconds.",
+        "details": {
+          "Split Time:": "0.1",
+          "Number of Illusions:": "2",
+          "Illusion Damage Dealt:": "35%",
+          "Illusion Damage Taken (Melee):": "200%",
+          "Illusion Damage Taken (Ranged):": "300%",
+          "Illusion Duration:": "75"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Invisibility",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Becomes invisible for 45 seconds. This invisibility is broken by attacking or by using an ability or item.",
+        "details": {
+          "Fade Time:": "2",
+          "Duration:": "45"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Regeneration",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Regenerates health and mana to maximum.",
+        "details": {
+          "Max Health as Health Regen per Second:": "6%",
+          "Max Mana as Mana Regen per Second:": "6%",
+          "Duration:": "30"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Shield",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants an All Damage Barrier for 75s equal to 50% of your max HP.",
+        "details": {
+          "Max Health as Barrier Capacity:": "50%",
+          "Duration:": "75"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Water",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Instantly restores 40 Health and 80 Mana.",
+        "details": {
+          "Health Restored:": "40",
+          "Mana Restored:": "80"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Wisdom",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants bonus XP.",
+        "details": {
+          "Max Affected Heroes:": "2",
+          "Base Experience:": "280",
+          "Experience Increase per Interval:": "280",
+          "Increase Interval:": "420"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Mantle of Intelligence",
+    "abilities": []
+  },
+  {
+    "item_name": "Dust of Appearance",
+    "abilities": [
+      {
+        "name": "Reveal",
+        "ability": "No Target  / Aura",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "For 12 seconds, creates an area that reveals invisible and slows heroes by 20% in an 1050 radius where the caster  was standing. Invisible units revealed by dust take 25 damage.<br>\\nThe debuff effect on enemies lingers for 8s after leaving the area of effect.",
+        "details": {
+          ":": "0",
+          "Radius:": "1050",
+          "Damage:": "25",
+          "Move Speed Slow:": "20%",
+          "Duration:": "12",
+          "Aura Linger Duration:": "8"
+        },
+        "cooldown": "30",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Gauntlets of Strength",
+    "abilities": []
+  },
+  {
+    "item_name": "Circlet",
+    "abilities": []
+  },
+  {
+    "item_name": "Band of Elvenskin",
+    "abilities": []
+  },
+  {
+    "item_name": "Belt of Strength",
+    "abilities": []
+  },
+  {
+    "item_name": "Slippers of Agility",
+    "abilities": []
+  },
+  {
+    "item_name": "Robe of the Magi",
+    "abilities": []
+  },
+  {
+    "item_name": "Diadem",
+    "abilities": []
+  },
+  {
+    "item_name": "Ogre Axe",
+    "abilities": []
+  },
+  {
+    "item_name": "Staff of Wizardry",
+    "abilities": []
+  },
+  {
+    "item_name": "Blade of Alacrity",
+    "abilities": []
+  },
+  {
+    "item_name": "Crown",
+    "abilities": []
+  },
+  {
+    "item_name": "Quelling Blade",
+    "abilities": [
+      {
+        "name": "Chop Tree",
+        "ability": "Target Unit",
+        "affects": "Trees",
+        "damage": "",
+        "description": "Destroy a target tree.",
+        "details": {
+          "Cast Range:": "350"
+        },
+        "cooldown": "4",
+        "manacost": "0"
+      },
+      {
+        "name": "Quell",
+        "ability": "Passive",
+        "affects": "Enemy Units",
+        "damage": "",
+        "description": "Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged.",
+        "details": {
+          "Attack Damage Bonus (Melee):": "8",
+          "Attack Damage Bonus (Ranged):": "4"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ring of Protection",
+    "abilities": []
+  },
+  {
+    "item_name": "Orb of Venom",
+    "abilities": [
+      {
+        "name": "Poison Attack",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical (HP Removal)",
+        "description": "Poisons the target, dealing 2 magical damage per second and slowing movement by 13% if the equipped hero is melee, or by 4% if they are ranged. Lasts for 2 seconds.",
+        "details": {
+          "Move Speed Slow (Melee):": "13%",
+          "Move Speed Slow (Ranged):": "4%",
+          "Damage per Second:": "2",
+          "Duration:": "2"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Infused Raindrops",
+    "abilities": [
+      {
+        "name": "Magical Damage Block",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Consumes a charge to block 120 magic damage from damage instances over 75 damage.<br><br>Comes with 6 charges. When the charges are gone, the item disappears.",
+        "details": {
+          "Min Damage Threshold:": "75",
+          "Magical Damage Blocked:": "120",
+          "Number of Charges:": "6"
+        },
+        "cooldown": "7",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Blades of Attack",
+    "abilities": []
+  },
+  {
+    "item_name": "Blight Stone",
+    "abilities": [
+      {
+        "name": "Lesser Corruption",
+        "ability": "Passive",
+        "affects": "Units",
+        "damage": "",
+        "description": "Your attacks reduce the target\\'s armor by 2 for 8 seconds.",
+        "details": {
+          "Armor Reduction:": "2",
+          "Duration:": "8"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Gloves of Haste",
+    "abilities": []
+  },
+  {
+    "item_name": "Quarterstaff",
+    "abilities": []
+  },
+  {
+    "item_name": "Chainmail",
+    "abilities": []
+  },
+  {
+    "item_name": "Helm of Iron Will",
+    "abilities": []
+  },
+  {
+    "item_name": "Javelin",
+    "abilities": [
+      {
+        "name": "Pierce",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Grants each attack a 30% chance to pierce through evasion and deal 70 bonus magical damage.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Damage:": "70"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Blitz Knuckles",
+    "abilities": []
+  },
+  {
+    "item_name": "Claymore",
+    "abilities": []
+  },
+  {
+    "item_name": "Broadsword",
+    "abilities": []
+  },
+  {
+    "item_name": "Sage's Mask",
+    "abilities": []
+  },
+  {
+    "item_name": "Ring of Regen",
+    "abilities": []
+  },
+  {
+    "item_name": "Mithril Hammer",
+    "abilities": []
+  },
+  {
+    "item_name": "Fluffy Hat",
+    "abilities": []
+  },
+  {
+    "item_name": "Wind Lace",
+    "abilities": []
+  },
+  {
+    "item_name": "Magic Stick",
+    "abilities": [
+      {
+        "name": "Energy Charge",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Instantly restores 15 health and mana per charge stored.<br><br> Max 10 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Charges per Cast Spell:": "1",
+          "Max Charges:": "10",
+          "Health and Mana Restored per Charge:": "15"
+        },
+        "cooldown": "13",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Voodoo Mask",
+    "abilities": [
+      {
+        "name": "Spell Lifesteal",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "10% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type.<br><br>Lifesteal reduced to 2% against creeps.",
+        "details": {
+          "Hero Spell Lifesteal:": "10%",
+          "Creep Spell Lifesteal:": "2%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ghost Scepter",
+    "abilities": [
+      {
+        "name": "Ghost Form",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and 40% more vulnerable to magic damage.",
+        "details": {
+          ":": "0",
+          "Magic Resistance Reduction:": "40%",
+          "Duration:": "4"
+        },
+        "cooldown": "22",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Boots of Speed",
+    "abilities": []
+  },
+  {
+    "item_name": "Shadow Amulet",
+    "abilities": [
+      {
+        "name": "Fade",
+        "ability": "Target Unit",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants invisibility to you or a target allied hero as long as the target unit remains still.<br><br>Has a 1.25 second fade time, and breaks instantly upon moving. <br><br>There is no cooldown when using this item on yourself.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "600",
+          "Fade Time:": "1.25",
+          "Duration:": "15",
+          "Self Cast Cooldown:": "0"
+        },
+        "cooldown": "7",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Morbid Mask",
+    "abilities": [
+      {
+        "name": "Lifesteal",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Heals the attacker for 18% of attack damage dealt. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          "Hero Lifesteal:": "18%",
+          "Creep Lifesteal:": "10.8%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Gem of True Sight",
+    "abilities": [
+      {
+        "name": "Reveal",
+        "ability": "Target Area",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Gives True Sight over a 300 radius revealing wards and units even in Fog of War.",
+        "details": {
+          "Cast Range:": "300",
+          "Radius:": "300",
+          "Duration:": "4",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": "12",
+        "manacost": "0"
+      },
+      {
+        "name": "True Sight",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier.",
+        "details": {
+          "Radius:": "900",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Everlasting",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Dropped on death, and cannot be destroyed.",
+        "details": {
+          "Vision Radius:": "300"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Cloak",
+    "abilities": []
+  },
+  {
+    "item_name": "Talisman of Evasion",
+    "abilities": []
+  },
+  {
+    "item_name": "Blink Dagger",
+    "abilities": [
+      {
+        "name": "Blink",
+        "ability": "Target Point",
+        "affects": "Self",
+        "damage": "",
+        "description": "Teleport to a target point up to 1200 units away. <br><br>Blink Dagger cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
+        "details": {
+          "Cast Range:": "Global",
+          "Max Blink Distance:": "1200",
+          "Penalty Blink Distance:": "960",
+          "Damage Mute Duration:": "3"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Vitality Booster",
+    "abilities": []
+  },
+  {
+    "item_name": "Void Stone",
+    "abilities": []
+  },
+  {
+    "item_name": "Cornucopia",
+    "abilities": []
+  },
+  {
+    "item_name": "Platemail",
+    "abilities": []
+  },
+  {
+    "item_name": "Ring of Health",
+    "abilities": []
+  },
+  {
+    "item_name": "Energy Booster",
+    "abilities": []
+  },
+  {
+    "item_name": "Point Booster",
+    "abilities": []
+  },
+  {
+    "item_name": "Demon Edge",
+    "abilities": []
+  },
+  {
+    "item_name": "Hyperstone",
+    "abilities": []
+  },
+  {
+    "item_name": "Eaglesong",
+    "abilities": []
+  },
+  {
+    "item_name": "Magic Wand",
+    "abilities": [
+      {
+        "name": "Energy Charge",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Instantly restores 15 health and mana per charge stored.<br><br>Max 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Charges per Cast Spell:": "1",
+          "Max Charges:": "20",
+          "Health and Mana Restored per Charge:": "15"
+        },
+        "cooldown": "13",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Sacred Relic",
+    "abilities": []
+  },
+  {
+    "item_name": "Ultimate Orb",
+    "abilities": []
+  },
+  {
+    "item_name": "Mystic Staff",
+    "abilities": []
+  },
+  {
+    "item_name": "Reaver",
+    "abilities": []
+  },
+  {
+    "item_name": "Null Talisman",
+    "abilities": []
+  },
+  {
+    "item_name": "Bracer",
+    "abilities": []
+  },
+  {
+    "item_name": "Power Treads",
+    "abilities": [
+      {
+        "name": "Switch Attribute",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Switches between +10 Strength, +10 Agility, or +10 Intelligence.",
+        "details": {
+          ":": "0",
+          "Selected Attribute Bonus:": "10"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Soul Ring",
+    "abilities": [
+      {
+        "name": "Sacrifice",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Consume 170 health to temporarily gain 150 mana. Lasts 10 seconds.<br><br>If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
+        "details": {
+          ":": "0",
+          "Health Cost:": "170",
+          "Temporary Mana Bonus:": "150",
+          "Duration:": "10"
+        },
+        "cooldown": "25",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Orb of Corrosion",
+    "abilities": [
+      {
+        "name": "Corrosion",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical (HP Removal)",
+        "description": "Dealing 3 damage per second, reducing armor by 3, and slowing movement speed by 13% if the equipped hero is melee, or by 4% if they are ranged.<br><br>Lasts 3 seconds.",
+        "details": {
+          "Armor Reduction:": "3",
+          "Move Speed Slow (Melee):": "13%",
+          "Move Speed Slow (Ranged):": "4%",
+          "Damage per Second:": "3",
+          "Duration:": "3"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Wraith Band",
+    "abilities": []
+  },
+  {
+    "item_name": "Falcon Blade",
+    "abilities": []
+  },
+  {
+    "item_name": "Perseverance",
+    "abilities": []
+  },
+  {
+    "item_name": "Phase Boots",
+    "abilities": [
+      {
+        "name": "Phase",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.",
+        "details": {
+          ":": "0",
+          "Move Speed Bonus (Melee):": "20%",
+          "Move Speed Bonus (Ranged):": "10%",
+          "Turn Rate (Melee):": "1",
+          "Duration:": "3"
+        },
+        "cooldown": "8",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Mask of Madness",
+    "abilities": [
+      {
+        "name": "Berserk",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Gives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds.",
+        "details": {
+          ":": "0",
+          "Attack Speed Bonus:": "110",
+          "Move Speed Bonus:": "30",
+          "Armor Reduction:": "8",
+          "Duration:": "6"
+        },
+        "cooldown": "16",
+        "manacost": "25"
+      },
+      {
+        "name": "Lifesteal",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Heals the attacker for 24% of attack damage dealt. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          "Hero Lifesteal:": "24%",
+          "Creep Lifesteal:": "14.4%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Oblivion Staff",
+    "abilities": []
+  },
+  {
+    "item_name": "Hand of Midas",
+    "abilities": [
+      {
+        "name": "Transmute",
+        "ability": "Target Unit",
+        "affects": "Enemy Units",
+        "damage": "Instant Kill",
+        "description": "Kills a non-hero target for 160 gold and 2.1x experience.<br><br> Cannot be used on Ancient Creeps.",
+        "details": {
+          "Cast Range:": "600",
+          "Set Neutral Gold Bounty:": "160",
+          "Experience Bonus Multiplier:": "2.1",
+          "Set Neutral Item Drop Rate:": "100%"
+        },
+        "cooldown": "90",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Boots of Travel",
+    "abilities": [
+      {
+        "name": "Upgrade: Town Portal Scroll",
+        "ability": "Passive",
+        "affects": "",
+        "damage": "",
+        "description": "<b>Boots of Travel:</b><br>Upgrades your Town Portal Scroll, allowing it to target units, reduces cooldown and does not consume a charge on usage.<br><br><b>Boots of Travel 2:</b><br>Upgrades your Town Portal Scroll, allowing it to target units and heroes, reduces cooldown, channel time and does not consume a charge on usage.",
+        "details": {
+          "Town Portal Scroll Cooldown:": "40/40",
+          "Channel Time Reduction:": "0/1"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Helm of the Dominator",
+    "abilities": [
+      {
+        "name": "Dominate",
+        "ability": "Target Unit",
+        "affects": "Enemy Units",
+        "damage": "Instant Kill",
+        "description": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1000. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. <br><br>Dominated units with a max health of greater than 1000 retain their original max health.  Dominated unit\\'s bounty is set to 100 gold.",
+        "details": {
+          "Cast Range:": "700",
+          "Max Units:": "1",
+          "Min Base Health:": "1000",
+          "Set Move Speed:": "380",
+          "Set Gold Bounty:": "100",
+          "Base Attack Damage Bonus:": "25",
+          "Health Regen Bonus:": "12",
+          "Mana Regen Bonus:": "4",
+          "Armor Bonus:": "4"
+        },
+        "cooldown": "45",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Moon Shard",
+    "abilities": [
+      {
+        "name": "Consume",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "Global",
+          "Attack Speed Bonus:": "60",
+          "Base Night Vision Bonus:": "200"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      },
+      {
+        "name": "Shade Sight",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants 400 bonus night vision.",
+        "details": {
+          "Night Vision Bonus:": "400"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Buckler",
+    "abilities": [
+      {
+        "name": "Buckler Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 2 armor to player units.",
+        "details": {
+          "Radius:": "1200",
+          "Armor Bonus:": "2",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Headdress",
+    "abilities": [
+      {
+        "name": "Regeneration Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 2 health regeneration to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Health Regen Bonus:": "2",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Helm of the Overlord",
+    "abilities": [
+      {
+        "name": "Dominate",
+        "ability": "Target Unit",
+        "affects": "Enemy Units",
+        "damage": "Instant Kill",
+        "description": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen and +7 armor. <br><br>Dominated units with a max health of greater than 1800 retain their original max health. Dominated unit\\'s bounty is set to 250 gold.",
+        "details": {
+          "Cast Range:": "700",
+          "Max Units:": "1",
+          "Min Base Health:": "1800",
+          "Set Move Speed:": "380",
+          "Set Gold Bounty:": "250",
+          "Base Attack Damage Bonus:": "70",
+          "Health Regen Bonus:": "12",
+          "Mana Regen Bonus:": "4",
+          "Armor Bonus:": "7"
+        },
+        "cooldown": "45",
+        "manacost": "0"
+      },
+      {
+        "name": "Vladmir's Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 20% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          "Radius:": "1200",
+          "Hero Lifesteal:": "20%",
+          "Creep Lifesteal:": "12%",
+          "Mana Regeneration Bonus:": "2",
+          "Attack Damage Bonus:": "18%",
+          "Armor Bonus:": "3",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Tranquil Boots",
+    "abilities": [
+      {
+        "name": "Break",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Whenever you attack a hero or are attacked by any unit, the bonus 14 HP regen is lost and the movement speed bonus is reduced to 40 for 13 seconds.",
+        "details": {
+          "Move Speed Reduction:": "25",
+          "Health Regen Reduction:": "14"
+        },
+        "cooldown": "13",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ring of Basilius",
+    "abilities": [
+      {
+        "name": "Basilius Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 1 mana regeneration to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Mana Regeneration Bonus:": "1",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Arcane Boots",
+    "abilities": [
+      {
+        "name": "Replenish Mana",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Restores 175 mana to all nearby allies.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Mana Restored:": "175"
+        },
+        "cooldown": "55",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Urn of Shadows",
+    "abilities": [
+      {
+        "name": "Soul Release",
+        "ability": "Target Unit  / Passive",
+        "affects": "Heroes",
+        "damage": "Magical",
+        "description": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies.<br><br>Lasts 1 seconds.<br><br>Gains charges every time an enemy hero dies within 1400 units. Only the closest Urn to the dying hero will gain a charge.",
+        "details": {
+          "Cast Range:": "750",
+          "Charge Gain Radius:": "1400",
+          "Ally Health Regen Bonus:": "30",
+          "Enemy Damage per Second:": "25",
+          "Charge Replenish on Death:": "1",
+          "Duration:": "8"
+        },
+        "cooldown": "7",
+        "manacost": ""
+      }
+    ]
+  },
+  {
+    "item_name": "Medallion of Courage",
+    "abilities": [
+      {
+        "name": "Valor",
+        "ability": "Target Unit",
+        "affects": "Units",
+        "damage": "",
+        "description": "If cast on an ally, grants them the 6 armor, and removing it from the caster.<br><br>If cast on an enemy, reduces 6 armor on both the enemy and the caster.<br><br>Cannot target spell immune enemies.",
+        "details": {
+          "Cast Range:": "1000",
+          "Self Armor Reduction:": "6",
+          "Enemy Armor Reduction:": "6",
+          "Ally Armor Bonus:": "6",
+          "Duration:": "8"
+        },
+        "cooldown": "16",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Pavise",
+    "abilities": [
+      {
+        "name": "Protect",
+        "ability": "Target Unit",
+        "affects": "Allies",
+        "damage": "",
+        "description": "When cast on an ally, grants them a barrier that absorbs 300 physical damage. Duration: 8s.",
+        "details": {
+          "Barrier Capacity:": "300",
+          "Duration:": "8"
+        },
+        "cooldown": "18",
+        "manacost": "75"
+      }
+    ]
+  },
+  {
+    "item_name": "Holy Locket",
+    "abilities": [
+      {
+        "name": "Energy Charge",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Target an allied unit to instantly restore 15 health and mana per charge stored.<br><br>Max 20 charges. Automatically gains a charge every 10 seconds and whenever a visible enemy within 1200 range uses an ability.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "500",
+          "Radius:": "1200",
+          "Passive Charge Gain Interval:": "10",
+          "Charges per Cast Spell:": "1",
+          "Max Charges:": "20",
+          "Health and Mana Restored per Charge:": "15"
+        },
+        "cooldown": "13",
+        "manacost": "0"
+      },
+      {
+        "name": "Holy Blessing",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Amplifies heals you provide by 30%.",
+        "details": {
+          "Heal Amp:": "30%"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Regeneration Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 3 health regeneration to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Health Regen Bonus:": "3",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Vladmir's Offering",
+    "abilities": [
+      {
+        "name": "Vladmir's Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 20% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          "Radius:": "1200",
+          "Hero Lifesteal:": "20%",
+          "Creep Lifesteal:": "12%",
+          "Mana Regeneration Bonus:": "1.75",
+          "Attack Damage Bonus:": "18%",
+          "Armor Bonus:": "3",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Mekansm",
+    "abilities": [
+      {
+        "name": "Restore",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Heals 275 health to allied units in a 1200 radius.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Heal:": "275",
+          "Heal Stack Limit Duration:": "49"
+        },
+        "cooldown": "50",
+        "manacost": "100"
+      },
+      {
+        "name": "Mekansm Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 2.5 health regeneration to allied units in a 1200 radius.",
+        "details": {
+          "Radius:": "1200",
+          "Health Regen Bonus:": "2.5",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Guardian Greaves",
+    "abilities": [
+      {
+        "name": "Mend",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Restores 350 health and 200 mana to nearby allies, and removes most negative effects from the caster.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Heal:": "350",
+          "Mana Restored:": "200",
+          "Heal Stack Limit Duration:": "39"
+        },
+        "cooldown": "40",
+        "manacost": "0"
+      },
+      {
+        "name": "Guardian Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Provides 2.5 health regeneration and 3 armor to allied units. If an allied hero\\'s health falls below 25%, they receive 12 health regeneration and 8 armor.",
+        "details": {
+          "Radius:": "1200",
+          "Health Regen Bonus:": "2.5",
+          "Armor Bonus:": "3",
+          "Max Health Threshold:": "25%",
+          "Boosted Health Regen Bonus:": "12",
+          "Boosted Armor Bonus:": "8",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Boots of Bearing",
+    "abilities": [
+      {
+        "name": "Endurance",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Gives +50 attack speed, +15% Movement Speed to nearby allies for 6 seconds. For the first 1.5 seconds allies are immune to slows.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Move Speed Bonus:": "15%",
+          "Attack Speed Bonus:": "50",
+          "Slow Immunity Duration:": "1.5",
+          "Buff Duration:": "6"
+        },
+        "cooldown": "30",
+        "manacost": "0"
+      },
+      {
+        "name": "Swiftness Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 20 movement speed to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Move Speed Bonus:": "20",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Drum of Endurance",
+    "abilities": [
+      {
+        "name": "Endurance",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Consumes a charge and gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds.<br><br>Comes with 8 charges.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Move Speed Bonus:": "13%",
+          "Attack Speed Bonus:": "45",
+          "Duration:": "6"
+        },
+        "cooldown": "30",
+        "manacost": ""
+      },
+      {
+        "name": "Swiftness Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 20 movement speed to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Move Speed Bonus:": "20",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Spirit Vessel",
+    "abilities": [
+      {
+        "name": "Soul Release",
+        "ability": "Target Unit  / Passive",
+        "affects": "Heroes",
+        "damage": "Magical",
+        "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration and healing by 45%. Deals 35 damage per second.<br><br>When used on allies, it provides 40 health regeneration per second.<br><br>Lasts 1 seconds.<br><br>Gains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge.",
+        "details": {
+          "Cast Range:": "750",
+          "Charge Gain Radius:": "1400",
+          "Ally Health Regen Bonus:": "40",
+          "Enemy Damage per Second:": "35",
+          "Enemy Current Health as Damage per Second:": "4%",
+          "Enemy Health Restoration Reduction:": "45%",
+          "Charge Replenish on Death:": "1",
+          "Duration:": "8"
+        },
+        "cooldown": "7",
+        "manacost": ""
+      }
+    ]
+  },
+  {
+    "item_name": "Pipe of Insight",
+    "abilities": [
+      {
+        "name": "Barrier",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Gives a shield that blocks 450 magic damage to all nearby allies. Lasts 12 seconds.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Damage Barrier:": "450",
+          "Duration:": "12"
+        },
+        "cooldown": "60",
+        "manacost": "150"
+      },
+      {
+        "name": "Insight Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Gives allied units 2.5 health regeneration and 10% magic resistance.",
+        "details": {
+          "Radius:": "1200",
+          "Health Regen Bonus:": "2.5",
+          "Magic Resistance Bonus:": "10%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Aether Lens",
+    "abilities": [
+      {
+        "name": "Aethereal Focus",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases targeted spell and item cast range by 225.",
+        "details": {
+          "Cast Range Increase:": "225"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Glimmer Cape",
+    "abilities": [
+      {
+        "name": "Glimmer",
+        "ability": "Target Unit",
+        "affects": "Allies",
+        "damage": "",
+        "description": "After a 0.5 second delay, grants invisibility, 40 movement speed and a magic damage barrier that absorbs up to 300 damage to you or a target allied unit for 40 seconds.<br><br>Can be cast while channelling.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "600",
+          "Fade Time:": "0.5",
+          "Damage Barrier:": "300",
+          "Move Speed Bonus:": "40",
+          "Duration:": "5"
+        },
+        "cooldown": "12",
+        "manacost": "90"
+      }
+    ]
+  },
+  {
+    "item_name": "Veil of Discord",
+    "abilities": [
+      {
+        "name": "Magic Weakness",
+        "ability": "Target Area",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Cast a 600 radius blast that causes enemies to take 18% increased damage from spells.",
+        "details": {
+          "Cast Range:": "1200",
+          "Radius:": "600",
+          "Spell Damage Amp:": "18%",
+          "Duration:": "16"
+        },
+        "cooldown": "22",
+        "manacost": "50"
+      },
+      {
+        "name": "Basilius Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants 1.75 mana regeneration to allies.",
+        "details": {
+          "Radius:": "1200",
+          "Mana Regeneration Bonus:": "1.75",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Force Staff",
+    "abilities": [
+      {
+        "name": "Force",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Allies",
+        "damage": "",
+        "description": "Pushes any target unit 600 units in the direction it is facing.",
+        "details": {
+          ":": "0",
+          "Ally Cast Range:": "550",
+          "Enemy Cast Range:": "850",
+          "Push Distance:": "600",
+          "Push Duration:": "0.5"
+        },
+        "cooldown": "19",
+        "manacost": "150"
+      }
+    ]
+  },
+  {
+    "item_name": "Dagon",
+    "abilities": [
+      {
+        "name": "Energy Burst",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "Magical  /  Instant Kill",
+        "description": "Emits a powerful burst of magical damage upon a targeted enemy unit. Heals the caster 75% of damage dealt by Dagon. Upgradable.",
+        "details": {
+          ":": "0",
+          "Damage:": "400/500/600/700/800",
+          "Cast Range:": "700/750/800/850/900",
+          "Spell Lifesteal:": "75%",
+          "Effect Delay:": "0"
+        },
+        "cooldown": "35/",
+        "manacost": "120/"
+      }
+    ]
+  },
+  {
+    "item_name": "Witch Blade",
+    "abilities": [
+      {
+        "name": "Witch Blade",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second. This attack has True Strike.",
+        "details": {
+          "Intelligence as Damage per Second:": "75%",
+          "Move Speed Slow:": "25%",
+          "Duration:": "4"
+        },
+        "cooldown": "9",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Aghanim's Scepter",
+    "abilities": [
+      {
+        "name": "Ability Upgrade",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Upgrades the ultimate, and some abilities, of all heroes.",
+        "details": {},
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Eul's Scepter of Divinity",
+    "abilities": [
+      {
+        "name": "Cyclone",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Self",
+        "damage": "Magical",
+        "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself.<br><br>Enemy units take 50 magical damage upon landing.",
+        "details": {
+          "Cast Range:": "550",
+          "Cyclone Radius:": "24",
+          "Damage:": "50",
+          "Duration:": "2.5"
+        },
+        "cooldown": "23",
+        "manacost": "175"
+      }
+    ]
+  },
+  {
+    "item_name": "Rod of Atos",
+    "abilities": [
+      {
+        "name": "Cripple",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Roots the target for 2 seconds.",
+        "details": {
+          "Cast Range:": "1100",
+          "Root Duration:": "2"
+        },
+        "cooldown": "18",
+        "manacost": "50"
+      }
+    ]
+  },
+  {
+    "item_name": "Solar Crest",
+    "abilities": [
+      {
+        "name": "Shine",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Allies",
+        "damage": "",
+        "description": "When cast on an ally, grants them 7 armor, 70 attack speed, and 18% movement speed. When cast on an enemy, removes 7 armor, 70 attack speed, and 18% movement speed.<br><br>Removes the armor from the caster when used.<br><br>Cannot target spell immune enemies.",
+        "details": {
+          "Cast Range:": "1000",
+          "Self Armor Reduction:": "7",
+          "Ally Armor Bonus:": "7",
+          "Ally Move Speed Bonus:": "18%",
+          "Ally Attack Speed Bonus:": "70",
+          "Enemy Armor Reduction:": "7",
+          "Enemy Move Speed Slow:": "18%",
+          "Enemy Attack Speed Slow:": "70",
+          "Duration:": "8"
+        },
+        "cooldown": "16",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Orchid Malevolence",
+    "abilities": [
+      {
+        "name": "Soul Burn",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Silences the target unit for  seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
+        "details": {
+          "Cast Range:": "900",
+          "Damage Dealt as Bonus Damage:": "30%",
+          "Damage Timer:": "5",
+          "null": null
+        },
+        "cooldown": "18",
+        "manacost": "100"
+      }
+    ]
+  },
+  {
+    "item_name": "Octarine Core",
+    "abilities": [
+      {
+        "name": "Cooldown Reduction",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Reduces the cooldown time of all spells and items by 25%.",
+        "details": {
+          "Cooldown Reduction:": "25%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Refresher Orb",
+    "abilities": [
+      {
+        "name": "Reset Cooldowns",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Shard. This item\\'s cooldown only progresses in your hero\\'s main inventory.",
+        "details": {},
+        "cooldown": "180",
+        "manacost": "350"
+      }
+    ]
+  },
+  {
+    "item_name": "Aghanim's Blessing",
+    "abilities": [
+      {
+        "name": "Ability Upgrade",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Upgrades the ultimate, and some abilities, of all heroes.",
+        "details": {},
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Scythe of Vyse",
+    "abilities": [
+      {
+        "name": "Hex",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "Instant Kill",
+        "description": "Turns a target unit into a harmless critter for 2.8 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.<br>Instantly destroys illusions.",
+        "details": {
+          "Cast Range:": "800",
+          "Set Move Speed:": "140",
+          "Duration:": "2.8"
+        },
+        "cooldown": "20",
+        "manacost": "250"
+      }
+    ]
+  },
+  {
+    "item_name": "Wind Waker",
+    "abilities": [
+      {
+        "name": "Cyclone",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Allies",
+        "damage": "Magical",
+        "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can be cast on yourself, enemy units or allied units.<br><br>Enemy units take 50 magical damage upon landing.",
+        "details": {
+          "Cast Range:": "550",
+          "Cyclone Radius:": "24",
+          "Damage:": "50",
+          "Self Cyclone Speed:": "360",
+          "Duration:": "2.5"
+        },
+        "cooldown": "13",
+        "manacost": "175"
+      }
+    ]
+  },
+  {
+    "item_name": "Gleipnir",
+    "abilities": [
+      {
+        "name": "Eternal Chains",
+        "ability": "Target Area",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Roots all enemies in a target 375 radius for 2 seconds and deals 180 damage.",
+        "details": {
+          "Cast Range:": "1100",
+          "Effect Radius:": "375",
+          "Damage:": "180",
+          "Duration:": "2"
+        },
+        "cooldown": "18",
+        "manacost": "200"
+      },
+      {
+        "name": "Chain Lightning",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Bounce Distance:": "650",
+          "Number of Bounces:": "4",
+          "Bounce Interval:": "0.25",
+          "Damage:": "160"
+        },
+        "cooldown": "0.2",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Aeon Disk",
+    "abilities": [
+      {
+        "name": "Combo Breaker",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a  second buff that provides +2.5 Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers.",
+        "details": {
+          "Max Health Threshold:": "70%",
+          "Damage Reduction:": "100%",
+          "Status Resistance Bonus:": "75%",
+          "Duration:": "2.5"
+        },
+        "cooldown": "105/",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Vanguard",
+    "abilities": [
+      {
+        "name": "Damage Block",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants a 60% chance to block 56 damage from incoming attacks on melee heroes, and 28 damage on ranged.",
+        "details": {
+          "Proc Chance:": "60%",
+          "Melee Blocked Damage:": "56",
+          "Ranged Blocked Damage:": "28"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Blade Mail",
+    "abilities": [
+      {
+        "name": "Damage Return",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "Source Type(No-reflection)",
+        "description": "For 5.5 seconds, the damage returned from all sources is increased by 85%.",
+        "details": {
+          ":": "0",
+          "Damage Returned:": "85%",
+          "Duration:": "5.5"
+        },
+        "cooldown": "25",
+        "manacost": "25"
+      },
+      {
+        "name": "Damage Return (Passive)",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Source Type(No-reflection) (No-reflection)",
+        "description": "Everytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you.",
+        "details": {
+          "Base Return Damage:": "20",
+          "Damage Taken as Return Damage:": "20%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Crimson Guard",
+    "abilities": [
+      {
+        "name": "Guard",
+        "ability": "No Target",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block 70 + 50% of caster\\'s Strength damage from each incoming attack.<br><br>Units may only be affected by Guard once every 34 seconds.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Damage Block Chance:": "100%",
+          "Blocked Damage:": "70 + 50% of caster's Strength",
+          "Buff Duration:": "8",
+          "Stack Limit Duration:": "34"
+        },
+        "cooldown": "35",
+        "manacost": "75"
+      },
+      {
+        "name": "Damage Block",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants a 60% chance to block 75 damage from incoming attacks on melee heroes, and 50 damage on ranged.",
+        "details": {
+          "Proc Chance:": "60%",
+          "Blocked Damage (Melee):": "75",
+          "Blocked Damage (Ranged):": "50"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Soul Booster",
+    "abilities": []
+  },
+  {
+    "item_name": "Eternal Shroud",
+    "abilities": [
+      {
+        "name": "Shroud",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Restores Mana equal to 25% of incoming enemy spell damage",
+        "details": {
+          "Damage as Mana Restored:": "25%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Black King Bar",
+    "abilities": [
+      {
+        "name": "Avatar",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Applies a Basic Dispel. Grants 50% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect.",
+        "details": {
+          ":": "0",
+          "Duration:": "9/8/7/6",
+          "Magic Resistance Bonus:": "50%"
+        },
+        "cooldown": "90",
+        "manacost": "50"
+      }
+    ]
+  },
+  {
+    "item_name": "Manta Style",
+    "abilities": [
+      {
+        "name": "Mirror Image",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Creates 2 images of your hero that last 20 seconds.<br><br>Melee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage.",
+        "details": {
+          "Split Time:": "0.1",
+          "Number of Illusions:": "2",
+          "Illusion Damage Dealt (Melee):": "33%",
+          "Illusion Damage Dealt (Ranged):": "28%",
+          "Illusion Damage Taken:": "300%",
+          "Illusion Duration:": "20"
+        },
+        "cooldown": "30",
+        "manacost": "125"
+      }
+    ]
+  },
+  {
+    "item_name": "Lotus Orb",
+    "abilities": [
+      {
+        "name": "Echo Shell",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Applies a shield to the target unit for 6 seconds which re-casts most targeted spells back to their caster.<br><br>The shielded unit will still take damage from the spell.",
+        "details": {
+          "Cast Range:": "900",
+          "Duration:": "6"
+        },
+        "cooldown": "15",
+        "manacost": "175"
+      }
+    ]
+  },
+  {
+    "item_name": "Hurricane Pike",
+    "abilities": [
+      {
+        "name": "Hurricane Thrust",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Allies",
+        "damage": "",
+        "description": "Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.<br><br>Works like Force Staff when used on self or allies.",
+        "details": {
+          "Ally Cast Range:": "650",
+          "Enemy Cast Range:": "450",
+          "Ally Push Distance:": "600",
+          "Enemy Push Distance:": "450",
+          "Ally Push Duration:": "0.4",
+          "Enemy Push Duration:": "0.2",
+          "Number of Attacks:": "5",
+          "Attack Speed Bonus:": "100",
+          "Buff Duration:": "6"
+        },
+        "cooldown": "19",
+        "manacost": "150"
+      },
+      {
+        "name": "Dragon's Reach",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases attack range of ranged heroes by 150.",
+        "details": {
+          "Attack Range Bonus:": "150"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Linken's Sphere",
+    "abilities": [
+      {
+        "name": "Spellblock",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Blocks most targeted spells once every 14 seconds.",
+        "details": {},
+        "cooldown": "14",
+        "manacost": null
+      },
+      {
+        "name": "Transfer Spellblock",
+        "ability": "Target Unit",
+        "affects": "Allied Heroes",
+        "damage": "",
+        "description": "Temporarily removes Spellblock from the item\\'s owner and transfers it to an allied unit for 14 seconds.",
+        "details": {
+          "Cast Range:": "700",
+          "Buff Duration:": "14"
+        },
+        "cooldown": "14",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Bloodstone",
+    "abilities": [
+      {
+        "name": "Bloodpact",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases Bloodstone\\'s Spell Lifesteal by 2.5x and also converts the same percentage of damage dealt to mana. Lasts 5 seconds.",
+        "details": {
+          "Spell Lifesteal Multiplier:": "2.5",
+          "Spell Damage Dealt as Mana Restore:": "100%",
+          "Duration:": "5"
+        },
+        "cooldown": "30",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Shiva's Guard",
+    "abilities": [
+      {
+        "name": "Arctic Blast",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by 40% for 4 seconds.",
+        "details": {
+          ":": "0",
+          "Radius:": "900",
+          "Damage:": "200",
+          "Move Speed Slow:": "40%",
+          "Slow Duration:": "4"
+        },
+        "cooldown": "27",
+        "manacost": "100"
+      },
+      {
+        "name": "Freezing Aura",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Reduces the attack speed of all enemies by 45 and all heals, regeneration and lifesteal by 25%.",
+        "details": {
+          "Radius:": "1200",
+          "Attack Speed Slow:": "45",
+          "Health Restoration Reduction:": "25%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Heart of Tarrasque",
+    "abilities": []
+  },
+  {
+    "item_name": "Assault Cuirass",
+    "abilities": [
+      {
+        "name": "Assault Aura",
+        "ability": "Aura",
+        "affects": "Allies  / Enemies",
+        "damage": "",
+        "description": "Grants 30 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by 5.",
+        "details": {
+          "Radius:": "1200",
+          "Ally Attack Speed Bonus:": "30",
+          "Ally Armor Bonus:": "5",
+          "Enemy Armor Reduction:": "5",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Crystalys",
+    "abilities": [
+      {
+        "name": "Critical Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Grants each attack a 30% chance to deal 160% damage.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Critical Damage:": "160%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Meteor Hammer",
+    "abilities": [
+      {
+        "name": "Meteor Hammer",
+        "ability": "Target Area  / Channeled",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 0.5 seconds and dealing impact damage. Continues to deal damage over time to enemy units and buildings for 6 seconds. Non-building units are also slowed for 20% for the duration of the burn.",
+        "details": {
+          "Cast Range:": "600",
+          "Impact Radius:": "400",
+          "Building Impact Damage:": "95",
+          "Non-Building Impact Damage:": "150",
+          "Damage per Second:": "60",
+          "Channel Time:": "2",
+          "Landing Time:": "0.5",
+          "Move Speed Slow:": "20%",
+          "Debuff Duration:": "6",
+          "Stun Duration:": "0.5"
+        },
+        "cooldown": "24",
+        "manacost": "100"
+      }
+    ]
+  },
+  {
+    "item_name": "Armlet of Mordiggian",
+    "abilities": [
+      {
+        "name": "Unholy Strength",
+        "ability": "Toggle",
+        "affects": "Self",
+        "damage": "",
+        "description": "When active, Unholy Strength grants +35 damage, +25 strength and +4 armor, but drains 0.6 health per second.<br><br>You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
+        "details": {
+          ":": "0",
+          "Attack Damage Bonus:": "35",
+          "Strength Bonus:": "25",
+          "Armor Bonus:": "4",
+          "Full Bonuses Delay:": "0.6"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Skull Basher",
+    "abilities": [
+      {
+        "name": "Bash",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.2 seconds and deal 100 bonus physical damage. Bash chance for ranged heroes is 10%.",
+        "details": {
+          "Melee Proc Chance:": "25%",
+          "Ranged Proc Chance:": "10%",
+          "Damage:": "100",
+          "Stun Duration:": "1.2"
+        },
+        "cooldown": "2.3",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Shadow Blade",
+    "abilities": [
+      {
+        "name": "Shadow Walk",
+        "ability": "No Target",
+        "affects": "Self  / Enemies",
+        "damage": "Physical",
+        "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units.<br><br>If attacking to end the invisibility, you gain 175 bonus physical damage on that attack.",
+        "details": {
+          ":": "0",
+          "Fade Time:": "0.3",
+          "Damage:": "175",
+          "Move Speed Bonus:": "20%",
+          "Duration:": "14"
+        },
+        "cooldown": "25",
+        "manacost": "75"
+      }
+    ]
+  },
+  {
+    "item_name": "Ethereal Blade",
+    "abilities": [
+      {
+        "name": "Ether Blast",
+        "ability": "Target Unit",
+        "affects": "Allies  / Enemies",
+        "damage": "Magical",
+        "description": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and 40% more vulnerable to magic damage.<br><br>Enemy targets are also slowed by 80%, and take 1.5x your target\\'s primary attribute + 50 as magical damage.",
+        "details": {
+          "Cast Range:": "800",
+          "Base Damage:": "50",
+          "Primary Attribute as Damage Bonus:": "150%",
+          "Universal Attributes as Damage Bonus:": "60%",
+          "Enemy Move Speed Slow:": "80%",
+          "Magic Resistance Reduction:": "40%",
+          "Duration:": "4"
+        },
+        "cooldown": "22",
+        "manacost": "100"
+      }
+    ]
+  },
+  {
+    "item_name": "Battle Fury",
+    "abilities": [
+      {
+        "name": "Chop Tree",
+        "ability": "Target Unit",
+        "affects": "Trees",
+        "damage": "",
+        "description": "Destroy a target tree.",
+        "details": {
+          "Cast Range:": "350"
+        },
+        "cooldown": "4",
+        "manacost": "0"
+      },
+      {
+        "name": "Quell",
+        "ability": "Passive",
+        "affects": "Enemy Units",
+        "damage": "",
+        "description": "Increases attack damage against non-hero units by 15 for melee heroes, and 6 for ranged.",
+        "details": {
+          "Attack Damage Bonus (Melee):": "15",
+          "Attack Damage Bonus (Ranged):": "6"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Cleave",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Deals 70% of attack damage as physical damage in a cone up to 650 around the target. Deals 40% against creeps. (Melee Only)",
+        "details": {
+          "Starting Radius:": "150",
+          "Distance:": "650",
+          "End Radius:": "360",
+          "Cleave Damage (Heroes):": "70%",
+          "Cleave Damage (Creeps):": "40%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Desolator",
+    "abilities": [
+      {
+        "name": "Corruption",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Your attacks reduce the target\\'s armor by 6 for 7 seconds.",
+        "details": {
+          "Armor Reduction:": "6",
+          "Duration:": "7"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Soul Stealer",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Desolator gains +2 damage every time an enemy hero dies while affected by Corruption, to a maximum of 20.",
+        "details": {
+          "Max Charges:": "20",
+          "Charges per Kill:": "2",
+          "Attack Damage Bonus per Charge:": "1"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Nullifier",
+    "abilities": [
+      {
+        "name": "Nullify",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target.",
+        "details": {
+          "Cast Range:": "900",
+          "Duration:": "5"
+        },
+        "cooldown": "10",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Butterfly",
+    "abilities": []
+  },
+  {
+    "item_name": "Radiance",
+    "abilities": [
+      {
+        "name": "Burn",
+        "ability": "Toggle  / Aura",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "When active, scorches enemies for 60 magical damage per second, and causes them to miss 15% of their attacks. Illusions deal 35 magical damage per second.",
+        "details": {
+          ":": "0",
+          "Radius:": "700",
+          "Damage per Second (Hero):": "60",
+          "Damage per Second (Illusion):": "35",
+          "Miss Chance:": "15%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": "0",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Monkey King Bar",
+    "abilities": [
+      {
+        "name": "Pierce",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Grants each attack a 80% chance to pierce through evasion and deal 70 bonus magical damage.",
+        "details": {
+          "Proc Chance:": "80%",
+          "Damage:": "70"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Daedalus",
+    "abilities": [
+      {
+        "name": "Critical Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Grants each attack a 30% chance to deal 225% damage.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Critical Damage:": "225%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Silver Edge",
+    "abilities": [
+      {
+        "name": "Shadow Walk",
+        "ability": "No Target",
+        "affects": "Self  / Enemies",
+        "damage": "Physical",
+        "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units. <br><br>Attacking to end the invisibility will deal 175 bonus physical damage and a guaranteed 160% critical strike to the target, and disable their passive abilities for 4 seconds.",
+        "details": {
+          ":": "0",
+          "Fade Time:": "0.3",
+          "Damage:": "175",
+          "Critical Damage:": "160%",
+          "Move Speed Bonus:": "25%",
+          "Invisibility Duration:": "14",
+          "Break Duration:": "4"
+        },
+        "cooldown": "20",
+        "manacost": "75"
+      },
+      {
+        "name": "Critical Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Grants each attack a 30% chance to deal 160% damage.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Critical Damage:": "160%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Divine Rapier",
+    "abilities": []
+  },
+  {
+    "item_name": "Disperser",
+    "abilities": [
+      {
+        "name": "Suppress",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "If targeting an enemy, slows it for 3 seconds. If targeting an ally, applies a <a href=\"/wiki/Basic_dispel\" class=\"mw-redirect\" title=\"Basic dispel\">basic dispel</a> and increases their movement speed by 100%, making them unslowable for 3.",
+        "details": {
+          "Cast Range:": "600",
+          "Enemy Move Speed Slow:": "100%",
+          "Ally Move Speed Bonus:": "100%",
+          "Slow Decay Intervals:": "5",
+          "Non-Hero Root Duration:": "3",
+          "Enemy Slow Duration:": "4",
+          "Ally Slow Immune Duration:": "4"
+        },
+        "cooldown": "15",
+        "manacost": "75"
+      },
+      {
+        "name": "Manabreak",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana.<br><br>Burns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
+        "details": {
+          "Mana Burned per Hit (Hero):": "40",
+          "Mana Burned per Hit (Illusion):": "8",
+          "Burned Mana as Damage:": "100%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Revenant's Brooch",
+    "abilities": [
+      {
+        "name": "Phantom Province",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Your next 5 attacks have True Strike and deal magic damage. Expires after 60 seconds.<br><br>Can attack ethereal units and deals no damage to Magic Immune targets.",
+        "details": {
+          "Number of Attacks:": "5",
+          "Attack Speed Bonus:": "60",
+          "Duration:": "15"
+        },
+        "cooldown": "25/",
+        "manacost": "300"
+      },
+      {
+        "name": "Witch Blade",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second. This attack has True Strike.",
+        "details": {
+          "Intelligence as Damage per Second:": "100%",
+          "Move Speed Slow:": "25%",
+          "Duration:": "4"
+        },
+        "cooldown": "9",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Bloodthorn",
+    "abilities": [
+      {
+        "name": "Soul Rend",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.<br><br>All attacks on the silenced target will have 100% accuracy.",
+        "details": {
+          "Cast Range:": "900",
+          "Damage Dealt as Bonus Damage:": "60%",
+          "Accuracy:": "100%",
+          "Damage Timer:": "5",
+          "null": null
+        },
+        "cooldown": "15",
+        "manacost": "100"
+      },
+      {
+        "name": "Mage Slayer",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
+        "details": {
+          "Spell Damage Reduction:": "35%",
+          "Duration:": "6"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Abyssal Blade",
+    "abilities": [
+      {
+        "name": "Overwhelm",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Stuns a target enemy unit for 1.6 seconds.<br><br>Pierces Spell Immunity.",
+        "details": {
+          "Cast Range:": "150",
+          "Stun Duration:": "1.6"
+        },
+        "cooldown": "35",
+        "manacost": "75"
+      },
+      {
+        "name": "Bash",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Grants melee heroes a 25% chance on hit to stun the target for 1.2 seconds and deal 120 bonus physical damage. Bash chance for ranged heroes is 10%.",
+        "details": {
+          "Melee Proc Chance:": "25%",
+          "Ranged Proc Chance:": "10%",
+          "Damage:": "120",
+          "Stun Duration:": "1.2"
+        },
+        "cooldown": "2.3",
+        "manacost": null
+      },
+      {
+        "name": "Damage Block",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+        "details": {
+          "Proc Chance:": "60%",
+          "Blocked Damage (Melee):": "70",
+          "Blocked Damage (Ranged):": "35"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Dragon Lance",
+    "abilities": [
+      {
+        "name": "Dragon's Reach",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases attack range of ranged heroes by 150.",
+        "details": {
+          "Attack Range Bonus:": "150"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Sange",
+    "abilities": []
+  },
+  {
+    "item_name": "Kaya",
+    "abilities": []
+  },
+  {
+    "item_name": "Echo Sabre",
+    "abilities": [
+      {
+        "name": "Echo Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
+        "details": {
+          "Self Attack Speed Bonus:": "490",
+          "Number of Attacks:": "1",
+          "Enemy Move Speed Slow:": "100%",
+          "Enemy Slow Duration:": "0.8"
+        },
+        "cooldown": "6",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Yasha",
+    "abilities": []
+  },
+  {
+    "item_name": "Phylactery",
+    "abilities": [
+      {
+        "name": "Empower Spell",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "Magical",
+        "description": "The next single target spell you cast on an enemy deals a separate 150 bonus damage to the target and slows them by 50% for 1.5 seconds. Cooldown: 6s",
+        "details": {
+          "Spell Damage Bonus:": "150",
+          "Move Speed Slow:": "50%",
+          "Duration:": "1.5"
+        },
+        "cooldown": "6",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Diffusal Blade",
+    "abilities": [
+      {
+        "name": "Inhibit",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Targets an enemy, slowing it for 3 seconds.",
+        "details": {
+          "Cast Range:": "600",
+          "Move Speed Slow:": "100%",
+          "Slow Decay Intervals:": "5",
+          "Non-Hero Root Duration:": "3",
+          "Slow Duration:": "4"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      },
+      {
+        "name": "Manabreak",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana.<br><br>Burns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
+        "details": {
+          "Mana Burned per Hit (Hero):": "40",
+          "Mana Burned per Hit (Illusion):": "8",
+          "Burned Mana as Damage:": "100%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Heaven's Halberd",
+    "abilities": [
+      {
+        "name": "Disarm",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.",
+        "details": {
+          "Cast Range:": "650",
+          "Duration (Melee):": "3",
+          "Duration (Ranged):": "5"
+        },
+        "cooldown": "18",
+        "manacost": "100"
+      }
+    ]
+  },
+  {
+    "item_name": "Mage Slayer",
+    "abilities": [
+      {
+        "name": "Mage Slayer",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds.",
+        "details": {
+          "Spell Damage Reduction:": "35%",
+          "Duration:": "6"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Yasha and Kaya",
+    "abilities": []
+  },
+  {
+    "item_name": "Sange and Yasha",
+    "abilities": []
+  },
+  {
+    "item_name": "Maelstrom",
+    "abilities": [
+      {
+        "name": "Chain Lightning",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 135 magical damage to each. Lightning proc pierces evasion.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Bounce Distance:": "650",
+          "Number of Bounces:": "4",
+          "Bounce Interval:": "0.25",
+          "Damage:": "135"
+        },
+        "cooldown": "0.2",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Kaya and Sange",
+    "abilities": []
+  },
+  {
+    "item_name": "Overwhelming Blink",
+    "abilities": [
+      {
+        "name": "Overwhelming Blink",
+        "ability": "Target Point",
+        "affects": "Self  / Enemies",
+        "damage": "Magical",
+        "description": "Teleport to a target point up to 1200 units away.<br><br>After teleportation, all enemies in a 800 AoE have 50% movement speed slow and 50 attack speed slow for 6 seconds, and take damage equal to 100 + 150% of your strength. <br><br>Overwhelming Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
+        "details": {
+          "Cast Range:": "Global",
+          "Max Blink Distance:": "1200",
+          "Penalty Blink Distance:": "960",
+          "Effect Radius:": "800",
+          "Base Damage:": "100",
+          "Strength as Damage Bonus:": "150%",
+          "Move Speed Slow:": "50%",
+          "Attack Speed Slow:": "50",
+          "Slow Duration:": "6",
+          "Damage Mute Duration:": "3"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Arcane Blink",
+    "abilities": [
+      {
+        "name": "Arcane Blink",
+        "ability": "Target Point",
+        "affects": "Self",
+        "damage": "",
+        "description": "Teleport to a target point up to 1400 units away.<br><br>Arcane Blink mutes for 3s after taking damage from an enemy hero or Roshan.",
+        "details": {
+          ":": "0",
+          "Cast Range:": "Global",
+          "Max Blink Distance:": "1400",
+          "Penalty Blink Distance:": "1120",
+          "Damage Mute Duration:": "3"
+        },
+        "cooldown": "7",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Eye of Skadi",
+    "abilities": [
+      {
+        "name": "Cold Attack",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Attacks lower enemy movement and attack speed and reduces heals, health regeneration and lifesteal by 40% for 3 seconds. Slows enemy ranged units by 50% movement speed and 60 attack speed. Slows enemy melee units by 20% movement speed and 30 attack speed.",
+        "details": {
+          "Move Speed Slow (Against Melee):": "20%",
+          "Move Speed Slow (Against Ranged):": "50%",
+          "Attack Speed Slow (Against Melee):": "30",
+          "Attack Speed Slow (Against Ranged):": "60",
+          "Health Restoration Reduction:": "40%",
+          "Duration:": "3"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Swift Blink",
+    "abilities": [
+      {
+        "name": "Swift Blink",
+        "ability": "Target Point",
+        "affects": "Self",
+        "damage": "",
+        "description": "Teleport to a target point up to 1200 units away.<br><br>After teleportation, you gain 40% phased movement speed and +35 Agility for 6 seconds. <br><br>Swift Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
+        "details": {
+          "Cast Range:": "Global",
+          "Max Blink Distance:": "1200",
+          "Penalty Blink Distance:": "960",
+          "Agility Bonus:": "35",
+          "Move Speed Bonus:": "40%",
+          "Duration:": "6",
+          "Damage Mute Duration:": "3"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Mjollnir",
+    "abilities": [
+      {
+        "name": "Static Charge",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Places a charged shield on a target unit for 15 seconds which has a 20% chance to release a 225 magical damage shocking bolt at a nearby attacker and 4 additional enemies.",
+        "details": {
+          "Cast Range:": "800",
+          "Proc Chance:": "20%",
+          "Proc Cooldown:": "1",
+          "Search Radius:": "900",
+          "Max Number of Targets:": "5",
+          "Damage:": "225",
+          "Shield Duration:": "15"
+        },
+        "cooldown": "35",
+        "manacost": "50"
+      },
+      {
+        "name": "Chain Lightning",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion.",
+        "details": {
+          "Proc Chance:": "30%",
+          "Bounce Distance:": "650",
+          "Number of Bounces:": "12",
+          "Bounce Interval:": "0.25",
+          "Damage:": "180"
+        },
+        "cooldown": "0.2",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Harpoon",
+    "abilities": [
+      {
+        "name": "Draw Forth",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "When targeting an enemy, fire an un-disjointable harpoon projectile at them, that pulls you and the target closer together. Ranged heroes pull the target up to 35% of the distance between them. Melee heroes always pull the target to their attack range. Enemy creeps are killed after the pull.",
+        "details": {
+          "Ranged Pull:": "35%",
+          "Cast Range:": "700"
+        },
+        "cooldown": "19",
+        "manacost": null
+      },
+      {
+        "name": "Echo Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
+        "details": {
+          "Self Attack Speed Bonus:": "490",
+          "Number of Attacks:": "1",
+          "Enemy Move Speed Slow:": "100%",
+          "Enemy Slow Duration:": "0.8"
+        },
+        "cooldown": "6",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Satanic",
+    "abilities": [
+      {
+        "name": "Lifesteal",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Heals the attacker for 30% of attack damage dealt. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          "Hero Lifesteal:": "30%",
+          "Creep Lifesteal:": "18%"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Unholy Rage",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Increases Lifesteal percentage to 175% for 6 seconds. Lifesteal from creeps is reduced by 60%",
+        "details": {
+          ":": "0",
+          "Hero Lifesteal Bonus:": "145%",
+          "Creep Lifesteal Bonus:": "87%",
+          "Duration:": "6"
+        },
+        "cooldown": "30",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Arcane Ring",
+    "abilities": [
+      {
+        "name": "Replenish Mana",
+        "ability": "No Target",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Restores 75 mana to all nearby allies.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Mana Restored:": "75"
+        },
+        "cooldown": "45",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Broom Handle",
+    "abilities": []
+  },
+  {
+    "item_name": "Duelist Gloves",
+    "abilities": [
+      {
+        "name": "Boldness",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Grants 20 attack speed as long as there are enemy heroes within 1200 units.",
+        "details": {
+          "Enemy Hero Search Radius:": "1200",
+          "Attack Speed Bonus:": "20"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Faded Broach",
+    "abilities": []
+  },
+  {
+    "item_name": "Fairy's Trinket",
+    "abilities": []
+  },
+  {
+    "item_name": "Occult Bracelet",
+    "abilities": [
+      {
+        "name": "Rites of Eloshar",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Each time the wearer is attacked they gain a stack of 0.5 mana regen, up to 5 stacks.\\nStacks last for 10 seconds.",
+        "details": {
+          "Max Stacks:": "5",
+          "Mana Regen Bonus:": "0.5",
+          "Duration:": "10"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Lance of Pursuit",
+    "abilities": [
+      {
+        "name": "Hound",
+        "ability": "Passive",
+        "affects": "Enemies  / Self",
+        "damage": "Physical",
+        "description": "Attacking from behind slows enemies by 12% (6% if Ranged) and deals +15 more Damage. Slows lasts for 2 second.",
+        "details": {
+          "Attack Damage Bonus:": "15",
+          "Melee Move Speed Slow:": "12%",
+          "Ranged Move Speed Slow:": "6%",
+          "Debuff Duration:": "2"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Pig Pole",
+    "abilities": [
+      {
+        "name": "Pig, Out!",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Turns your hero into a critter for 4 seconds and gives them +10% Movement Speed.",
+        "details": {
+          "Move Speed Bonus:": "10%",
+          "Duration:": "4"
+        },
+        "cooldown": "25",
+        "manacost": "50"
+      }
+    ]
+  },
+  {
+    "item_name": "Seeds of Serenity",
+    "abilities": [
+      {
+        "name": "Verdurous Dale",
+        "ability": "Target Area",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Target the ground with a 400 radius. Provides +10 health regeneration to all allied units while they\\'re in the area of effect.",
+        "details": {
+          "Radius:": "400",
+          "Health Regen Bonus:": "10",
+          "Duration:": "14",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": "35",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Spark of Courage",
+    "abilities": [
+      {
+        "name": "Courage",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Provides 18 damage when the owner is above 50% health, and 7 armor when they are below that threshold.",
+        "details": {
+          "Max Health Threshold:": "50%",
+          "Attack Damage Bonus:": "18",
+          "Armor Bonus:": "7"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Trusty Shovel",
+    "abilities": [
+      {
+        "name": "Dig",
+        "ability": "Target Point",
+        "affects": "",
+        "damage": "",
+        "description": "Channel for 1 second.<br>Can find a Bounty Rune, a Flask, an Enchanted Mango, or a friendly Kobold.",
+        "details": {
+          ":": "0.1",
+          "Channel Time:": "1",
+          "Bounty Rune Drop Chance:": "16%",
+          "Healing Salve Drop Chance:": "28%",
+          "Enchanted Mango Drop Chance:": "28%",
+          "Kobold Drop Chance:": "28%"
+        },
+        "cooldown": "40",
+        "manacost": "0"
+      },
+      {
+        "name": "Bounty",
+        "ability": "No Target",
+        "affects": "Self  / Allies",
+        "damage": "",
+        "description": "Grants bonus Gold.",
+        "details": {
+          "Initial Spawn Team Gold:": "40",
+          "Next Spawn Base Team Gold:": "36",
+          "Next Spawn Team Gold Bonus per Interval:": "9",
+          "Team Gold Bonus Interval:": "300",
+          "Turbo Mode Multiplier:": "2"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Prospecting Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Kobolds are adept at finding gold, increasing nearby allied heroes\\' GPM.",
+        "details": {
+          "Radius:": "1200",
+          "Gold per Minute Bonus:": "20/25/30/40",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Bullwhip",
+    "abilities": [
+      {
+        "name": "Whip",
+        "ability": "Target Unit",
+        "affects": "Allies  / Enemies",
+        "damage": "",
+        "description": "Grants 18% movement speed when cast on allies, and slows by 18% when cast on enemies. Lasts 4 seconds.",
+        "details": {
+          "Cast Range:": "850",
+          "Effect Delay:": "0.3",
+          "Move Speed Change:": "18%",
+          "Duration:": "4"
+        },
+        "cooldown": "11",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Grove Bow",
+    "abilities": [
+      {
+        "name": "Magic Amp",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Reduces magic resistance of the attacked enemy by 15%.",
+        "details": {
+          "Magic Resistance Reduction:": "15%",
+          "Duration:": "6"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Dragon Scale",
+    "abilities": [
+      {
+        "name": "Afterburn",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Causes attacks to burn the enemy, dealing 22 damage per second for 3 seconds.<br>Affects buildings.",
+        "details": {
+          "Damage per Second:": "22",
+          "Duration:": "3"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Eye of the Vizier",
+    "abilities": []
+  },
+  {
+    "item_name": "Orb of Destruction",
+    "abilities": [
+      {
+        "name": "Impeding Corruption",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Attacks reduce the target\\'s armor and movement speed. Slow amount varies based on whether the wearer is melee or ranged.",
+        "details": {
+          "Melee Move Speed Slow:": "20%",
+          "Ranged Move Speed Slow:": "10%",
+          "Armor Reduction:": "3",
+          "Duration:": "4"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Tumbler's Toy",
+    "abilities": [
+      {
+        "name": "Vault",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Propels your hero forward 300 units. Tumbler\\'s Toy gets disabled for 3 seconds if its owner receives damage from a player source.",
+        "details": {
+          "Leap Distance:": "300",
+          "Damage Duration:": "3"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Gossamer Cape",
+    "abilities": [
+      {
+        "name": "Sixth Sense",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Automatically dodge the next attack from a hero.",
+        "details": {
+          "Evasion:": "100%"
+        },
+        "cooldown": "4",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ring of Aquila",
+    "abilities": [
+      {
+        "name": "Aquila Aura",
+        "ability": "Toggle  / Aura",
+        "affects": "Allies  / Allied Heroes",
+        "damage": "",
+        "description": "Grants 1.25 mana regeneration and 2 armor to nearby allies.<br><br>Deactivate to stop affecting non-hero units.",
+        "details": {
+          ":": "0",
+          "Radius:": "1200",
+          "Mana Regeneration Bonus:": "1.25",
+          "Armor Bonus:": "2",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": "0",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Philosopher's Stone",
+    "abilities": []
+  },
+  {
+    "item_name": "Pupil's Gift",
+    "abilities": [
+      {
+        "name": "Pupil's Gift",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants flat 15 secondary attribute bonus or 7 all attributes to universal heroes.",
+        "details": {
+          "Secondary Attribute Bonus:": "15",
+          "Universal All Attribute Bonus:": "7"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Vampire Fangs",
+    "abilities": []
+  },
+  {
+    "item_name": "Specialist's Array",
+    "abilities": [
+      {
+        "name": "Crackshot",
+        "ability": "Passive",
+        "affects": "Self  / Enemies",
+        "damage": " Instant Attack",
+        "description": "Ranged Only. The next attack fires projectiles at 2 additional targets within attack range. Does not trigger attack modifiers.",
+        "details": {
+          "Search Range Buffer:": "225",
+          "Bonus Attack Targets:": "2",
+          "Instant Attack Damage Bonus:": "20"
+        },
+        "cooldown": "8",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Vambrace",
+    "abilities": [
+      {
+        "name": "Switch Attribute",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "There is no description for this ability.",
+        "details": {
+          ":": "0",
+          "Selected Attribute Bonus:": "8",
+          "Other Attributes Bonus:": "4",
+          "Strength Magic Resistance Bonus:": "10%",
+          "Agility Attack Speed Bonus:": "10",
+          "Intelligence Spell Damage Bonus:": "6%"
+        },
+        "cooldown": "0",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Ceremonial Robe",
+    "abilities": [
+      {
+        "name": "Ceremonial Aura",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Lowers enemy Status Resistance by 10% and Magic Resistance by 10%.",
+        "details": {
+          "Radius:": "1200",
+          "Status Resistance Reduction:": "10%",
+          "Magic Resistance Reduction:": "10%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Cloak of Flames",
+    "abilities": [
+      {
+        "name": "Immolate",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Burns enemy units for 45 damage per second. Illusions deal 30 damage per second.",
+        "details": {
+          "Radius:": "375",
+          "Damage per Second (Hero):": "45",
+          "Damage per Second (Illusion):": "30",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Paladin Sword",
+    "abilities": [
+      {
+        "name": "Greater Healing",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Amplifies the wearer\\'s Regeneration, Healing, Lifesteal and Spell Lifesteal by 14%.",
+        "details": {
+          "Heal Amp:": "14%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Defiant Shell",
+    "abilities": [
+      {
+        "name": "Reciprocity",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "When attacked, the hero counter-attacks a target within their attack range.",
+        "details": {
+          "Returned Damage:": "100%"
+        },
+        "cooldown": "5",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Psychic Headband",
+    "abilities": [
+      {
+        "name": "Psychic Headband",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants 15% intelligence bonus.",
+        "details": {
+          "Intelligence Bonus:": "15%"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Psychic Push",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Pushes the target enemy unit away from you 400 distance.",
+        "details": {
+          "Cast Range:": "600",
+          "Push Distance:": "400",
+          "Push Duration:": "0.3"
+        },
+        "cooldown": "20",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Ogre Seal Totem",
+    "abilities": [
+      {
+        "name": "Ogre Seal Flop",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Flop forward like an ogre seal 2 times, dealing 150 damage in a 275 radius by 1.5 for  second on each bounce. 400 bounce distance.",
+        "details": {
+          ":": "0.3",
+          "Flop Effect Radius:": "275",
+          "Distance per Flop:": "400",
+          "Number of Flops:": "2",
+          "Damage:": "150",
+          "Move Speed Slow:": "100%",
+          "Slow Duration:": "1.5"
+        },
+        "cooldown": "40",
+        "manacost": "75"
+      }
+    ]
+  },
+  {
+    "item_name": "Quickening Charm",
+    "abilities": [
+      {
+        "name": "Cooldown Reduction",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Reduces the cooldown time of all spells and items by 10%",
+        "details": {
+          "Cooldown Reduction:": "10%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Dandelion Amulet",
+    "abilities": [
+      {
+        "name": "Magical Damage Block",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Block 300 magic damage from damage instances over 75  damage",
+        "details": {
+          "Damage Threshold:": "75",
+          "Barrier Capacity:": "300"
+        },
+        "cooldown": "12",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Enchanted Quiver",
+    "abilities": [
+      {
+        "name": "Certain Strike",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Empowers your next attack with 225 bonus magical damage and True Strike. <font color=\"#7d7d7d\">Ranged Attackers</font> have +350 bonus range for the attack.",
+        "details": {
+          "Attack Range Bonus:": "350",
+          "Damage:": "225"
+        },
+        "cooldown": "4",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Elven Tunic",
+    "abilities": []
+  },
+  {
+    "item_name": "Titan Sliver",
+    "abilities": []
+  },
+  {
+    "item_name": "Vindicator's Axe",
+    "abilities": [
+      {
+        "name": "Vengeance",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Provides 30 damage if equipped hero is Silenced and 20 armor if equipped hero is Stunned.",
+        "details": {
+          "Silenced Attack Damage Bonus:": "30",
+          "Stunned Armor Bonus:": "20"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ascetic's Cap",
+    "abilities": [
+      {
+        "name": "Endurance",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Whenever a debuff would be applied to the owner, grant 40% Status resistance for 5 seconds.",
+        "details": {
+          "Status Resistance Bonus:": "40%",
+          "Duration:": "5"
+        },
+        "cooldown": "25",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Havoc Hammer",
+    "abilities": [
+      {
+        "name": "Havoc",
+        "ability": "No Target",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Knocks back enemies in 400 range around you, slowing them by 50% for 3 seconds and dealing 175 + 0.015x your str as magical damage.",
+        "details": {
+          ":": "0",
+          "Radius:": "400",
+          "Knockback Distance:": "250",
+          "Base Damage:": "175",
+          "Strength Damage Multiplier:": "1.5",
+          "Move Speed Slow:": "50%",
+          "Attack Speed Slow:": "50",
+          "Knockback Duration:": "0.3",
+          "Slow Duration:": "3"
+        },
+        "cooldown": "10",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Martyr's Plate",
+    "abilities": [
+      {
+        "name": "Martyrdom",
+        "ability": "N/A",
+        "affects": "",
+        "damage": "",
+        "description": "Redirects 20% of all damage dealt to allied heroes within 900 radius towards you for 8 seconds.",
+        "details": {
+          "Radius:": "900",
+          "Damage Redirected:": "20%",
+          "Duration:": "8"
+        },
+        "cooldown": "40",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Mind Breaker",
+    "abilities": [
+      {
+        "name": "Silence Strike",
+        "ability": "Passive",
+        "affects": "Enemy Heroes",
+        "damage": "",
+        "description": "The next attack silences the hit enemy for 2 seconds.",
+        "details": {
+          "Duration:": "2"
+        },
+        "cooldown": "12",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Ninja Gear",
+    "abilities": [
+      {
+        "name": "Solitary Disguise",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Casts Smoke of Deceit on yourself only.",
+        "details": {
+          ":": "0",
+          "Dispel Radius:": "1025",
+          "Fade Time:": "0",
+          "Move Speed Bonus:": "20%",
+          "Duration:": "35"
+        },
+        "cooldown": "45",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Spell Prism",
+    "abilities": [
+      {
+        "name": "Cooldown Reduction",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Reduces the cooldown time of all spells and items by 12%.",
+        "details": {
+          "Cooldown Reduction:": "12%"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Penta-Edged Sword",
+    "abilities": [
+      {
+        "name": "Maim",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Each attack has a 25% chance to reduce enemy hero movement speed by 20% and attack speed by 60 for 3 seconds.",
+        "details": {
+          "Proc Chance:": "25%",
+          "Move Speed Slow:": "20%",
+          "Attack Speed Slow:": "60",
+          "Slow Duration:": "3"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Stormcrafter",
+    "abilities": [
+      {
+        "name": "Bottled Lightning",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Zaps 0.4 enemies within 700 range, dealing 200 damage and a 40% slow for 0.4 seconds. Strikes every 3 seconds.",
+        "details": {
+          "Search Radius:": "700",
+          "Strike Recharge Time:": "3",
+          "Max Targets:": "2",
+          "Damage:": "200",
+          "Move Speed Slow:": "40%",
+          "Slow Duration:": "0.4"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Timeless Relic",
+    "abilities": []
+  },
+  {
+    "item_name": "Telescope",
+    "abilities": [
+      {
+        "name": "Prescient Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Lowers Scan cooldown by 50%. Increases attack and cast range of allies in a 1200 unit radius.",
+        "details": {
+          "Radius:": "1200",
+          "Scan Cooldown Reduction:": "50%",
+          "Ranged Attack Range Bonus:": "125",
+          "Cast Range Bonus:": "125",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Trickster Cloak",
+    "abilities": [
+      {
+        "name": "Cloak",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Causes you to become invisible for 6 seconds.",
+        "details": {
+          ":": "0",
+          "Fade Time:": "0.2",
+          "Duration:": "6"
+        },
+        "cooldown": "25",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Apex",
+    "abilities": [
+      {
+        "name": "Apex",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Grants flat 70 primary attribute bonus or 25 all attributes to universal heroes.",
+        "details": {
+          "Primary Attribute Bonus:": "70",
+          "Universal All Attribute Bonus:": "25"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Arcanist's Armor",
+    "abilities": [
+      {
+        "name": "Mega Shield",
+        "ability": "No Target",
+        "affects": "Allies  / Enemies",
+        "damage": "Source Type(No-reflection)",
+        "description": "Force Field Aura Grants 40% Damage Reflection for 5 seconds.",
+        "details": {
+          ":": "0",
+          "Damage Returned:": "40%",
+          "Damage Return Range:": "Global",
+          "Duration:": "5"
+        },
+        "cooldown": "20",
+        "manacost": "0"
+      },
+      {
+        "name": "Shield",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Grants +5 armor and +20% Magic Resistance to all allies within 1200 radius.",
+        "details": {
+          "Radius:": "1200",
+          "Armor Bonus:": "5",
+          "Magic Resistance Bonus:": "20%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Book of Shadows",
+    "abilities": [
+      {
+        "name": "Shadows",
+        "ability": "Target Unit",
+        "affects": "Units",
+        "damage": "",
+        "description": "Target an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 4 seconds. Applies a basic dispel.",
+        "details": {
+          "Cast Range:": "700",
+          "Duration:": "4"
+        },
+        "cooldown": "8",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Fallen Sky",
+    "abilities": [
+      {
+        "name": "Fallen Sky",
+        "ability": "Target Area",
+        "affects": "Self  / Enemies",
+        "damage": "",
+        "description": "Transforms into a meteor that strikes down at the target area after 1 seconds in a 315 AoE, stunning enemies for 1.6 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.",
+        "details": {
+          "Cast Range:": "1200",
+          "Impact Radius:": "315",
+          "Effect Delay:": "1",
+          "Impact Damage (Units):": "150",
+          "Impact Damage (Buildings):": "75",
+          "Damage per Second:": "60",
+          "Burn Duration:": "6",
+          "Stun Duration:": "1.6",
+          "Damage Cooldown:": "3"
+        },
+        "cooldown": "15",
+        "manacost": "0"
+      }
+    ]
+  },
+  {
+    "item_name": "Ex Machina",
+    "abilities": [
+      {
+        "name": "Reset Cooldowns",
+        "ability": "No Target",
+        "affects": "Self",
+        "damage": "",
+        "description": "Reset the cooldowns on all items (except Refresher Orb).",
+        "details": {
+          ":": "0"
+        },
+        "cooldown": "25",
+        "manacost": "350"
+      }
+    ]
+  },
+  {
+    "item_name": "Force Boots",
+    "abilities": [
+      {
+        "name": "Force",
+        "ability": "Target Unit",
+        "affects": "Enemies  / Allies",
+        "damage": "",
+        "description": "Dispels the user and pushes them 750 units in the direction they are facing.",
+        "details": {
+          "Cast Range:": "750",
+          "Push Distance:": "750",
+          "Push Duration:": "0.5"
+        },
+        "cooldown": "8",
+        "manacost": "75"
+      },
+      {
+        "name": "Speed Unlock",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Completely removes the speed limit for the wearer.",
+        "details": {},
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Mirror Shield",
+    "abilities": [
+      {
+        "name": "Echo Shield",
+        "ability": "Passive",
+        "affects": "Self",
+        "damage": "",
+        "description": "Block and reflect most targeted spells back to their caster once every 8 seconds.",
+        "details": {},
+        "cooldown": "8",
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Pirate Hat",
+    "abilities": [
+      {
+        "name": "Dig",
+        "ability": "Target Point",
+        "affects": "",
+        "damage": "",
+        "description": "Channel for 1 second.<br>Always finds a Bounty Rune!",
+        "details": {
+          ":": "0.1",
+          "Channel Time:": "1"
+        },
+        "cooldown": "40",
+        "manacost": "0"
+      },
+      {
+        "name": "Bounty",
+        "ability": "No Target",
+        "affects": "Self  / Allies",
+        "damage": "",
+        "description": "Grants bonus Gold.",
+        "details": {
+          "Initial Spawn Team Gold:": "40",
+          "Next Spawn Base Team Gold:": "36",
+          "Next Spawn Team Gold Bonus per Interval:": "9",
+          "Team Gold Bonus Interval:": "300",
+          "Turbo Mode Multiplier:": "2"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Giant's Ring",
+    "abilities": [
+      {
+        "name": "Giant's Foot",
+        "ability": "Passive",
+        "affects": "Self  / Enemies",
+        "damage": "Magical",
+        "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing ontop of.",
+        "details": {
+          "Model Size Increase:": "60%",
+          "Damage Radius:": "100",
+          "Strength as Damage per Second:": "100%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Book of the Dead",
+    "abilities": [
+      {
+        "name": "Greater Demonic Summoning",
+        "ability": "No Target",
+        "affects": "",
+        "damage": "",
+        "description": "Summons 4 level 3 Necronomicon Units that last 75 seconds. Units have 100% more health and 75% more damage.",
+        "details": {
+          ":": "0",
+          "Number of Warriors:": "2",
+          "Number of Archers:": "2",
+          "Bonus Health:": "100%",
+          "Bonus Attack Damage:": "75%",
+          "Duration:": "75"
+        },
+        "cooldown": "80",
+        "manacost": "0"
+      },
+      {
+        "name": "Mana Break",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Physical",
+        "description": "Mana burned per hit, a portion of which is dealt as damage.",
+        "details": {
+          "Mana Burned per Hit:": "50",
+          "Burned Mana as Damage:": "50%"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Last Will",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "Magical",
+        "description": "Deals damage to the unit that kills the Necronomicon Warrior.",
+        "details": {
+          "Damage:": "800"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "True Sight",
+        "ability": "Aura",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Reveals invisible units.",
+        "details": {
+          "Radius:": "1000",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      },
+      {
+        "name": "Purge",
+        "ability": "Target Unit",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Removes positive buffs from enemies and slow their movement speed.",
+        "details": {
+          ":": "0.3",
+          "Cast Range:": "600",
+          "Move Speed Slow:": "100%",
+          "Slow Duration:": "4"
+        },
+        "cooldown": "15",
+        "manacost": null
+      },
+      {
+        "name": "Archer Aura",
+        "ability": "Aura",
+        "affects": "Allies",
+        "damage": "",
+        "description": "Increases movement of nearby units.",
+        "details": {
+          "Radius:": "1200",
+          "Move Speed Bonus:": "5%/7%/9%",
+          "Aura Linger Duration:": "0.5"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Stygian Desolator",
+    "abilities": [
+      {
+        "name": "Greater Corruption",
+        "ability": "Passive",
+        "affects": "Enemies",
+        "damage": "",
+        "description": "Your attacks reduce the target\\'s armor by 10 for 7 seconds.",
+        "details": {
+          "Armor Reduction:": "10",
+          "Duration:": "7"
+        },
+        "cooldown": null,
+        "manacost": null
+      }
+    ]
+  },
+  {
+    "item_name": "Seer Stone",
+    "abilities": [
+      {
+        "name": "Reveal",
+        "ability": "Target Area",
+        "affects": "",
+        "damage": "",
+        "description": "Reveal a target 800 area of the map for 6 seconds.",
+        "details": {
+          "Cast Range:": "Global",
+          "Radius:": "800",
+          "Duration:": "6"
+        },
+        "cooldown": "60",
+        "manacost": "0"
+      }
+    ]
+  }
+]

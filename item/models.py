@@ -66,7 +66,7 @@ class TypeSpecific(models.Model):
 class ItemAbility(models.Model):
     owner = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300, null=True)
+    description = models.TextField(max_length=1000, null=True)
     cooldown = models.CharField(max_length=100, null=True)
     manacost = models.CharField(max_length=100, null=True)
     details = jsonfield.JSONField(blank=True, null=True)
