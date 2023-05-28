@@ -2,8 +2,7 @@ from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from django.db.models import F
-
-
+from django.views.generic.detail import DetailView
 from .models import *
 
 
@@ -40,8 +39,23 @@ class ItemList(ListView):
             return super().dispatch(request, *args, **kwargs)
 
 
+from django.views.generic import DetailView
+
+
 class ItemDetail(DetailView):
     model = Item
     template_name = 'item/items_detail.html'
     context_object_name = 'item'
     slug_url_kwarg = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        item = self.get_object()
+        abilities = item.itemability_set.all()
+        context['abilities'] = abilities
+
+        return context
+
+
+
+
