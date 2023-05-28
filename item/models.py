@@ -3,6 +3,10 @@ from django.db import models
 from django.utils.text import slugify
 
 
+from django.db import models
+from django.utils.text import slugify
+
+
 class Item(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50, blank=True, null=True)
@@ -19,6 +23,7 @@ class Item(models.Model):
     availability = models.ForeignKey('Availability', on_delete=models.CASCADE)
     recipe = models.ManyToManyField('self', blank=True, symmetrical=False)
     need_recipe = models.BooleanField(default=False)
+    ability = models.ForeignKey('ItemAbility', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name

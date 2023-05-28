@@ -7,6 +7,10 @@ def run():
         items_ability = json.load(f1)
 
     ItemAbility.objects.all().delete()
+    Affects.objects.all().delete()
+    Damage.objects.all().delete()
+
+
 
     for row in items_ability:
         print(row['item_name'])
@@ -15,8 +19,9 @@ def run():
 
         for ab in row['abilities']:
             ab_type, created = AbilityType.objects.get_or_create(name=ab["ability"])
-            af, created = Affects.objects.get_or_create(name="affects")
-            dmg, created = Damage.objects.get_or_create(name="damage")
+            af, created = Affects.objects.get_or_create(name=ab["affects"])
+            dmg, created = Damage.objects.get_or_create(name=ab["damage"])
+
 
             ability = ItemAbility(
                 owner=ow,
