@@ -22,7 +22,6 @@ def run():
             af, created = Affects.objects.get_or_create(name=ab["affects"])
             dmg, created = Damage.objects.get_or_create(name=ab["damage"])
 
-
             ability = ItemAbility(
                 owner=ow,
                 name=ab['name'],
