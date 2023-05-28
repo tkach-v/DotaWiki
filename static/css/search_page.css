@@ -1,0 +1,89 @@
+.search-wrapper {
+  max-width: 850px;
+}
+
+h1, h2 {
+  font-family: "Bebas Neue", serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.search-input-wrapper {
+  border-top: 2px solid #FFFFFF;
+  padding: 8px 20px;
+  background: #1A1A1F;
+}
+.search-input-wrapper .searchpage-search {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.search-input-wrapper .searchpage-search .form-input {
+  color: #FFFFFF;
+  background: #1A1A1F;
+  width: 100%;
+}
+.search-input-wrapper .searchpage-search .form-btn {
+  background: #1A1A1F;
+  display: flex;
+  align-items: end;
+}
+.search-input-wrapper .searchpage-search .form-x {
+  padding: 0 20px;
+}
+.search-input-wrapper .searchpage-search .form-submit {
+  padding-left: 20px;
+  border-left: 1px solid #353535;
+}
+
+.search-results .search-result {
+  background-color: #212125;
+  padding: 8px 20px;
+  margin-bottom: 10px;
+}
+.search-results .search-result .result-title {
+  padding: 0;
+  border-right: 1px solid #353535;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.search-results .search-result .result-description {
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+}
+.search-results .search-result a {
+  color: #ffffff;
+  background-color: #212125;
+}
+.search-results .search-result a:hover .result-title {
+  color: #FED14C;
+}
+@media (max-width: 576px) {
+  .search-results .search-result .result-title {
+    padding-bottom: 5px;
+    border-right: 0;
+    border-bottom: 1px solid #353535;
+  }
+  .search-results .search-result .result-description {
+    padding: 5px 0 0;
+  }
+}
+
+/*# sourceMappingURL=search_page.css.map */
