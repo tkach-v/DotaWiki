@@ -50,15 +50,9 @@ class ItemDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-        # Отримати об'єкт Item
         item = self.get_object()
-
-        # Отримати об'єкт ItemAbility, пов'язаний з Item
-        ability = item.ability
-
-        # Додати дані до контексту
-        context['ability'] = ability
+        abilities = item.itemability_set.all()
+        context['abilities'] = abilities
 
         return context
 
