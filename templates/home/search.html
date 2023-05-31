@@ -20,7 +20,9 @@
         </div>
         <h2>Search results:</h2>
         <div class="search-results">
-            {% for result in results %}
+            {% if results_basic %}
+                <h2>Categories</h2>
+            {% for result in results_basic %}
                 <div class="search-result">
                     <a href="{{ result.href }}">
                         <div class="row m-0">
@@ -34,6 +36,58 @@
                     </a>
                 </div>
             {% endfor %}
+            {% endif %}
+            {% if results_hero %}
+                <h2>Heroes</h2>
+            {% for result in results_hero %}
+                <div class="search-result">
+                    <a href="{{ result.href }}">
+                        <div class="row m-0">
+                            <div class="col-12 col-sm-3 result-title">
+                                {{ result.name }}
+                            </div>
+                            <div class="col-12 col-sm-9 result-description">
+                                {{ result.description }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% if results_item %}
+                <h2>Items</h2>
+            {% for result in results_item %}
+                <div class="search-result">
+                    <a href="{{ result.href }}">
+                        <div class="row m-0">
+                            <div class="col-12 col-sm-3 result-title">
+                                {{ result.name }}
+                            </div>
+                            <div class="col-12 col-sm-9 result-description">
+                                {{ result.description }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% if results_cosmetic %}
+                <h2>Cosmetics</h2>
+            {% for result in results_cosmetic %}
+                <div class="search-result">
+                    <a href="{{ result.href }}">
+                        <div class="row m-0">
+                            <div class="col-12 col-sm-3 result-title">
+                                {{ result.name }}
+                            </div>
+                            <div class="col-12 col-sm-9 result-description">
+                                {{ result.description }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+            {% endif %}
         </div>
     </div>
 {% endblock %}
