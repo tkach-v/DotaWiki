@@ -5,6 +5,6 @@ document.querySelector('.form-x').addEventListener('click', evt => {
 });
 
 // add margin when not much content
-if (window.screen.width >= 768 && document.querySelectorAll(".search-result").length < 3) {
+if (window.screen.width >= 768 && document.querySelectorAll(".search-result").length < 4) {
     document.querySelector(".search-results").style.marginBottom = "35vh";
 }

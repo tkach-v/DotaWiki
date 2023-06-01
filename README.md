@@ -17,7 +17,6 @@ Volodymyr Tkach - vovantkac5.work@gmail.com, [Github](https://github.com/tkach-v
 ## Tech Stack
 - Python-Django
 - MySQL
-- External APIs
 - HTML
 - CSS
 - JavaScript
