@@ -1,7 +1,6 @@
 // do connections in recipe
 function draw() {
     const horizontalWidth = otherImages[0].offsetWidth * (otherImages.length - 1);
-
     document.querySelector('.connection').style.width = horizontalWidth + 'px';
 }
 
@@ -59,9 +58,7 @@ if (window.screen.width >= 768 && abilities.length > 1) {
                 if (window.scrollY <= maxScroll) {
                     elem.style.top = window.scrollY - minScroll + 51 + "px"
                 } else {
-                    // elem.classList.remove('item-infobox-fixed');
                     elem.style.top = maxScroll - minScroll + 51 + "px"
-                    // elem.style.top = null;
                 }
 
             } else {
