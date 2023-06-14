@@ -9,7 +9,7 @@
         <h1>Search</h1>
         <div class="search-input-wrapper">
             <form role="search" class="searchpage-search" method="get" action="{% url 'home:search' %}">
-                <input name="search" type="text" class="form-input" value="{{ search_input }}" autocomplete="off">
+                <input name="search" type="text" class="form-input" value="{{ search_input }}" autocomplete="off" required>
                 <button class="form-btn form-x" type="button">
                     <img src="{% static 'images/base/x.svg' %}" alt="Clear">
                 </button>
